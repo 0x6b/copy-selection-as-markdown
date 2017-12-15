@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Copy Selection as Markdown",
+  "version": "0.1.0",
+  "description": "Copy title, URL, and selection as Markdown",
+  "icons": {
+    "48": "icons/default.svg",
+    "96": "icons/default.svg"
+  },
+  "background": {
+    "scripts": [
+      "index.js"
+    ]
+  },
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "clipboardWrite",
+    "contextMenus",
+    "tabs"
+  ]
+}
