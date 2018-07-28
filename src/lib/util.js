@@ -27,6 +27,15 @@ const getSelectionAsMarkdown = () => {
       }
     }
 
+    for (let img of container.getElementsByTagName("img")) {
+      if (!img.getAttribute("src").startsWith("http")) {
+        img.setAttribute(
+          "src",
+          url.resolve(document.URL, img.getAttribute("src"))
+        );
+      }
+    }
+
     html = container.innerHTML;
   }
 
