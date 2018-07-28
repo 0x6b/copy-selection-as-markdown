@@ -13,12 +13,14 @@
     "copy-assets": "cpx 'src/{icons/*,manifest.json}' dist",
     "prebuild": "npm-run-all generate-icons copy-assets webpack",
     "build": "unset WEB_EXT_API_KEY WEB_EXT_API_SECRET WEB_EXT_FIREFOX && web-ext --source-dir dist --artifacts-dir dist/web-ext-artifacts build",
-    "postbuild": "unset WEB_EXT_FIREFOX && web-ext --source-dir dist --artifacts-dir dist/web-ext-artifacts sign --api-key $WEB_EXT_API_KEY --api-secret $WEB_EXT_API_SECRET"
+    "postbuild": "unset WEB_EXT_FIREFOX && web-ext --source-dir dist --artifacts-dir dist/web-ext-artifacts sign --api-key $WEB_EXT_API_KEY --api-secret $WEB_EXT_API_SECRET",
+    "format": "prettier --write 'src/**/*.js'"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
     "npm-run-all": "^4.1.2",
     "octicons": "^7.0.1",
+    "prettier": "^1.13.7",
     "web-ext": "^2.2.2",
     "webpack": "^3.10.0"
   },

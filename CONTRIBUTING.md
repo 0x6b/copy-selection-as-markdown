@@ -53,6 +53,7 @@ Run with `yarn <script-name>`.
     - `watch:js`: Run [`webpack`](https://webpack.github.io/docs/cli.html) in [watch mode](https://webpack.github.io/docs/cli.html#watch-mode-watch)
     - `watch:assets`: Watch assets change in `src` and copy it to `dist`
 - Builds
+    - `format`: format JS files by [Prettier](https://prettier.io/)
     - `generate-icons`: Generate icons
     - `copy-assets`: Copy assets in `src` to `dist`
     - `webpack`: Run [`webpack`](https://webpack.js.org) to bundle scripts according to the [`webpack.config.js`](https://webpack.js.org/concepts/configuration/)
