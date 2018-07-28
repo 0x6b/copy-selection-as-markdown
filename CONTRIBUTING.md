@@ -73,3 +73,10 @@ Run with `yarn <script-name>`.
 ### Icon
 
 - [Octicons](https://octicons.github.com/)
+
+## FAQ
+
+> Why `package.json` unset `WEB_EXT_...` environment variables before executing `web-ext`?
+
+See [Environment variables get applied as options to any command · Issue #793 · mozilla/web-ext](https://github.com/mozilla/web-ext/issues/793)
+
