@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   browser.storage.local.get("use-quote").then(
     result => {
-      document.querySelector("#quote").checked = result["use-quote"] || true;
+      if (typeof result["use-quote"] === "undefined") {
+        document.querySelector("#quote").checked = true;
+      } else {
+        document.querySelector("#quote").checked = result["use-quote"];
+      }
     },
     error => {
       console.log(`Error: ${error}`);
