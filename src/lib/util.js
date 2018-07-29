@@ -39,11 +39,7 @@ const getSelectionAsMarkdown = () => {
     html = container.innerHTML;
   }
 
-  return turndownService
-    .turndown(html)
-    .split("\n")
-    .map(line => `> ${line}`)
-    .join("\n");
+  return turndownService.turndown(html);
 };
 
 const doCopy = text => {
