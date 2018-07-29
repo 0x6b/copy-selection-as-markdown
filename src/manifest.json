@@ -8,9 +8,7 @@
     "96": "icons/default.svg"
   },
   "background": {
-    "scripts": [
-      "index.js"
-    ]
+    "scripts": ["index.js"]
   },
   "permissions": [
     "<all_urls>",
