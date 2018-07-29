@@ -1,8 +1,21 @@
 browser.contextMenus.create(
   {
+    id: "copy-as-markdown",
+    title: "Copy Title and URL as Markdown",
+    contexts: ["page"],
+    documentUrlPatterns: ["<all_urls>"]
+  },
+  () => {
+    if (browser.runtime.lastError)
+      console.log(`Error: ${browser.runtime.lastError}`);
+  }
+);
+
+browser.contextMenus.create(
+  {
     id: "copy-selection-as-markdown",
     title: "Copy Selection as Markdown",
-    contexts: ["page", "selection"],
+    contexts: ["selection"],
     documentUrlPatterns: ["<all_urls>"]
   },
   () => {
@@ -12,7 +25,10 @@ browser.contextMenus.create(
 );
 
 browser.contextMenus.onClicked.addListener(({ menuItemId }, { id }) => {
-  if (menuItemId === "copy-selection-as-markdown") {
+  if (
+    menuItemId === "copy-selection-as-markdown" ||
+    menuItemId === "copy-as-markdown"
+  ) {
     browser.tabs.executeScript(id, { file: "copy.js" });
   }
 });

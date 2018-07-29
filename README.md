@@ -8,4 +8,7 @@ Install latest extension from `dist/web-ext-artifacts` directory or [Add-ons for
 
 ## Usage
 
-Right click and select `Copy Selection as Markdown`.
+Right click and select:
+
+- when part of the page is selected: **Copy Selection as Markdown**
+- when user context-clicks in the page: **Copy Title and URL as Markdown**
