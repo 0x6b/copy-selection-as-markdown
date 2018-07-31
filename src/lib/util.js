@@ -5,6 +5,42 @@ const url = require("url");
 const getSelectionAsMarkdown = options => {
   const turndownService = TurndownService(options);
 
+// remove display formula
+turndownService.addRule("mathjax-remove-display-formula", {
+  filter: node => {
+    return node.nodeName === "DIV" && node.className === "MathJax_Display";
+  },
+  replacement: () => ""
+});
+
+// remove inline formula
+turndownService.addRule("mathjax-remove-inline-formula", {
+  filter: node => {
+    return (
+      node.nodeName === "SPAN" &&
+      node.className === "MathJax" &&
+      node.style["text-align"] !== "center"
+    );
+  },
+  replacement: () => ""
+});
+
+// extract script tag as content
+turndownService.addRule("mathjax-extract-raw", {
+  filter: node => {
+    return node.nodeName === "SCRIPT";
+  },
+  replacement: (content, node) => {
+    if (node.type === "math/tex; mode=display") {
+      return `$$${node.innerText}$$`;
+    } else if (node.type === "math/tex") {
+      return `\\(${node.innerText}\\)`;
+    }
+    return "(ERROR while copying MathJax formula)"
+  }
+});
+
+const getSelectionAsMarkdown = () => {
   let html = "";
   const sel = document.getSelection();
 
