@@ -23,7 +23,6 @@ rules.removeInlineFormulat = {
 // remove new lines surrounding blank paragraph before script node
 rules.paragraphBeforeScriptNode = {
   filter: "p",
-
   replacement: function(content, node) {
     var hasSiblings = node.nextSibling;
 
@@ -45,10 +44,12 @@ rules.extractRaw = {
     return node.nodeName === "SCRIPT" && node.type.startsWith("math/tex");
   },
   replacement: (content, node) => {
+    // `textContent` is for JSDOM testing
+    // [innerText implementation · Issue #1245 · jsdom/jsdom](https://github.com/jsdom/jsdom/issues/1245)
     if (node.type === "math/tex; mode=display") {
-      return `\n\n$$${node.innerText.trim()}$$\n\n`;
+      return `\n\n$$${node.innerText || node.textContent}$$\n\n`;
     } else if (node.type === "math/tex") {
-      return `$${node.innerText.trim()}$`;
+      return `$${node.innerText || node.textContent}$`;
     }
     return "(ERROR while copying MathJax formula)";
   }
