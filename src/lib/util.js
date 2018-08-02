@@ -31,7 +31,7 @@ turndownService.addRule("mathjax-remove-inline-formula", {
 turndownService.addRule("mathjax-paragraph-before-script-node", {
   filter: "p",
 
-  replacement: function (content, node) {
+  replacement: function(content, node) {
     var hasSiblings = node.nextSibling;
 
     if (
@@ -87,7 +87,7 @@ const getSelectionAsMarkdown = () => {
     html = container.innerHTML;
   }
 
-  return turndownService.turndown(html);
+  return { html, output: turndownService.turndown(html), url: document.URL };
 };
 
 const doCopy = text => {

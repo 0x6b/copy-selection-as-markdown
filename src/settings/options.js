@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         typeof result.linkStyle === "undefined" ? "inlined" : result.linkStyle;
       document.querySelector("form").linkReferenceStyle.value =
         typeof result.linkReferenceStyle === "undefined" ? "full" : result.linkReferenceStyle;
+      document.querySelector("#debug").checked = 
+        typeof result.debug === "undefined" ? true : result.debug;
     },
     error => console.log(`Error: ${error}`)
   );
@@ -37,6 +39,7 @@ document.querySelector("form").addEventListener("submit", e => {
     emDelimiter: document.querySelector("form").emDelimiter.value,
     strongDelimiter: document.querySelector("form").strongDelimiter.value,
     linkStyle: document.querySelector("form").linkStyle.value,
-    linkReferenceStyle: document.querySelector("form").linkReferenceStyle.value
+    linkReferenceStyle: document.querySelector("form").linkReferenceStyle.value,
+    debug: document.querySelector("#debug").checked
   });
 });
