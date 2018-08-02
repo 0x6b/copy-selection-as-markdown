@@ -2,41 +2,31 @@ import TurndownService from "turndown";
 
 const url = require("url");
 
-const getSelectionAsMarkdown = options => {
-  const turndownService = TurndownService(options);
-
-// remove display formula
-turndownService.addRule("mathjax-remove-display-formula", {
-  filter: node => {
+const turndownService = TurndownService({
+  headingStyle: "atx",
+  bulletListMarker: "-"
+})
+  .remove(node => {
+    // remove display formula
     return node.nodeName === "DIV" && node.className === "MathJax_Display";
-  },
-  replacement: () => ""
-});
-
-// remove inline formula
-turndownService.addRule("mathjax-remove-inline-formula", {
-  filter: node => {
-    return (
-      node.nodeName === "SPAN" &&
-      node.className === "MathJax" &&
-      node.style["text-align"] !== "center"
-    );
-  },
-  replacement: () => ""
-});
+  })
+  .remove(node => {
+    // remove inline formula
+    return node.nodeName === "SPAN" && node.className === "MathJax";
+  });
 
 // extract script tag as content
 turndownService.addRule("mathjax-extract-raw", {
   filter: node => {
-    return node.nodeName === "SCRIPT";
+    return node.nodeName === "SCRIPT" && node.type.startsWith("math/tex");
   },
   replacement: (content, node) => {
     if (node.type === "math/tex; mode=display") {
       return `$$${node.innerText}$$`;
     } else if (node.type === "math/tex") {
-      return `\\(${node.innerText}\\)`;
+      return `$${node.innerText}$`;
     }
-    return "(ERROR while copying MathJax formula)"
+    return "(ERROR while copying MathJax formula)";
   }
 });
 

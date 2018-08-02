@@ -1,7 +1,11 @@
 {
   "manifest_version": 2,
   "name": "Copy Selection as Markdown",
+<<<<<<< HEAD
   "version": "0.5.2",
+=======
+  "version": "0.4.1",
+>>>>>>> b93913b... refactor(mathjax): more robust MathJax handling
   "description": "Copy title, URL, and selection as Markdown",
   "icons": {
     "48": "icons/default.svg",
