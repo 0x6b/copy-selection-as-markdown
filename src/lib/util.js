@@ -5,15 +5,46 @@ const url = require("url");
 const turndownService = TurndownService({
   headingStyle: "atx",
   bulletListMarker: "-"
-})
-  .remove(node => {
-    // remove display formula
+});
+
+// remove display formula
+turndownService.addRule("mathjax-remove-display-formula", {
+  filter: node => {
     return node.nodeName === "DIV" && node.className === "MathJax_Display";
-  })
-  .remove(node => {
-    // remove inline formula
-    return node.nodeName === "SPAN" && node.className === "MathJax";
-  });
+  },
+  replacement: () => ""
+});
+
+// remove inline formula
+turndownService.addRule("mathjax-remove-inline-formula", {
+  filter: node => {
+    return (
+      node.nodeName === "SPAN" &&
+      node.className === "MathJax" &&
+      node.style["text-align"] !== "center"
+    );
+  },
+  replacement: () => ""
+});
+
+// remove new lines surrounding blank paragraph before script node
+turndownService.addRule("mathjax-paragraph-before-script-node", {
+  filter: "p",
+
+  replacement: function (content, node) {
+    var hasSiblings = node.nextSibling;
+
+    if (
+      hasSiblings &&
+      node.nextSibling.nodeName === "SCRIPT" &&
+      node.nextSibling.type.startsWith("math/tex")
+    ) {
+      return content;
+    }
+
+    return "\n\n" + content + "\n\n";
+  }
+});
 
 // extract script tag as content
 turndownService.addRule("mathjax-extract-raw", {
@@ -22,9 +53,9 @@ turndownService.addRule("mathjax-extract-raw", {
   },
   replacement: (content, node) => {
     if (node.type === "math/tex; mode=display") {
-      return `$$${node.innerText}$$`;
+      return `\n\n$$${node.innerText.trim()}$$\n\n`;
     } else if (node.type === "math/tex") {
-      return `$${node.innerText}$`;
+      return `$${node.innerText.trim()}$`;
     }
     return "(ERROR while copying MathJax formula)";
   }
