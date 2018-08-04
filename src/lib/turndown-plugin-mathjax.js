@@ -9,7 +9,7 @@ rules.removeDisplayFormula = {
 };
 
 // remove inline formula
-rules.removeInlineFormulat = {
+rules.removeInlineFormula = {
   filter: node => {
     return (
       node.nodeName === "SPAN" &&
@@ -18,6 +18,37 @@ rules.removeInlineFormulat = {
     );
   },
   replacement: () => ""
+};
+
+rules.removeBlankListItem = {
+  filter: ["li"],
+  replacement: function(content, node, options) {
+    node.childNodes.forEach(child => {
+      if (child.className && child.className.startsWith("MathJax")) {
+        node.removeChild(child);
+      }
+    });
+    //console.log(content);
+    content = content
+      .replace(/^\n+/, "") // remove leading newlines
+      .replace(/\n+$/, "\n") // replace trailing newlines with just a single one
+      .replace(/\n/gm, "\n    "); // indent
+    let prefix = options.bulletListMarker + "   ";
+    const parent = node.parentNode;
+    if (parent.nodeName === "OL") {
+      const start = parent.getAttribute("start");
+      const index = Array.prototype.indexOf.call(parent.children, node);
+      prefix = (start ? Number(start) + index : index + 1) + ".  ";
+    }
+    if (content !== "") {
+      return (
+        prefix +
+        content +
+        (node.nextSibling && !/\n$/.test(content) ? "\n" : "")
+      );
+    }
+    return "";
+  }
 };
 
 // remove new lines surrounding blank paragraph before script node
