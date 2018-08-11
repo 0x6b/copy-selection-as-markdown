@@ -1,11 +1,16 @@
 import { readFileSync } from "fs";
-import { assert } from "chai";
 import { JSDOM } from "jsdom";
 
 import TurndownService from "turndown";
 import turndownPluginMathJax from "../src/lib/turndown-plugin-mathjax";
 
-const tests = [
+const turndownService = TurndownService({
+  headingStyle: "atx",
+  bulletListMarker: "-"
+});
+turndownService.use(turndownPluginMathJax);
+
+const testCases = [
   {
     filename: "1",
     url:
@@ -31,24 +36,10 @@ const tests = [
   }
 ];
 
-describe("copy-selection-as-markdown", () => {
-  const turndownService = TurndownService({
-    headingStyle: "atx",
-    bulletListMarker: "-"
-  });
-  turndownService.use(turndownPluginMathJax);
-
-  tests.forEach(test => {
-    it(`${test.url} (${test.filename})`, () => {
-      const input = new JSDOM(
-        readFileSync(`${__dirname}/fixtures/${test.filename}.html`, "utf-8")
-      ).window.document;
-      const output = readFileSync(
-        `${__dirname}/fixtures/${test.filename}.md`,
-        "utf-8"
-      ).trim();
-
-      assert.equal(turndownService.turndown(input), output);
-    });
+testCases.forEach(testCase => {
+  test(`${testCase.filename}.html (${testCase.url})`, () => {
+    const input = new JSDOM(readFileSync(`${__dirname}/fixtures/${testCase.filename}.html`, "utf-8")).window.document;
+    const expected = readFileSync(`${__dirname}/fixtures/${testCase.filename}.md`, "utf-8").trim();
+    expect(turndownService.turndown(input)).toEqual(expected);
   });
 });
