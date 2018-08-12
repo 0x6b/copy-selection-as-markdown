@@ -10,7 +10,7 @@
 
 ## Fork on GitHub
 
-Before you do anything else, login on [GitHub](https://github.com/) and fork this repository.
+Before you do anything else, login on [GitHub](https://github.com/) and [fork](https://help.github.com/articles/fork-a-repo/) this repository
 
 ## Clone your fork locally
 
@@ -28,13 +28,42 @@ $ git clone https://github.com/<your-account>/copy-selection-as-markdown.git
     $ export WEB_EXT_API_KEY=...
     $ export WEB_EXT_API_SECRET=...
     ```
-3. Install dependencies: `yarn install`
+3. Install dependencies
+    ```sh
+    $ yarn install # or npm install
+    ```
 4. Create a new topic branch
     ```sh
     $ git checkout -b add-new-feature
     ```
-5. Run js bundler/watcher and firefox: `yarn watch`
+5. Run js bundler/watcher and firefox
+    ```sh
+    $ yarn watch # or npm run watch
+    ```
 6. Modify source code and firefox will reload the extension automatically
+
+## Testing
+
+1. Run test cases
+    ```sh
+    $ yarn test # or npm test
+    ```
+
+To make sure Turndown conversion remains intact after my modification for supporting [MathJax](https://www.mathjax.org/), I use [Jest snapshot testing](https://jestjs.io/docs/en/snapshot-testing). When you updated [Turndown](https://github.com/domchristie/turndown), you have to [update snapshots]((https://jestjs.io/docs/en/cli.html#updatesnapshot)).
+
+1. Comment out following line from [`test.js`](test/test.js)
+    ```js
+    turndownService.use(turndownPluginMathJax);
+    ```
+2. Update Jest snapshot
+    ```sh
+    $ yarn test --updateSnapshot
+    ```
+3. Revert [`test.js`](test/test.js)
+4. Run test cases
+    ```sh
+    $ yarn test # or npm test
+    ```
 
 ## Open a pull request
 
@@ -48,25 +77,22 @@ $ git clone https://github.com/<your-account>/copy-selection-as-markdown.git
 
 ### Package Scripts
 
-Run with `yarn <script-name>`.
+Run with `yarn <script-name>` or `npm run <script-name>`.
 
 - Watchers
-    - `prewatch`: Generate icon before starting `watch`
+    - `prewatch`: run `generate-icons` and `copy-assets` before starting `watch`
     - `watch`: Run watch scripts below
-    - `watch:webextension`: Run [`web-ext run`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run) which watches all extension source files and reload the extension in Firefox as files change
-    - `watch:js`: Run [`webpack`](https://webpack.github.io/docs/cli.html) in [watch mode](https://webpack.github.io/docs/cli.html#watch-mode-watch)
-    - `watch:assets`: Watch assets change in `src` and copy it to `dist`
+        - `watch:webextension`: Run [`web-ext run`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run) which watches all extension source files and reload the extension in Firefox as files change
+        - `watch:js`: Run [`webpack`](https://webpack.github.io/docs/cli.html) in [watch mode](https://webpack.github.io/docs/cli.html#watch-mode-watch)
+        - `watch:assets`: Watch assets change in `src` and copy it to `dist`
 - Builds
     - `format`: format JS files by [Prettier](https://prettier.io/)
     - `generate-icons`: Generate icons
     - `copy-assets`: Copy assets in `src` to `dist`
     - `webpack`: Run [`webpack`](https://webpack.js.org) to bundle scripts according to the [`webpack.config.js`](https://webpack.js.org/concepts/configuration/)
-    - `prebuild`: Run `copy-assets` and `webpack` before build
+    - `prebuild`: Run `generate-icons`, `copy-assets` and `webpack` before starting `build`
     - `build`: Build the extension with [`web-ext build`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_build)
     - `postbuild`: Sign the extension with [`web-ext sign`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_sign) after build
-- Cleanup
-    - `clean`: Remove `dist/icons/`, `dist/*.js`, and `dist/*.json`
-    - `clean-all`: Remove `dist/icons/`, `dist/*.js`, `dist/*.json`, and `node_modules`
 
 ### Mozilla Developer Network (MDN)
 
@@ -76,11 +102,10 @@ Run with `yarn <script-name>`.
 
 ### Icon
 
-- [Octicons](https://octicons.github.com/)
+- [Octicons](https://octicons.github.com/) [clippy](https://octicons.github.com/icon/clippy/)
 
 ## FAQ
 
 > Why `package.json` unset `WEB_EXT_...` environment variables before executing `web-ext`?
 
 See [Environment variables get applied as options to any command · Issue #793 · mozilla/web-ext](https://github.com/mozilla/web-ext/issues/793)
-
