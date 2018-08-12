@@ -1,0 +1,2180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1.tabs.html 1`] = `"    foo→baz→→bim"`;
+
+exports[`2.tabs.html 1`] = `"    foo→baz→→bim"`;
+
+exports[`3.tabs.html 1`] = `
+"    a→a
+    ὐ→a"
+`;
+
+exports[`4.tabs.html 1`] = `
+"-   foo
+    
+    bar"
+`;
+
+exports[`5.tabs.html 1`] = `
+"-   foo
+    
+          bar"
+`;
+
+exports[`6.tabs.html 1`] = `
+">       foo
+>"
+`;
+
+exports[`7.tabs.html 1`] = `"-         foo"`;
+
+exports[`8.tabs.html 1`] = `
+"    foo
+    bar"
+`;
+
+exports[`9.tabs.html 1`] = `
+"-   foo
+    -   bar
+        -   baz"
+`;
+
+exports[`10.tabs.html 1`] = `"# Foo"`;
+
+exports[`11.tabs.html 1`] = `"* * *"`;
+
+exports[`12.precedence.html 1`] = `
+"-   \`one
+-   two\`"
+`;
+
+exports[`13.thematic_breaks.html 1`] = `
+"* * *
+
+* * *
+
+* * *"
+`;
+
+exports[`14.thematic_breaks.html 1`] = `"+++"`;
+
+exports[`15.thematic_breaks.html 1`] = `"==="`;
+
+exports[`16.thematic_breaks.html 1`] = `"\\\\-\\\\- \\\\*\\\\* \\\\_\\\\_"`;
+
+exports[`17.thematic_breaks.html 1`] = `
+"* * *
+
+* * *
+
+* * *"
+`;
+
+exports[`18.thematic_breaks.html 1`] = `"    ***"`;
+
+exports[`19.thematic_breaks.html 1`] = `"Foo ***"`;
+
+exports[`20.thematic_breaks.html 1`] = `"* * *"`;
+
+exports[`21.thematic_breaks.html 1`] = `"* * *"`;
+
+exports[`22.thematic_breaks.html 1`] = `"* * *"`;
+
+exports[`23.thematic_breaks.html 1`] = `"* * *"`;
+
+exports[`24.thematic_breaks.html 1`] = `"* * *"`;
+
+exports[`25.thematic_breaks.html 1`] = `
+"_ _ _ _ a
+
+a------
+
+---a---"
+`;
+
+exports[`26.thematic_breaks.html 1`] = `"_-_"`;
+
+exports[`27.thematic_breaks.html 1`] = `
+"-   foo
+
+* * *
+
+-   bar"
+`;
+
+exports[`28.thematic_breaks.html 1`] = `
+"Foo
+
+* * *
+
+bar"
+`;
+
+exports[`29.thematic_breaks.html 1`] = `
+"## Foo
+
+bar"
+`;
+
+exports[`30.thematic_breaks.html 1`] = `
+"-   Foo
+
+* * *
+
+-   Bar"
+`;
+
+exports[`31.thematic_breaks.html 1`] = `
+"-   Foo
+-   * * *"
+`;
+
+exports[`32.atx_headings.html 1`] = `
+"# foo
+
+## foo
+
+### foo
+
+#### foo
+
+##### foo
+
+###### foo"
+`;
+
+exports[`33.atx_headings.html 1`] = `"####### foo"`;
+
+exports[`34.atx_headings.html 1`] = `
+"#5 bolt
+
+#hashtag"
+`;
+
+exports[`35.atx_headings.html 1`] = `"\\\\## foo"`;
+
+exports[`36.atx_headings.html 1`] = `"# foo _bar_ \\\\*baz\\\\*"`;
+
+exports[`37.atx_headings.html 1`] = `"# foo"`;
+
+exports[`38.atx_headings.html 1`] = `
+"### foo
+
+## foo
+
+# foo"
+`;
+
+exports[`39.atx_headings.html 1`] = `"    # foo"`;
+
+exports[`40.atx_headings.html 1`] = `"foo # bar"`;
+
+exports[`41.atx_headings.html 1`] = `
+"## foo
+
+### bar"
+`;
+
+exports[`42.atx_headings.html 1`] = `
+"# foo
+
+##### foo"
+`;
+
+exports[`43.atx_headings.html 1`] = `"### foo"`;
+
+exports[`44.atx_headings.html 1`] = `"### foo ### b"`;
+
+exports[`45.atx_headings.html 1`] = `"# foo#"`;
+
+exports[`46.atx_headings.html 1`] = `
+"### foo ###
+
+## foo ###
+
+# foo #"
+`;
+
+exports[`47.atx_headings.html 1`] = `
+"* * *
+
+## foo
+
+* * *"
+`;
+
+exports[`48.atx_headings.html 1`] = `
+"Foo bar
+
+# baz
+
+Bar foo"
+`;
+
+exports[`49.atx_headings.html 1`] = `""`;
+
+exports[`50.setext_headings.html 1`] = `
+"# Foo _bar_
+
+## Foo _bar_"
+`;
+
+exports[`51.setext_headings.html 1`] = `"# Foo _bar baz_"`;
+
+exports[`52.setext_headings.html 1`] = `
+"## Foo
+
+# Foo"
+`;
+
+exports[`53.setext_headings.html 1`] = `
+"## Foo
+
+## Foo
+
+# Foo"
+`;
+
+exports[`54.setext_headings.html 1`] = `
+"    Foo
+    ---
+    
+    Foo
+    
+
+* * *"
+`;
+
+exports[`55.setext_headings.html 1`] = `"## Foo"`;
+
+exports[`56.setext_headings.html 1`] = `"Foo ---"`;
+
+exports[`57.setext_headings.html 1`] = `
+"Foo = =
+
+Foo
+
+* * *"
+`;
+
+exports[`58.setext_headings.html 1`] = `"## Foo"`;
+
+exports[`59.setext_headings.html 1`] = `"## Foo\\\\"`;
+
+exports[`60.setext_headings.html 1`] = `
+"## \`Foo
+
+\`
+
+## <a title=\\"a lot
+
+of dashes\\"/>"
+`;
+
+exports[`61.setext_headings.html 1`] = `
+"> Foo
+
+* * *"
+`;
+
+exports[`62.setext_headings.html 1`] = `"> foo bar ==="`;
+
+exports[`63.setext_headings.html 1`] = `
+"-   Foo
+
+* * *"
+`;
+
+exports[`64.setext_headings.html 1`] = `"## Foo Bar"`;
+
+exports[`65.setext_headings.html 1`] = `
+"* * *
+
+## Foo
+
+## Bar
+
+Baz"
+`;
+
+exports[`66.setext_headings.html 1`] = `"===="`;
+
+exports[`67.setext_headings.html 1`] = `
+"* * *
+
+* * *"
+`;
+
+exports[`68.setext_headings.html 1`] = `
+"-   foo
+
+* * *"
+`;
+
+exports[`69.setext_headings.html 1`] = `
+"    foo
+    
+
+* * *"
+`;
+
+exports[`70.setext_headings.html 1`] = `
+"> foo
+
+* * *"
+`;
+
+exports[`71.setext_headings.html 1`] = `"## \\\\> foo"`;
+
+exports[`72.setext_headings.html 1`] = `
+"Foo
+
+## bar
+
+baz"
+`;
+
+exports[`73.setext_headings.html 1`] = `
+"Foo bar
+
+* * *
+
+baz"
+`;
+
+exports[`74.setext_headings.html 1`] = `
+"Foo bar
+
+* * *
+
+baz"
+`;
+
+exports[`75.setext_headings.html 1`] = `"Foo bar --- baz"`;
+
+exports[`76.indented_code_blocks.html 1`] = `
+"    a simple
+      indented code block"
+`;
+
+exports[`77.indented_code_blocks.html 1`] = `
+"-   foo
+    
+    bar"
+`;
+
+exports[`78.indented_code_blocks.html 1`] = `
+"1.  foo
+    
+    -   bar"
+`;
+
+exports[`79.indented_code_blocks.html 1`] = `
+"    <a/>
+    *hi*
+    
+    - one"
+`;
+
+exports[`80.indented_code_blocks.html 1`] = `
+"    chunk1
+    
+    chunk2
+    
+    
+    
+    chunk3"
+`;
+
+exports[`81.indented_code_blocks.html 1`] = `
+"    chunk1
+      
+      chunk2"
+`;
+
+exports[`82.indented_code_blocks.html 1`] = `"Foo bar"`;
+
+exports[`83.indented_code_blocks.html 1`] = `
+"    foo
+    
+
+bar"
+`;
+
+exports[`84.indented_code_blocks.html 1`] = `
+"# Heading
+
+    foo
+    
+
+## Heading
+
+    foo
+    
+
+* * *"
+`;
+
+exports[`85.indented_code_blocks.html 1`] = `
+"        foo
+    bar"
+`;
+
+exports[`86.indented_code_blocks.html 1`] = `"    foo"`;
+
+exports[`87.indented_code_blocks.html 1`] = `"    foo"`;
+
+exports[`88.fenced_code_blocks.html 1`] = `
+"    <
+     >"
+`;
+
+exports[`89.fenced_code_blocks.html 1`] = `
+"    <
+     >"
+`;
+
+exports[`90.fenced_code_blocks.html 1`] = `"\`foo\`"`;
+
+exports[`91.fenced_code_blocks.html 1`] = `
+"    aaa
+    ~~~"
+`;
+
+exports[`92.fenced_code_blocks.html 1`] = `
+"    aaa
+    \`\`\`"
+`;
+
+exports[`93.fenced_code_blocks.html 1`] = `
+"    aaa
+    \`\`\`"
+`;
+
+exports[`94.fenced_code_blocks.html 1`] = `
+"    aaa
+    ~~~"
+`;
+
+exports[`95.fenced_code_blocks.html 1`] = `""`;
+
+exports[`96.fenced_code_blocks.html 1`] = `
+"    
+    \`\`\`
+    aaa"
+`;
+
+exports[`97.fenced_code_blocks.html 1`] = `
+">     aaa
+>     
+
+bbb"
+`;
+
+exports[`98.fenced_code_blocks.html 1`] = `""`;
+
+exports[`99.fenced_code_blocks.html 1`] = `""`;
+
+exports[`100.fenced_code_blocks.html 1`] = `
+"    aaa
+    aaa"
+`;
+
+exports[`101.fenced_code_blocks.html 1`] = `
+"    aaa
+    aaa
+    aaa"
+`;
+
+exports[`102.fenced_code_blocks.html 1`] = `
+"    aaa
+     aaa
+    aaa"
+`;
+
+exports[`103.fenced_code_blocks.html 1`] = `
+"    \`\`\`
+    aaa
+    \`\`\`"
+`;
+
+exports[`104.fenced_code_blocks.html 1`] = `"    aaa"`;
+
+exports[`105.fenced_code_blocks.html 1`] = `"    aaa"`;
+
+exports[`106.fenced_code_blocks.html 1`] = `
+"    aaa
+        \`\`\`"
+`;
+
+exports[`107.fenced_code_blocks.html 1`] = `"aaa"`;
+
+exports[`108.fenced_code_blocks.html 1`] = `
+"    aaa
+    ~~~ ~~"
+`;
+
+exports[`109.fenced_code_blocks.html 1`] = `
+"foo
+
+    bar
+    
+
+baz"
+`;
+
+exports[`110.fenced_code_blocks.html 1`] = `
+"## foo
+
+    bar
+    
+
+# baz"
+`;
+
+exports[`111.fenced_code_blocks.html 1`] = `
+"    def foo(x)
+      return 3
+    end"
+`;
+
+exports[`112.fenced_code_blocks.html 1`] = `
+"    def foo(x)
+      return 3
+    end"
+`;
+
+exports[`113.fenced_code_blocks.html 1`] = `""`;
+
+exports[`114.fenced_code_blocks.html 1`] = `"\`aa\` foo"`;
+
+exports[`115.fenced_code_blocks.html 1`] = `"    \`\`\` aaa"`;
+
+exports[`116.html_blocks.html 1`] = `
+"\\\\*\\\\*Hello\\\\*\\\\*,
+
+_world_."
+`;
+
+exports[`117.html_blocks.html 1`] = `
+"hi
+
+okay."
+`;
+
+exports[`118.html_blocks.html 1`] = `"\\\\*hello\\\\*"`;
+
+exports[`119.html_blocks.html 1`] = `"\\\\*foo\\\\*"`;
+
+exports[`120.html_blocks.html 1`] = `"_Markdown_"`;
+
+exports[`121.html_blocks.html 1`] = `""`;
+
+exports[`122.html_blocks.html 1`] = `""`;
+
+exports[`123.html_blocks.html 1`] = `
+"\\\\*foo\\\\*
+
+_bar_"
+`;
+
+exports[`124.html_blocks.html 1`] = `""`;
+
+exports[`125.html_blocks.html 1`] = `""`;
+
+exports[`126.html_blocks.html 1`] = `""`;
+
+exports[`127.html_blocks.html 1`] = `"[\\\\*foo\\\\*](bar)"`;
+
+exports[`128.html_blocks.html 1`] = `"foo"`;
+
+exports[`129.html_blocks.html 1`] = `"\`\`\` c int x = 33; \`\`\`"`;
+
+exports[`130.html_blocks.html 1`] = `"[\\\\*bar\\\\*](foo)"`;
+
+exports[`131.html_blocks.html 1`] = `"\\\\*bar\\\\*"`;
+
+exports[`132.html_blocks.html 1`] = `"_\\\\*bar\\\\*_"`;
+
+exports[`133.html_blocks.html 1`] = `"\\\\*bar\\\\*"`;
+
+exports[`134.html_blocks.html 1`] = `"\\\\*foo\\\\*"`;
+
+exports[`135.html_blocks.html 1`] = `"_foo_"`;
+
+exports[`136.html_blocks.html 1`] = `"_foo_"`;
+
+exports[`137.html_blocks.html 1`] = `
+"    
+    import Text.HTML.TagSoup
+    
+    main :: IO ()
+    main = print $ parseTags tags
+    
+
+okay"
+`;
+
+exports[`138.html_blocks.html 1`] = `
+"// JavaScript example document.getElementById(\\"demo\\").innerHTML = \\"Hello JavaScript!\\";
+
+okay"
+`;
+
+exports[`139.html_blocks.html 1`] = `
+"h1 {color:red;} p {color:blue;}
+
+okay"
+`;
+
+exports[`140.html_blocks.html 1`] = `"foo"`;
+
+exports[`141.html_blocks.html 1`] = `
+"> foo
+
+bar"
+`;
+
+exports[`142.html_blocks.html 1`] = `"-   foo"`;
+
+exports[`143.html_blocks.html 1`] = `
+"p{color:red;}
+
+_foo_"
+`;
+
+exports[`144.html_blocks.html 1`] = `
+"\\\\*bar\\\\*
+
+_baz_"
+`;
+
+exports[`145.html_blocks.html 1`] = `
+"foo
+
+1\\\\. \\\\*bar\\\\*"
+`;
+
+exports[`146.html_blocks.html 1`] = `"okay"`;
+
+exports[`147.html_blocks.html 1`] = `
+"'; ?>
+
+okay"
+`;
+
+exports[`148.html_blocks.html 1`] = `""`;
+
+exports[`149.html_blocks.html 1`] = `"okay"`;
+
+exports[`150.html_blocks.html 1`] = `"    <!-- foo -->"`;
+
+exports[`151.html_blocks.html 1`] = `"    <div>"`;
+
+exports[`152.html_blocks.html 1`] = `
+"Foo
+
+bar"
+`;
+
+exports[`153.html_blocks.html 1`] = `
+"bar
+
+\\\\*foo\\\\*"
+`;
+
+exports[`154.html_blocks.html 1`] = `
+"Foo [baz](bar)
+
+[](bar)"
+`;
+
+exports[`155.html_blocks.html 1`] = `"_Emphasized_ text."`;
+
+exports[`156.html_blocks.html 1`] = `"\\\\*Emphasized\\\\* text."`;
+
+exports[`157.html_blocks.html 1`] = `"Hi"`;
+
+exports[`158.html_blocks.html 1`] = `
+"    <td>
+      Hi
+    </td>"
+`;
+
+exports[`159.link_reference_definitions.html 1`] = `"[foo](/url \\"title\\")"`;
+
+exports[`160.link_reference_definitions.html 1`] = `"[foo](/url \\"the title\\")"`;
+
+exports[`161.link_reference_definitions.html 1`] = `"[Foo*bar\\\\]](my_(url) \\"title (with parens)\\")"`;
+
+exports[`162.link_reference_definitions.html 1`] = `"[Foo bar](my%20url \\"title\\")"`;
+
+exports[`163.link_reference_definitions.html 1`] = `
+"[foo](/url \\"
+title
+line1
+line2
+\\")"
+`;
+
+exports[`164.link_reference_definitions.html 1`] = `
+"\\\\[foo\\\\]: /url 'title
+
+with blank line'
+
+\\\\[foo\\\\]"
+`;
+
+exports[`165.link_reference_definitions.html 1`] = `"[foo](/url)"`;
+
+exports[`166.link_reference_definitions.html 1`] = `
+"\\\\[foo\\\\]:
+
+\\\\[foo\\\\]"
+`;
+
+exports[`167.link_reference_definitions.html 1`] = `"[foo](/url%5Cbar*baz \\"foo\\"bar\\\\baz\\")"`;
+
+exports[`168.link_reference_definitions.html 1`] = `"[foo](url)"`;
+
+exports[`169.link_reference_definitions.html 1`] = `"[foo](first)"`;
+
+exports[`170.link_reference_definitions.html 1`] = `"[Foo](/url)"`;
+
+exports[`171.link_reference_definitions.html 1`] = `"[αγω](/%CF%86%CE%BF%CF%85)"`;
+
+exports[`172.link_reference_definitions.html 1`] = `""`;
+
+exports[`173.link_reference_definitions.html 1`] = `"bar"`;
+
+exports[`174.link_reference_definitions.html 1`] = `"\\\\[foo\\\\]: /url \\"title\\" ok"`;
+
+exports[`175.link_reference_definitions.html 1`] = `"\\"title\\" ok"`;
+
+exports[`176.link_reference_definitions.html 1`] = `
+"    [foo]: /url \\"title\\"
+    
+
+\\\\[foo\\\\]"
+`;
+
+exports[`177.link_reference_definitions.html 1`] = `
+"    [foo]: /url
+    
+
+\\\\[foo\\\\]"
+`;
+
+exports[`178.link_reference_definitions.html 1`] = `
+"Foo \\\\[bar\\\\]: /baz
+
+\\\\[bar\\\\]"
+`;
+
+exports[`179.link_reference_definitions.html 1`] = `
+"# [Foo](/url)
+
+> bar"
+`;
+
+exports[`180.link_reference_definitions.html 1`] = `"[foo](/foo-url \\"foo\\"), [bar](/bar-url \\"bar\\"), [baz](/baz-url)"`;
+
+exports[`181.link_reference_definitions.html 1`] = `"[foo](/url)"`;
+
+exports[`182.paragraphs.html 1`] = `
+"aaa
+
+bbb"
+`;
+
+exports[`183.paragraphs.html 1`] = `
+"aaa bbb
+
+ccc ddd"
+`;
+
+exports[`184.paragraphs.html 1`] = `
+"aaa
+
+bbb"
+`;
+
+exports[`185.paragraphs.html 1`] = `"aaa bbb"`;
+
+exports[`186.paragraphs.html 1`] = `"aaa bbb ccc"`;
+
+exports[`187.paragraphs.html 1`] = `"aaa bbb"`;
+
+exports[`188.paragraphs.html 1`] = `
+"    aaa
+    
+
+bbb"
+`;
+
+exports[`189.paragraphs.html 1`] = `
+"aaa  
+bbb"
+`;
+
+exports[`190.blank_lines.html 1`] = `
+"aaa
+
+# aaa"
+`;
+
+exports[`191.block_quotes.html 1`] = `
+"> # Foo
+> 
+> bar baz"
+`;
+
+exports[`192.block_quotes.html 1`] = `
+"> # Foo
+> 
+> bar baz"
+`;
+
+exports[`193.block_quotes.html 1`] = `
+"> # Foo
+> 
+> bar baz"
+`;
+
+exports[`194.block_quotes.html 1`] = `
+"    > # Foo
+    > bar
+    > baz"
+`;
+
+exports[`195.block_quotes.html 1`] = `
+"> # Foo
+> 
+> bar baz"
+`;
+
+exports[`196.block_quotes.html 1`] = `"> bar baz foo"`;
+
+exports[`197.block_quotes.html 1`] = `
+"> foo
+
+* * *"
+`;
+
+exports[`198.block_quotes.html 1`] = `
+"> -   foo
+
+-   bar"
+`;
+
+exports[`199.block_quotes.html 1`] = `
+">     foo
+>     
+
+    bar"
+`;
+
+exports[`200.block_quotes.html 1`] = `"foo"`;
+
+exports[`201.block_quotes.html 1`] = `"> foo - bar"`;
+
+exports[`202.block_quotes.html 1`] = `""`;
+
+exports[`203.block_quotes.html 1`] = `""`;
+
+exports[`204.block_quotes.html 1`] = `"> foo"`;
+
+exports[`205.block_quotes.html 1`] = `
+"> foo
+
+> bar"
+`;
+
+exports[`206.block_quotes.html 1`] = `"> foo bar"`;
+
+exports[`207.block_quotes.html 1`] = `
+"> foo
+> 
+> bar"
+`;
+
+exports[`208.block_quotes.html 1`] = `
+"foo
+
+> bar"
+`;
+
+exports[`209.block_quotes.html 1`] = `
+"> aaa
+
+* * *
+
+> bbb"
+`;
+
+exports[`210.block_quotes.html 1`] = `"> bar baz"`;
+
+exports[`211.block_quotes.html 1`] = `
+"> bar
+
+baz"
+`;
+
+exports[`212.block_quotes.html 1`] = `
+"> bar
+
+baz"
+`;
+
+exports[`213.block_quotes.html 1`] = `"> > > foo bar"`;
+
+exports[`214.block_quotes.html 1`] = `"> > > foo bar baz"`;
+
+exports[`215.block_quotes.html 1`] = `
+">     code
+>     
+
+> not code"
+`;
+
+exports[`216.list_items.html 1`] = `
+"A paragraph with two lines.
+
+    indented code
+    
+
+> A block quote."
+`;
+
+exports[`217.list_items.html 1`] = `
+"1.  A paragraph with two lines.
+    
+        indented code
+        
+    
+    > A block quote."
+`;
+
+exports[`218.list_items.html 1`] = `
+"-   one
+
+two"
+`;
+
+exports[`219.list_items.html 1`] = `
+"-   one
+    
+    two"
+`;
+
+exports[`220.list_items.html 1`] = `
+"-   one
+
+     two"
+`;
+
+exports[`221.list_items.html 1`] = `
+"-   one
+    
+    two"
+`;
+
+exports[`222.list_items.html 1`] = `
+"> > 1.  one
+> >     
+> >     two
+> >"
+`;
+
+exports[`223.list_items.html 1`] = `
+"> > -   one
+> > 
+> > two"
+`;
+
+exports[`224.list_items.html 1`] = `
+"-one
+
+2.two"
+`;
+
+exports[`225.list_items.html 1`] = `
+"-   foo
+    
+    bar"
+`;
+
+exports[`226.list_items.html 1`] = `
+"1.  foo
+    
+        bar
+        
+    
+    baz
+    
+    > bam"
+`;
+
+exports[`227.list_items.html 1`] = `
+"-   Foo
+    
+        bar
+        
+        
+        baz"
+`;
+
+exports[`228.list_items.html 1`] = `"123456789.  ok"`;
+
+exports[`229.list_items.html 1`] = `"1234567890\\\\. not ok"`;
+
+exports[`230.list_items.html 1`] = `"0.  ok"`;
+
+exports[`231.list_items.html 1`] = `"3.  ok"`;
+
+exports[`232.list_items.html 1`] = `"-1\\\\. not ok"`;
+
+exports[`233.list_items.html 1`] = `
+"-   foo
+    
+        bar"
+`;
+
+exports[`234.list_items.html 1`] = `
+"10.  foo
+    
+        bar"
+`;
+
+exports[`235.list_items.html 1`] = `
+"    indented code
+    
+
+paragraph
+
+    more code"
+`;
+
+exports[`236.list_items.html 1`] = `
+"1.      indented code
+        
+    
+    paragraph
+    
+        more code"
+`;
+
+exports[`237.list_items.html 1`] = `
+"1.       indented code
+        
+    
+    paragraph
+    
+        more code"
+`;
+
+exports[`238.list_items.html 1`] = `
+"foo
+
+bar"
+`;
+
+exports[`239.list_items.html 1`] = `
+"-   foo
+
+bar"
+`;
+
+exports[`240.list_items.html 1`] = `
+"-   foo
+    
+    bar"
+`;
+
+exports[`241.list_items.html 1`] = `
+"-   foo
+-       bar
+        
+    
+-       baz"
+`;
+
+exports[`242.list_items.html 1`] = `"-   foo"`;
+
+exports[`243.list_items.html 1`] = `"foo"`;
+
+exports[`244.list_items.html 1`] = `
+"-   foo
+
+-   bar"
+`;
+
+exports[`245.list_items.html 1`] = `
+"-   foo
+
+-   bar"
+`;
+
+exports[`246.list_items.html 1`] = `
+"1.  foo
+
+3.  bar"
+`;
+
+exports[`247.list_items.html 1`] = `""`;
+
+exports[`248.list_items.html 1`] = `
+"foo *
+
+foo 1."
+`;
+
+exports[`249.list_items.html 1`] = `
+"1.  A paragraph with two lines.
+    
+        indented code
+        
+    
+    > A block quote."
+`;
+
+exports[`250.list_items.html 1`] = `
+"1.  A paragraph with two lines.
+    
+        indented code
+        
+    
+    > A block quote."
+`;
+
+exports[`251.list_items.html 1`] = `
+"1.  A paragraph with two lines.
+    
+        indented code
+        
+    
+    > A block quote."
+`;
+
+exports[`252.list_items.html 1`] = `
+"    1.  A paragraph
+        with two lines.
+    
+            indented code
+    
+        > A block quote."
+`;
+
+exports[`253.list_items.html 1`] = `
+"1.  A paragraph with two lines.
+    
+        indented code
+        
+    
+    > A block quote."
+`;
+
+exports[`254.list_items.html 1`] = `"1.  A paragraph with two lines."`;
+
+exports[`255.list_items.html 1`] = `
+"> 1.  > Blockquote continued here.
+>"
+`;
+
+exports[`256.list_items.html 1`] = `
+"> 1.  > Blockquote continued here.
+>"
+`;
+
+exports[`257.list_items.html 1`] = `
+"-   foo
+    -   bar
+        -   baz
+            -   boo"
+`;
+
+exports[`258.list_items.html 1`] = `
+"-   foo
+-   bar
+-   baz
+-   boo"
+`;
+
+exports[`259.list_items.html 1`] = `
+"10.  foo
+    -   bar"
+`;
+
+exports[`260.list_items.html 1`] = `
+"10.  foo
+
+-   bar"
+`;
+
+exports[`261.list_items.html 1`] = `"-   -   foo"`;
+
+exports[`262.list_items.html 1`] = `"1.  -   2.  foo"`;
+
+exports[`263.list_items.html 1`] = `
+"-   # Foo
+    
+-   ## Bar
+    
+    baz"
+`;
+
+exports[`264.lists.html 1`] = `
+"-   foo
+-   bar
+
+-   baz"
+`;
+
+exports[`265.lists.html 1`] = `
+"1.  foo
+2.  bar
+
+3.  baz"
+`;
+
+exports[`266.lists.html 1`] = `
+"Foo
+
+-   bar
+-   baz"
+`;
+
+exports[`267.lists.html 1`] = `"The number of windows in my house is 14. The number of doors is 6."`;
+
+exports[`268.lists.html 1`] = `
+"The number of windows in my house is
+
+1.  The number of doors is 6."
+`;
+
+exports[`269.lists.html 1`] = `
+"-   foo
+    
+-   bar
+    
+-   baz"
+`;
+
+exports[`270.lists.html 1`] = `
+"-   foo
+    -   bar
+        -   baz
+            
+            bim"
+`;
+
+exports[`271.lists.html 1`] = `
+"-   foo
+-   bar
+
+-   baz
+-   bim"
+`;
+
+exports[`272.lists.html 1`] = `
+"-   foo
+    
+    notcode
+    
+-   foo
+    
+
+    code"
+`;
+
+exports[`273.lists.html 1`] = `
+"-   a
+-   b
+-   c
+-   d
+-   e
+-   f
+-   g"
+`;
+
+exports[`274.lists.html 1`] = `
+"1.  a
+    
+2.  b
+    
+3.  c"
+`;
+
+exports[`275.lists.html 1`] = `
+"-   a
+-   b
+-   c
+-   d - e"
+`;
+
+exports[`276.lists.html 1`] = `
+"1.  a
+    
+2.  b
+    
+
+    3. c"
+`;
+
+exports[`277.lists.html 1`] = `
+"-   a
+    
+-   b
+    
+-   c"
+`;
+
+exports[`278.lists.html 1`] = `
+"-   a
+    
+
+-   c"
+`;
+
+exports[`279.lists.html 1`] = `
+"-   a
+    
+-   b
+    
+    c
+    
+-   d"
+`;
+
+exports[`280.lists.html 1`] = `
+"-   a
+    
+-   b
+    
+-   d"
+`;
+
+exports[`281.lists.html 1`] = `
+"-   a
+-       b
+        
+        
+        
+    
+-   c"
+`;
+
+exports[`282.lists.html 1`] = `
+"-   a
+    -   b
+        
+        c
+        
+-   d"
+`;
+
+exports[`283.lists.html 1`] = `
+"-   a
+    
+    > b
+    
+-   c"
+`;
+
+exports[`284.lists.html 1`] = `
+"-   a
+    
+    > b
+    
+        c
+        
+    
+-   d"
+`;
+
+exports[`285.lists.html 1`] = `"-   a"`;
+
+exports[`286.lists.html 1`] = `
+"-   a
+    -   b"
+`;
+
+exports[`287.lists.html 1`] = `
+"1.      foo
+        
+    
+    bar"
+`;
+
+exports[`288.lists.html 1`] = `
+"-   foo
+    
+    -   bar
+    
+    baz"
+`;
+
+exports[`289.lists.html 1`] = `
+"-   a
+    
+    -   b
+    -   c
+-   d
+    
+    -   e
+    -   f"
+`;
+
+exports[`290.inlines.html 1`] = `"\`hi\`lo\`"`;
+
+exports[`291.backslash_escapes.html 1`] = `"!\\"#$%&'()*+,-./:;<=>?@\\\\[\\\\\\\\\\\\]^_\`{|}~"`;
+
+exports[`292.backslash_escapes.html 1`] = `"\\\\\\\\→\\\\\\\\A\\\\\\\\a\\\\ \\\\\\\\3\\\\\\\\φ\\\\\\\\«"`;
+
+exports[`293.backslash_escapes.html 1`] = `"\\\\*not emphasized\\\\* <br/> not a tag \\\\[not a link\\\\](/foo) \\\\\`not code\\\\\` 1. not a list * not a list # not a heading \\\\[foo\\\\]: /url \\"not a reference\\""`;
+
+exports[`294.backslash_escapes.html 1`] = `"\\\\_emphasis_"`;
+
+exports[`295.backslash_escapes.html 1`] = `
+"foo  
+bar"
+`;
+
+exports[`296.backslash_escapes.html 1`] = `"\`\`\\\\[\\\\\` \`\`"`;
+
+exports[`297.backslash_escapes.html 1`] = `"    \\\\[\\\\]"`;
+
+exports[`298.backslash_escapes.html 1`] = `"    \\\\[\\\\]"`;
+
+exports[`299.backslash_escapes.html 1`] = `"[http://example.com?find=\\\\\\\\*](http://example.com?find=%5C*)"`;
+
+exports[`300.backslash_escapes.html 1`] = `""`;
+
+exports[`301.backslash_escapes.html 1`] = `"[foo](/bar* \\"ti*tle\\")"`;
+
+exports[`302.backslash_escapes.html 1`] = `"[foo](/bar* \\"ti*tle\\")"`;
+
+exports[`303.backslash_escapes.html 1`] = `"    foo"`;
+
+exports[`304.entity_and_numeric_character_references.html 1`] = `"  & © Æ Ď ¾ ℋ ⅆ ∲ ≧̸"`;
+
+exports[`305.entity_and_numeric_character_references.html 1`] = `"\\\\# Ӓ Ϡ �"`;
+
+exports[`306.entity_and_numeric_character_references.html 1`] = `"\\" ആ ಫ"`;
+
+exports[`307.entity_and_numeric_character_references.html 1`] = `"&nbsp &x; &#; &#x; &#987654321; &#abcdef0; &ThisIsNotDefined; &hi?;"`;
+
+exports[`308.entity_and_numeric_character_references.html 1`] = `"&copy"`;
+
+exports[`309.entity_and_numeric_character_references.html 1`] = `"&MadeUpEntity;"`;
+
+exports[`310.entity_and_numeric_character_references.html 1`] = `""`;
+
+exports[`311.entity_and_numeric_character_references.html 1`] = `"[foo](/f%C3%B6%C3%B6 \\"föö\\")"`;
+
+exports[`312.entity_and_numeric_character_references.html 1`] = `"[foo](/f%C3%B6%C3%B6 \\"föö\\")"`;
+
+exports[`313.entity_and_numeric_character_references.html 1`] = `"    foo"`;
+
+exports[`314.entity_and_numeric_character_references.html 1`] = `"\`f&ouml;&ouml;\`"`;
+
+exports[`315.entity_and_numeric_character_references.html 1`] = `"    f&ouml;f&ouml;"`;
+
+exports[`316.code_spans.html 1`] = `"\`foo\`"`;
+
+exports[`317.code_spans.html 1`] = `"\`\`foo \` bar\`\`"`;
+
+exports[`318.code_spans.html 1`] = `"\` \`\` \`"`;
+
+exports[`319.code_spans.html 1`] = `"\`foo\`"`;
+
+exports[`320.code_spans.html 1`] = `"\`foo bar baz\`"`;
+
+exports[`321.code_spans.html 1`] = `"\`a  b\`"`;
+
+exports[`322.code_spans.html 1`] = `"\`foo \`\` bar\`"`;
+
+exports[`323.code_spans.html 1`] = `"\`foo\\\\\`bar\`"`;
+
+exports[`324.code_spans.html 1`] = `"*foo\`*\`"`;
+
+exports[`325.code_spans.html 1`] = `"\\\\[not a \`link](/foo\`)"`;
+
+exports[`326.code_spans.html 1`] = `"\`<a href=\\"\`\\">\`"`;
+
+exports[`327.code_spans.html 1`] = `
+"[\`](\`)
+
+[](\`)"
+`;
+
+exports[`328.code_spans.html 1`] = `"\`<http://foo.bar.\`baz>\`"`;
+
+exports[`329.code_spans.html 1`] = `"[http://foo.bar.\`baz](http://foo.bar.%60baz)\`"`;
+
+exports[`330.code_spans.html 1`] = `"\\\\\`\\\\\`\\\\\`foo\\\\\`\\\\\`"`;
+
+exports[`331.code_spans.html 1`] = `"\`foo"`;
+
+exports[`332.code_spans.html 1`] = `"\`foo\`bar\`"`;
+
+exports[`333.emphasis_and_strong_emphasis.html 1`] = `"_foo bar_"`;
+
+exports[`334.emphasis_and_strong_emphasis.html 1`] = `"a * foo bar*"`;
+
+exports[`335.emphasis_and_strong_emphasis.html 1`] = `"a*\\"foo\\"*"`;
+
+exports[`336.emphasis_and_strong_emphasis.html 1`] = `"* a *"`;
+
+exports[`337.emphasis_and_strong_emphasis.html 1`] = `"foo_bar_"`;
+
+exports[`338.emphasis_and_strong_emphasis.html 1`] = `"5_6_78"`;
+
+exports[`339.emphasis_and_strong_emphasis.html 1`] = `"_foo bar_"`;
+
+exports[`340.emphasis_and_strong_emphasis.html 1`] = `"_ foo bar_"`;
+
+exports[`341.emphasis_and_strong_emphasis.html 1`] = `"a_\\"foo\\"_"`;
+
+exports[`342.emphasis_and_strong_emphasis.html 1`] = `"foo\\\\_bar\\\\_"`;
+
+exports[`343.emphasis_and_strong_emphasis.html 1`] = `"5\\\\_6\\\\_78"`;
+
+exports[`344.emphasis_and_strong_emphasis.html 1`] = `"пристаням_стремятся_"`;
+
+exports[`345.emphasis_and_strong_emphasis.html 1`] = `"aa_\\"bb\\"_cc"`;
+
+exports[`346.emphasis_and_strong_emphasis.html 1`] = `"foo-_(bar)_"`;
+
+exports[`347.emphasis_and_strong_emphasis.html 1`] = `"_foo*"`;
+
+exports[`348.emphasis_and_strong_emphasis.html 1`] = `"\\\\*foo bar \\\\*"`;
+
+exports[`349.emphasis_and_strong_emphasis.html 1`] = `"\\\\*foo bar \\\\*"`;
+
+exports[`350.emphasis_and_strong_emphasis.html 1`] = `"*(*foo)"`;
+
+exports[`351.emphasis_and_strong_emphasis.html 1`] = `"_(_foo_)_"`;
+
+exports[`352.emphasis_and_strong_emphasis.html 1`] = `"_foo_bar"`;
+
+exports[`353.emphasis_and_strong_emphasis.html 1`] = `"\\\\_foo bar \\\\_"`;
+
+exports[`354.emphasis_and_strong_emphasis.html 1`] = `"_(_foo)"`;
+
+exports[`355.emphasis_and_strong_emphasis.html 1`] = `"_(_foo_)_"`;
+
+exports[`356.emphasis_and_strong_emphasis.html 1`] = `"\\\\_foo\\\\_bar"`;
+
+exports[`357.emphasis_and_strong_emphasis.html 1`] = `"_пристаням_стремятся"`;
+
+exports[`358.emphasis_and_strong_emphasis.html 1`] = `"_foo\\\\_bar\\\\_baz_"`;
+
+exports[`359.emphasis_and_strong_emphasis.html 1`] = `"_(bar)_."`;
+
+exports[`360.emphasis_and_strong_emphasis.html 1`] = `"**foo bar**"`;
+
+exports[`361.emphasis_and_strong_emphasis.html 1`] = `"\\\\*\\\\* foo bar**"`;
+
+exports[`362.emphasis_and_strong_emphasis.html 1`] = `"a**\\"foo\\"**"`;
+
+exports[`363.emphasis_and_strong_emphasis.html 1`] = `"foo**bar**"`;
+
+exports[`364.emphasis_and_strong_emphasis.html 1`] = `"**foo bar**"`;
+
+exports[`365.emphasis_and_strong_emphasis.html 1`] = `"__ foo bar__"`;
+
+exports[`366.emphasis_and_strong_emphasis.html 1`] = `"__ foo bar__"`;
+
+exports[`367.emphasis_and_strong_emphasis.html 1`] = `"a__\\"foo\\"__"`;
+
+exports[`368.emphasis_and_strong_emphasis.html 1`] = `"foo\\\\_\\\\_bar\\\\_\\\\_"`;
+
+exports[`369.emphasis_and_strong_emphasis.html 1`] = `"5\\\\_\\\\_6\\\\_\\\\_78"`;
+
+exports[`370.emphasis_and_strong_emphasis.html 1`] = `"пристаням__стремятся__"`;
+
+exports[`371.emphasis_and_strong_emphasis.html 1`] = `"**foo, **bar**, baz**"`;
+
+exports[`372.emphasis_and_strong_emphasis.html 1`] = `"foo-**(bar)**"`;
+
+exports[`373.emphasis_and_strong_emphasis.html 1`] = `"\\\\*\\\\*foo bar \\\\*\\\\*"`;
+
+exports[`374.emphasis_and_strong_emphasis.html 1`] = `"**(**foo)"`;
+
+exports[`375.emphasis_and_strong_emphasis.html 1`] = `"_(**foo**)_"`;
+
+exports[`376.emphasis_and_strong_emphasis.html 1`] = `"**Gomphocarpus (_Gomphocarpus physocarpus_, syn. _Asclepias physocarpa_)**"`;
+
+exports[`377.emphasis_and_strong_emphasis.html 1`] = `"**foo \\"_bar_\\" foo**"`;
+
+exports[`378.emphasis_and_strong_emphasis.html 1`] = `"**foo**bar"`;
+
+exports[`379.emphasis_and_strong_emphasis.html 1`] = `"\\\\_\\\\_foo bar \\\\_\\\\_"`;
+
+exports[`380.emphasis_and_strong_emphasis.html 1`] = `"__(__foo)"`;
+
+exports[`381.emphasis_and_strong_emphasis.html 1`] = `"_(**foo**)_"`;
+
+exports[`382.emphasis_and_strong_emphasis.html 1`] = `"\\\\_\\\\_foo\\\\_\\\\_bar"`;
+
+exports[`383.emphasis_and_strong_emphasis.html 1`] = `"__пристаням__стремятся"`;
+
+exports[`384.emphasis_and_strong_emphasis.html 1`] = `"**foo\\\\_\\\\_bar\\\\_\\\\_baz**"`;
+
+exports[`385.emphasis_and_strong_emphasis.html 1`] = `"**(bar)**."`;
+
+exports[`386.emphasis_and_strong_emphasis.html 1`] = `"_foo [bar](/url)_"`;
+
+exports[`387.emphasis_and_strong_emphasis.html 1`] = `"_foo bar_"`;
+
+exports[`388.emphasis_and_strong_emphasis.html 1`] = `"_foo **bar** baz_"`;
+
+exports[`389.emphasis_and_strong_emphasis.html 1`] = `"_foo _bar_ baz_"`;
+
+exports[`390.emphasis_and_strong_emphasis.html 1`] = `"__foo_ bar_"`;
+
+exports[`391.emphasis_and_strong_emphasis.html 1`] = `"_foo _bar__"`;
+
+exports[`392.emphasis_and_strong_emphasis.html 1`] = `"_foo **bar** baz_"`;
+
+exports[`393.emphasis_and_strong_emphasis.html 1`] = `"_foo**bar**baz_"`;
+
+exports[`394.emphasis_and_strong_emphasis.html 1`] = `"_foo**bar_"`;
+
+exports[`395.emphasis_and_strong_emphasis.html 1`] = `"_**foo** bar_"`;
+
+exports[`396.emphasis_and_strong_emphasis.html 1`] = `"_foo **bar**_"`;
+
+exports[`397.emphasis_and_strong_emphasis.html 1`] = `"_foo**bar**_"`;
+
+exports[`398.emphasis_and_strong_emphasis.html 1`] = `"_foo **bar _baz_ bim** bop_"`;
+
+exports[`399.emphasis_and_strong_emphasis.html 1`] = `"_foo [_bar_](/url)_"`;
+
+exports[`400.emphasis_and_strong_emphasis.html 1`] = `"\\\\*\\\\* is not an empty emphasis"`;
+
+exports[`401.emphasis_and_strong_emphasis.html 1`] = `"\\\\*\\\\*\\\\*\\\\* is not an empty strong emphasis"`;
+
+exports[`402.emphasis_and_strong_emphasis.html 1`] = `"**foo [bar](/url)**"`;
+
+exports[`403.emphasis_and_strong_emphasis.html 1`] = `"**foo bar**"`;
+
+exports[`404.emphasis_and_strong_emphasis.html 1`] = `"**foo _bar_ baz**"`;
+
+exports[`405.emphasis_and_strong_emphasis.html 1`] = `"**foo **bar** baz**"`;
+
+exports[`406.emphasis_and_strong_emphasis.html 1`] = `"****foo** bar**"`;
+
+exports[`407.emphasis_and_strong_emphasis.html 1`] = `"**foo **bar****"`;
+
+exports[`408.emphasis_and_strong_emphasis.html 1`] = `"**foo _bar_ baz**"`;
+
+exports[`409.emphasis_and_strong_emphasis.html 1`] = `"**foo_bar_baz**"`;
+
+exports[`410.emphasis_and_strong_emphasis.html 1`] = `"**_foo_ bar**"`;
+
+exports[`411.emphasis_and_strong_emphasis.html 1`] = `"**foo _bar_**"`;
+
+exports[`412.emphasis_and_strong_emphasis.html 1`] = `"**foo _bar **baz** bim_ bop**"`;
+
+exports[`413.emphasis_and_strong_emphasis.html 1`] = `"**foo [_bar_](/url)**"`;
+
+exports[`414.emphasis_and_strong_emphasis.html 1`] = `"__ is not an empty emphasis"`;
+
+exports[`415.emphasis_and_strong_emphasis.html 1`] = `"____ is not an empty strong emphasis"`;
+
+exports[`416.emphasis_and_strong_emphasis.html 1`] = `"foo ***"`;
+
+exports[`417.emphasis_and_strong_emphasis.html 1`] = `"foo _*_"`;
+
+exports[`418.emphasis_and_strong_emphasis.html 1`] = `"foo ___"`;
+
+exports[`419.emphasis_and_strong_emphasis.html 1`] = `"foo *****"`;
+
+exports[`420.emphasis_and_strong_emphasis.html 1`] = `"foo *****"`;
+
+exports[`421.emphasis_and_strong_emphasis.html 1`] = `"foo **_**"`;
+
+exports[`422.emphasis_and_strong_emphasis.html 1`] = `"*_foo_"`;
+
+exports[`423.emphasis_and_strong_emphasis.html 1`] = `"_foo_*"`;
+
+exports[`424.emphasis_and_strong_emphasis.html 1`] = `"***foo**"`;
+
+exports[`425.emphasis_and_strong_emphasis.html 1`] = `"\\\\*\\\\*\\\\*_foo_"`;
+
+exports[`426.emphasis_and_strong_emphasis.html 1`] = `"**foo***"`;
+
+exports[`427.emphasis_and_strong_emphasis.html 1`] = `"_foo_\\\\*\\\\*\\\\*"`;
+
+exports[`428.emphasis_and_strong_emphasis.html 1`] = `"foo ___"`;
+
+exports[`429.emphasis_and_strong_emphasis.html 1`] = `"foo ___"`;
+
+exports[`430.emphasis_and_strong_emphasis.html 1`] = `"foo _*_"`;
+
+exports[`431.emphasis_and_strong_emphasis.html 1`] = `"foo _____"`;
+
+exports[`432.emphasis_and_strong_emphasis.html 1`] = `"foo **_**"`;
+
+exports[`433.emphasis_and_strong_emphasis.html 1`] = `"foo *****"`;
+
+exports[`434.emphasis_and_strong_emphasis.html 1`] = `"__foo_"`;
+
+exports[`435.emphasis_and_strong_emphasis.html 1`] = `"_foo__"`;
+
+exports[`436.emphasis_and_strong_emphasis.html 1`] = `"_**foo**"`;
+
+exports[`437.emphasis_and_strong_emphasis.html 1`] = `"\\\\_\\\\_\\\\__foo_"`;
+
+exports[`438.emphasis_and_strong_emphasis.html 1`] = `"**foo**_"`;
+
+exports[`439.emphasis_and_strong_emphasis.html 1`] = `"_foo_\\\\_\\\\_\\\\_"`;
+
+exports[`440.emphasis_and_strong_emphasis.html 1`] = `"**foo**"`;
+
+exports[`441.emphasis_and_strong_emphasis.html 1`] = `"__foo__"`;
+
+exports[`442.emphasis_and_strong_emphasis.html 1`] = `"**foo**"`;
+
+exports[`443.emphasis_and_strong_emphasis.html 1`] = `"__foo__"`;
+
+exports[`444.emphasis_and_strong_emphasis.html 1`] = `"****foo****"`;
+
+exports[`445.emphasis_and_strong_emphasis.html 1`] = `"****foo****"`;
+
+exports[`446.emphasis_and_strong_emphasis.html 1`] = `"******foo******"`;
+
+exports[`447.emphasis_and_strong_emphasis.html 1`] = `"_**foo**_"`;
+
+exports[`448.emphasis_and_strong_emphasis.html 1`] = `"_****foo****_"`;
+
+exports[`449.emphasis_and_strong_emphasis.html 1`] = `"_foo _bar_ baz_"`;
+
+exports[`450.emphasis_and_strong_emphasis.html 1`] = `"_foo **bar *baz bim** bam_"`;
+
+exports[`451.emphasis_and_strong_emphasis.html 1`] = `"**foo **bar baz**"`;
+
+exports[`452.emphasis_and_strong_emphasis.html 1`] = `"*foo _bar baz_"`;
+
+exports[`453.emphasis_and_strong_emphasis.html 1`] = `"*[bar*](/url)"`;
+
+exports[`454.emphasis_and_strong_emphasis.html 1`] = `"_foo [bar_](/url)"`;
+
+exports[`455.emphasis_and_strong_emphasis.html 1`] = `"*![](foo \\"*\\")"`;
+
+exports[`456.emphasis_and_strong_emphasis.html 1`] = `
+"**[](**)
+
+[](**)"
+`;
+
+exports[`457.emphasis_and_strong_emphasis.html 1`] = `
+"__[](__)
+
+[](__)"
+`;
+
+exports[`458.emphasis_and_strong_emphasis.html 1`] = `"_a \`*\`_"`;
+
+exports[`459.emphasis_and_strong_emphasis.html 1`] = `"_a \`_\`_"`;
+
+exports[`460.emphasis_and_strong_emphasis.html 1`] = `"**a[http://foo.bar/?q=**](http://foo.bar/?q=**)"`;
+
+exports[`461.emphasis_and_strong_emphasis.html 1`] = `"__a[http://foo.bar/?q=__](http://foo.bar/?q=__)"`;
+
+exports[`462.links.html 1`] = `"[link](/uri \\"title\\")"`;
+
+exports[`463.links.html 1`] = `"[link](/uri)"`;
+
+exports[`464.links.html 1`] = `"link"`;
+
+exports[`465.links.html 1`] = `"link"`;
+
+exports[`466.links.html 1`] = `"\\\\[link\\\\](/my uri)"`;
+
+exports[`467.links.html 1`] = `"[link](/my%20uri)"`;
+
+exports[`468.links.html 1`] = `"\\\\[link\\\\](foo bar)"`;
+
+exports[`469.links.html 1`] = `"\\\\[link\\\\]()"`;
+
+exports[`470.links.html 1`] = `"[link]((foo))"`;
+
+exports[`471.links.html 1`] = `"[link](foo(and(bar)))"`;
+
+exports[`472.links.html 1`] = `"[link](foo(and(bar))"`;
+
+exports[`473.links.html 1`] = `"[link](foo(and(bar))"`;
+
+exports[`474.links.html 1`] = `"[link](foo):)"`;
+
+exports[`475.links.html 1`] = `
+"[link](#fragment)
+
+[link](http://example.com#fragment)
+
+[link](http://example.com?foo=3#frag)"
+`;
+
+exports[`476.links.html 1`] = `"[link](foo%5Cbar)"`;
+
+exports[`477.links.html 1`] = `"[link](foo%20b%C3%A4)"`;
+
+exports[`478.links.html 1`] = `"[link](%22title%22)"`;
+
+exports[`479.links.html 1`] = `"[link](/url \\"title\\") [link](/url \\"title\\") [link](/url \\"title\\")"`;
+
+exports[`480.links.html 1`] = `"[link](/url \\"title \\"\\"\\")"`;
+
+exports[`481.links.html 1`] = `"[link](/url%C2%A0%22title%22)"`;
+
+exports[`482.links.html 1`] = `"\\\\[link\\\\](/url \\"title \\"and\\" title\\")"`;
+
+exports[`483.links.html 1`] = `"[link](/url \\"title \\"and\\" title\\")"`;
+
+exports[`484.links.html 1`] = `"[link](/uri \\"title\\")"`;
+
+exports[`485.links.html 1`] = `"\\\\[link\\\\] (/uri)"`;
+
+exports[`486.links.html 1`] = `"[link \\\\[foo \\\\[bar\\\\]\\\\]](/uri)"`;
+
+exports[`487.links.html 1`] = `"\\\\[link\\\\] bar\\\\](/uri)"`;
+
+exports[`488.links.html 1`] = `"\\\\[link [bar](/uri)"`;
+
+exports[`489.links.html 1`] = `"[link \\\\[bar](/uri)"`;
+
+exports[`490.links.html 1`] = `"[link _foo **bar** \`#\`_](/uri)"`;
+
+exports[`491.links.html 1`] = `"[![moon](moon.jpg)](/uri)"`;
+
+exports[`492.links.html 1`] = `"\\\\[foo [bar](/uri)\\\\](/uri)"`;
+
+exports[`493.links.html 1`] = `"\\\\[foo _\\\\[bar [baz](/uri)\\\\](/uri)_\\\\](/uri)"`;
+
+exports[`494.links.html 1`] = `"![[foo](uri2)](uri3)"`;
+
+exports[`495.links.html 1`] = `"*[foo*](/uri)"`;
+
+exports[`496.links.html 1`] = `"[foo *bar](baz*)"`;
+
+exports[`497.links.html 1`] = `"_foo \\\\[bar_ baz\\\\]"`;
+
+exports[`498.links.html 1`] = `"\\\\[foo"`;
+
+exports[`499.links.html 1`] = `"\\\\[foo\`](/uri)\`"`;
+
+exports[`500.links.html 1`] = `"\\\\[foo[http://example.com/?search=\\\\](uri)](http://example.com/?search=%5D(uri))"`;
+
+exports[`501.links.html 1`] = `"[foo](/url \\"title\\")"`;
+
+exports[`502.links.html 1`] = `"[link \\\\[foo \\\\[bar\\\\]\\\\]](/uri)"`;
+
+exports[`503.links.html 1`] = `"[link \\\\[bar](/uri)"`;
+
+exports[`504.links.html 1`] = `"[link _foo **bar** \`#\`_](/uri)"`;
+
+exports[`505.links.html 1`] = `"[![moon](moon.jpg)](/uri)"`;
+
+exports[`506.links.html 1`] = `"\\\\[foo [bar](/uri)\\\\][ref](/uri)"`;
+
+exports[`507.links.html 1`] = `"\\\\[foo _bar [baz](/uri)_\\\\][ref](/uri)"`;
+
+exports[`508.links.html 1`] = `"*[foo*](/uri)"`;
+
+exports[`509.links.html 1`] = `"[foo *bar](/uri)"`;
+
+exports[`510.links.html 1`] = `"\\\\[foo"`;
+
+exports[`511.links.html 1`] = `"\\\\[foo\`][ref]\`"`;
+
+exports[`512.links.html 1`] = `"\\\\[foo[http://example.com/?search=\\\\]\\\\[ref\\\\]](http://example.com/?search=%5D%5Bref%5D)"`;
+
+exports[`513.links.html 1`] = `"[foo](/url \\"title\\")"`;
+
+exports[`514.links.html 1`] = `"[Толпой](/url) is a Russian word."`;
+
+exports[`515.links.html 1`] = `"[Baz](/url)"`;
+
+exports[`516.links.html 1`] = `"\\\\[foo\\\\] [bar](/url \\"title\\")"`;
+
+exports[`517.links.html 1`] = `"\\\\[foo\\\\] [bar](/url \\"title\\")"`;
+
+exports[`518.links.html 1`] = `"[bar](/url1)"`;
+
+exports[`519.links.html 1`] = `"\\\\[bar\\\\]\\\\[foo!\\\\]"`;
+
+exports[`520.links.html 1`] = `
+"\\\\[foo\\\\]\\\\[ref\\\\[\\\\]
+
+\\\\[ref\\\\[\\\\]: /uri"
+`;
+
+exports[`521.links.html 1`] = `
+"\\\\[foo\\\\]\\\\[ref\\\\[bar\\\\]\\\\]
+
+\\\\[ref\\\\[bar\\\\]\\\\]: /uri"
+`;
+
+exports[`522.links.html 1`] = `
+"\\\\[\\\\[\\\\[foo\\\\]\\\\]\\\\]
+
+\\\\[\\\\[\\\\[foo\\\\]\\\\]\\\\]: /url"
+`;
+
+exports[`523.links.html 1`] = `"[foo](/uri)"`;
+
+exports[`524.links.html 1`] = `"[bar\\\\](/uri)"`;
+
+exports[`525.links.html 1`] = `
+"\\\\[\\\\]
+
+\\\\[\\\\]: /uri"
+`;
+
+exports[`526.links.html 1`] = `
+"\\\\[ \\\\]
+
+\\\\[ \\\\]: /uri"
+`;
+
+exports[`527.links.html 1`] = `"[foo](/url \\"title\\")"`;
+
+exports[`528.links.html 1`] = `"[_foo_ bar](/url \\"title\\")"`;
+
+exports[`529.links.html 1`] = `"[Foo](/url \\"title\\")"`;
+
+exports[`530.links.html 1`] = `"[foo](/url \\"title\\") \\\\[\\\\]"`;
+
+exports[`531.links.html 1`] = `"[foo](/url \\"title\\")"`;
+
+exports[`532.links.html 1`] = `"[_foo_ bar](/url \\"title\\")"`;
+
+exports[`533.links.html 1`] = `"\\\\[[_foo_ bar](/url \\"title\\")\\\\]"`;
+
+exports[`534.links.html 1`] = `"\\\\[\\\\[bar [foo](/url)"`;
+
+exports[`535.links.html 1`] = `"[Foo](/url \\"title\\")"`;
+
+exports[`536.links.html 1`] = `"[foo](/url) bar"`;
+
+exports[`537.links.html 1`] = `"\\\\[foo\\\\]"`;
+
+exports[`538.links.html 1`] = `"*[foo*](/url)"`;
+
+exports[`539.links.html 1`] = `"[foo](/url2)"`;
+
+exports[`540.links.html 1`] = `"[foo](/url1)"`;
+
+exports[`541.links.html 1`] = `"foo"`;
+
+exports[`542.links.html 1`] = `"[foo](/url1)(not a link)"`;
+
+exports[`543.links.html 1`] = `"\\\\[foo\\\\][bar](/url)"`;
+
+exports[`544.links.html 1`] = `"[foo](/url2)[baz](/url1)"`;
+
+exports[`545.links.html 1`] = `"\\\\[foo\\\\][bar](/url1)"`;
+
+exports[`546.images.html 1`] = `"![foo](/url \\"title\\")"`;
+
+exports[`547.images.html 1`] = `"![foo bar](train.jpg \\"train & tracks\\")"`;
+
+exports[`548.images.html 1`] = `"![foo bar](/url2)"`;
+
+exports[`549.images.html 1`] = `"![foo bar](/url2)"`;
+
+exports[`550.images.html 1`] = `"![foo bar](train.jpg \\"train & tracks\\")"`;
+
+exports[`551.images.html 1`] = `"![foo bar](train.jpg \\"train & tracks\\")"`;
+
+exports[`552.images.html 1`] = `"![foo](train.jpg)"`;
+
+exports[`553.images.html 1`] = `"My ![foo bar](/path/to/train.jpg \\"title\\")"`;
+
+exports[`554.images.html 1`] = `"![foo](url)"`;
+
+exports[`555.images.html 1`] = `"![](/url)"`;
+
+exports[`556.images.html 1`] = `"![foo](/url)"`;
+
+exports[`557.images.html 1`] = `"![foo](/url)"`;
+
+exports[`558.images.html 1`] = `"![foo](/url \\"title\\")"`;
+
+exports[`559.images.html 1`] = `"![foo bar](/url \\"title\\")"`;
+
+exports[`560.images.html 1`] = `"![Foo](/url \\"title\\")"`;
+
+exports[`561.images.html 1`] = `"![foo](/url \\"title\\") \\\\[\\\\]"`;
+
+exports[`562.images.html 1`] = `"![foo](/url \\"title\\")"`;
+
+exports[`563.images.html 1`] = `"![foo bar](/url \\"title\\")"`;
+
+exports[`564.images.html 1`] = `
+"!\\\\[\\\\[foo\\\\]\\\\]
+
+\\\\[\\\\[foo\\\\]\\\\]: /url \\"title\\""
+`;
+
+exports[`565.images.html 1`] = `"![Foo](/url \\"title\\")"`;
+
+exports[`566.images.html 1`] = `"!\\\\[foo\\\\]"`;
+
+exports[`567.images.html 1`] = `"![foo](/url \\"title\\")"`;
+
+exports[`568.autolinks.html 1`] = `"[http://foo.bar.baz](http://foo.bar.baz)"`;
+
+exports[`569.autolinks.html 1`] = `"[http://foo.bar.baz/test?q=hello&id=22&boolean](http://foo.bar.baz/test?q=hello&id=22&boolean)"`;
+
+exports[`570.autolinks.html 1`] = `"[irc://foo.bar:2233/baz](irc://foo.bar:2233/baz)"`;
+
+exports[`571.autolinks.html 1`] = `"[MAILTO:FOO@BAR.BAZ](MAILTO:FOO@BAR.BAZ)"`;
+
+exports[`572.autolinks.html 1`] = `"[a+b+c:d](a+b+c:d)"`;
+
+exports[`573.autolinks.html 1`] = `"[made-up-scheme://foo,bar](made-up-scheme://foo,bar)"`;
+
+exports[`574.autolinks.html 1`] = `"[http://../](http://../)"`;
+
+exports[`575.autolinks.html 1`] = `"[localhost:5001/foo](localhost:5001/foo)"`;
+
+exports[`576.autolinks.html 1`] = `"<http://foo.bar/baz bim>"`;
+
+exports[`577.autolinks.html 1`] = `"[http://example.com/\\\\\\\\\\\\[\\\\](http://example.com/%5C%5B%5C)"`;
+
+exports[`578.autolinks.html 1`] = `"[foo@bar.example.com](mailto:foo@bar.example.com)"`;
+
+exports[`579.autolinks.html 1`] = `"[foo+special@Bar.baz-bar0.com](mailto:foo+special@Bar.baz-bar0.com)"`;
+
+exports[`580.autolinks.html 1`] = `"<foo+@bar.example.com>"`;
+
+exports[`581.autolinks.html 1`] = `"<>"`;
+
+exports[`582.autolinks.html 1`] = `"< http://foo.bar >"`;
+
+exports[`583.autolinks.html 1`] = `"<m:abc>"`;
+
+exports[`584.autolinks.html 1`] = `"<foo.bar.baz>"`;
+
+exports[`585.autolinks.html 1`] = `"http://example.com"`;
+
+exports[`586.autolinks.html 1`] = `"foo@bar.example.com"`;
+
+exports[`587.raw_html.html 1`] = `""`;
+
+exports[`588.raw_html.html 1`] = `""`;
+
+exports[`589.raw_html.html 1`] = `""`;
+
+exports[`590.raw_html.html 1`] = `""`;
+
+exports[`591.raw_html.html 1`] = `"Foo"`;
+
+exports[`592.raw_html.html 1`] = `"<33> <__>"`;
+
+exports[`593.raw_html.html 1`] = `"<a h*#ref=\\"hi\\">"`;
+
+exports[`594.raw_html.html 1`] = `"<a href=\\"hi'> <a href=hi'>"`;
+
+exports[`595.raw_html.html 1`] = `"< a>< foo><bar/ > <foo bar=baz bim!bop />"`;
+
+exports[`596.raw_html.html 1`] = `"<a href='bar'title=title>"`;
+
+exports[`597.raw_html.html 1`] = `""`;
+
+exports[`598.raw_html.html 1`] = `"</a href=\\"foo\\">"`;
+
+exports[`599.raw_html.html 1`] = `"foo"`;
+
+exports[`600.raw_html.html 1`] = `"foo <!-- not a comment -- two hyphens -->"`;
+
+exports[`601.raw_html.html 1`] = `
+"foo <!--> foo -->
+
+foo <!-- foo--->"
+`;
+
+exports[`602.raw_html.html 1`] = `"foo"`;
+
+exports[`603.raw_html.html 1`] = `"foo"`;
+
+exports[`604.raw_html.html 1`] = `"foo &<\\\\]\\\\]>"`;
+
+exports[`605.raw_html.html 1`] = `
+"foo[](ö)
+
+[](ö)"
+`;
+
+exports[`606.raw_html.html 1`] = `
+"foo[](\\\\*)
+
+[](\\\\*)"
+`;
+
+exports[`607.raw_html.html 1`] = `"<a href=\\"\\"\\">"`;
+
+exports[`608.hard_line_breaks.html 1`] = `
+"foo  
+baz"
+`;
+
+exports[`609.hard_line_breaks.html 1`] = `
+"foo  
+baz"
+`;
+
+exports[`610.hard_line_breaks.html 1`] = `
+"foo  
+baz"
+`;
+
+exports[`611.hard_line_breaks.html 1`] = `
+"foo  
+bar"
+`;
+
+exports[`612.hard_line_breaks.html 1`] = `
+"foo  
+bar"
+`;
+
+exports[`613.hard_line_breaks.html 1`] = `
+"_foo  
+bar_"
+`;
+
+exports[`614.hard_line_breaks.html 1`] = `
+"_foo  
+bar_"
+`;
+
+exports[`615.hard_line_breaks.html 1`] = `"\`code span\`"`;
+
+exports[`616.hard_line_breaks.html 1`] = `"\`code\\\\ span\`"`;
+
+exports[`617.hard_line_breaks.html 1`] = `""`;
+
+exports[`618.hard_line_breaks.html 1`] = `""`;
+
+exports[`619.hard_line_breaks.html 1`] = `"foo\\\\"`;
+
+exports[`620.hard_line_breaks.html 1`] = `"foo"`;
+
+exports[`621.hard_line_breaks.html 1`] = `"### foo\\\\"`;
+
+exports[`622.hard_line_breaks.html 1`] = `"### foo"`;
+
+exports[`623.soft_line_breaks.html 1`] = `"foo baz"`;
+
+exports[`624.soft_line_breaks.html 1`] = `"foo baz"`;
+
+exports[`625.textual_content.html 1`] = `"hello $.;'there"`;
+
+exports[`626.textual_content.html 1`] = `"Foo χρῆν"`;
+
+exports[`627.textual_content.html 1`] = `"Multiple spaces"`;
