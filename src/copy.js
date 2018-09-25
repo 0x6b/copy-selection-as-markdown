@@ -1,22 +1,31 @@
 import { getSelectionAsMarkdown, doCopy } from "./lib/util";
 
-let text = `[${document.title}](${document.URL})`;
-let selection = getSelectionAsMarkdown();
+async function main() {
+  try {
+    const quote = (await browser.storage.local.get("use-quote"))["use-quote"];
+    const link = (await browser.storage.local.get("link-to-source"))["link-to-source"];
 
-browser.storage.local.get("use-quote").then(
-  result => {
-    if (typeof result["use-quote"] === "undefined" || result["use-quote"]) {
-      selection = selection
-        .split("\n")
-        .map(line => `> ${line}`)
-        .join("\n");
-      if (selection !== "> ") text += `\n\n${selection}`;
-    } else {
-      if (selection !== "") text += `\n\n${selection}`;
+    let text = `[${document.title}](${document.URL})`;
+    let selection = getSelectionAsMarkdown();
+
+    if (selection !== "") {
+      if (typeof quote === "undefined" || quote) {
+        selection = selection
+          .split("\n")
+          .map(line => `> ${line}`)
+          .join("\n");
+      }
+      if (link) {
+        text += `\n\n${selection}`;
+      } else {
+        text = selection;
+      }
     }
+
     doCopy(text);
-  },
-  error => {
-    console.error(`Error: ${error}`);
+  } catch (e) {
+    console.error(e);
   }
-);
+}
+
+main();
