@@ -26,5 +26,8 @@
   },
   "dependencies": {
     "turndown": "4.0.2"
+  },
+  "prettier": {
+    "printWidth": 120
   }
 }

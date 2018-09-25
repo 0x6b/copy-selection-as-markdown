@@ -6,8 +6,7 @@ browser.contextMenus.create(
     documentUrlPatterns: ["<all_urls>"]
   },
   () => {
-    if (browser.runtime.lastError)
-      console.log(`Error: ${browser.runtime.lastError}`);
+    if (browser.runtime.lastError) console.log(`Error: ${browser.runtime.lastError}`);
   }
 );
 
@@ -19,16 +18,12 @@ browser.contextMenus.create(
     documentUrlPatterns: ["<all_urls>"]
   },
   () => {
-    if (browser.runtime.lastError)
-      console.log(`Error: ${browser.runtime.lastError}`);
+    if (browser.runtime.lastError) console.log(`Error: ${browser.runtime.lastError}`);
   }
 );
 
 browser.contextMenus.onClicked.addListener(({ menuItemId }, { id }) => {
-  if (
-    menuItemId === "copy-selection-as-markdown" ||
-    menuItemId === "copy-as-markdown"
-  ) {
+  if (menuItemId === "copy-selection-as-markdown" || menuItemId === "copy-as-markdown") {
     browser.tabs.executeScript(id, { file: "copy.js" });
   }
 });
