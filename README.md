@@ -15,7 +15,7 @@ Right click and select:
 
 ## Setting
 
-You can configure **Append quote (<code>&gt;</code>) to selection**.
+You can configure **Append quote (<code>&gt;</code>) to selection** and **Include link to source web page in the beginning of copied text**.
 
 1. Click the menu button ![](https://prod-cdn.sumo.mozilla.net/uploads/gallery/images/2017-10-22-15-37-15-18c775.png) and choose ![](https://prod-cdn.sumo.mozilla.net/uploads/gallery/images/2017-10-30-08-25-40-b7327f.png) Add-ons. The Add-ons Manager tab will open
 2. In the Add-ons Manager tab, select the Extensions panel
