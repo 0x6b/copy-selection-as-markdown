@@ -2,12 +2,9 @@ import TurndownService from "turndown";
 
 const url = require("url");
 
-const turndownService = TurndownService({
-  headingStyle: "atx",
-  bulletListMarker: "-"
-});
+const getSelectionAsMarkdown = options => {
+  const turndownService = TurndownService(options);
 
-const getSelectionAsMarkdown = () => {
   let html = "";
   const sel = document.getSelection();
 

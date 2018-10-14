@@ -1,36 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
-  browser.storage.local.get("use-quote").then(
+  browser.storage.local.get().then(
     result => {
-      if (typeof result["use-quote"] === "undefined") {
-        document.querySelector("#quote").checked = true;
-      } else {
-        document.querySelector("#quote").checked = result["use-quote"];
-      }
+      console.dir(result);
+      document.querySelector("#quote").checked =
+        typeof result["use-quote"] === "undefined" ? true : result["use-quote"];
+      document.querySelector("#link").checked =
+        typeof result["link-to-source"] === "undefined" ? true : result["link-to-source"];
+      document.querySelector("form").headingStyle.value =
+        typeof result.headingStyle === "undefined" ? "atx" : result.headingStyle;
+      document.querySelector("form").bulletListMarker.value =
+        typeof result.bulletListMarker === "undefined" ? "-" : result.bulletListMarker;
+      document.querySelector("form").codeBlockStyle.value =
+        typeof result.codeBlockStyle === "undefined" ? "indented" : result.codeBlockStyle;
+      document.querySelector("form").fence.value = typeof result.fence === "undefined" ? "`" : result.fence;
+      document.querySelector("form").emDelimiter.value =
+        typeof result.emDelimiter === "undefined" ? "_" : result.emDelimiter;
+      document.querySelector("form").strongDelimiter.value =
+        typeof result.strongDelimiter === "undefined" ? "**" : result.strongDelimiter;
+      document.querySelector("form").linkStyle.value =
+        typeof result.linkStyle === "undefined" ? "inlined" : result.linkStyle;
+      document.querySelector("form").linkReferenceStyle.value =
+        typeof result.linkReferenceStyle === "undefined" ? "full" : result.linkReferenceStyle;
     },
-    error => {
-      console.log(`Error: ${error}`);
-    }
-  );
-  browser.storage.local.get("link-to-source").then(
-    result => {
-      if (typeof result["link-to-source"] === "undefined") {
-        document.querySelector("#link").checked = true;
-      } else {
-        document.querySelector("#link").checked = result["link-to-source"];
-      }
-    },
-    error => {
-      console.log(`Error: ${error}`);
-    }
+    error => console.log(`Error: ${error}`)
   );
 });
 
 document.querySelector("form").addEventListener("submit", e => {
   e.preventDefault();
   browser.storage.local.set({
-    "use-quote": document.querySelector("#quote").checked
-  });
-  browser.storage.local.set({
-    "link-to-source": document.querySelector("#link").checked
+    "use-quote": document.querySelector("#quote").checked,
+    "link-to-source": document.querySelector("#link").checked,
+    headingStyle: document.querySelector("form").headingStyle.value,
+    bulletListMarker: document.querySelector("form").bulletListMarker.value,
+    codeBlockStyle: document.querySelector("form").codeBlockStyle.value,
+    fence: document.querySelector("form").fence.value,
+    emDelimiter: document.querySelector("form").emDelimiter.value,
+    strongDelimiter: document.querySelector("form").strongDelimiter.value,
+    linkStyle: document.querySelector("form").linkStyle.value,
+    linkReferenceStyle: document.querySelector("form").linkReferenceStyle.value
   });
 });

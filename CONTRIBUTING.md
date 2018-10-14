@@ -16,6 +16,10 @@ Before you do anything else, login on [GitHub](https://github.com/) and fork thi
 
 Install [Git](https://git-scm.com/) and clone your forked repository locally.
 
+```sh
+$ git clone https://github.com/<your-account>/copy-selection-as-markdown.git
+```
+
 ## Play with your fork
 
 1. Open your terminal, navigate to local repository directory
