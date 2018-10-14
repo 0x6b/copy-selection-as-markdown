@@ -14,5 +14,10 @@
     "page": "settings/settings.html",
     "browser_style": true
   },
-  "permissions": ["<all_urls>", "activeTab", "clipboardWrite", "contextMenus", "tabs", "storage"]
+  "permissions": ["<all_urls>", "activeTab", "clipboardWrite", "contextMenus", "tabs", "storage"],
+  "applications":{
+    "gecko":{
+      "id": "{db9a72da-7bc5-4805-bcea-da3cb1a15316}"
+    }
+  }
 }
