@@ -15,8 +15,6 @@ async function main() {
     options.linkReferenceStyle =
       typeof options.linkReferenceStyle === "undefined" ? "full" : options.linkReferenceStyle;
 
-    console.dir(options);
-
     let text = `[${document.title}](${document.URL})`;
     let selection = getSelectionAsMarkdown(options);
 

@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   browser.storage.local.get().then(
     result => {
-      console.dir(result);
       document.querySelector("#quote").checked =
         typeof result["use-quote"] === "undefined" ? true : result["use-quote"];
       document.querySelector("#link").checked =
