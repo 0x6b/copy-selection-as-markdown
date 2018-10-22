@@ -40,7 +40,7 @@ You can configure **Append quote (<code>&gt;</code>) to selection** and **Includ
 
 #### Bullet list marker
 
-- Minux (`-`) (default)
+- Minus (`-`) (default)
   ```
   - one
   - two
@@ -126,16 +126,20 @@ You can configure **Append quote (<code>&gt;</code>) to selection** and **Includ
 - Reference (default)
     ```
     [Reference][1]
+    
     [1]: https://example.com
     ```
 - Collapsed
     ```
     [Reference with collapsed style][]
+    
     [Reference with collapsed style]: https://example.com
     ```
 - Shortcut
     ```
-    [Reference with shortcut style][reference with shortcut style]: https://example.com
+    [Reference with shortcut style]
+    
+    [reference with shortcut style]: https://example.com
     ```
 
 ## Contributing
