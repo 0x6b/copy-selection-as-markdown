@@ -5,7 +5,10 @@ const url = require("url");
 
 const getSelectionAsMarkdown = options => {
   const turndownService = TurndownService(options);
-  turndownService.use(turndownPluginMathJax);
+
+  if (options.mathjax) {
+    turndownService.use(turndownPluginMathJax);
+  }
 
   let html = "";
   const sel = document.getSelection();

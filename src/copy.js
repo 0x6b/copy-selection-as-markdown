@@ -15,6 +15,7 @@ async function main() {
     options.linkReferenceStyle =
       typeof options.linkReferenceStyle === "undefined" ? "full" : options.linkReferenceStyle;
     options.debug = typeof options.debug === "undefined" ? false : options.debug;
+    options.mathjax = typeof options.mathjax === "undefined" ? false : options.mathjax;
 
     let text = `[${document.title}](${document.URL})`;
     let selection = getSelectionAsMarkdown(options);
