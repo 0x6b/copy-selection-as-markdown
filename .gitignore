@@ -1,5 +1,4 @@
 dist/*
-!dist/web-ext-artifacts/
 node_modules/
 .idea/
 *.svg
