@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         typeof result.linkStyle === "undefined" ? "inlined" : result.linkStyle;
       document.querySelector("form").linkReferenceStyle.value =
         typeof result.linkReferenceStyle === "undefined" ? "full" : result.linkReferenceStyle;
-      document.querySelector("#debug").checked = 
-        typeof result.debug === "undefined" ? true : result.debug;
+      document.querySelector("#debug").checked =
+        typeof result.debug === "undefined" ? false : result.debug;
     },
     error => console.log(`Error: ${error}`)
   );
