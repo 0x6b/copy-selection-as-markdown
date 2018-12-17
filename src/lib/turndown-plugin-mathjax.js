@@ -11,11 +11,7 @@ rules.removeDisplayFormula = {
 // remove inline formula
 rules.removeInlineFormula = {
   filter: node => {
-    return (
-      node.nodeName === "SPAN" &&
-      node.className === "MathJax" &&
-      node.style["text-align"] !== "center"
-    );
+    return node.nodeName === "SPAN" && node.className === "MathJax" && node.style["text-align"] !== "center";
   },
   replacement: () => ""
 };
@@ -41,11 +37,7 @@ rules.removeBlankListItem = {
       prefix = (start ? Number(start) + index : index + 1) + ".  ";
     }
     if (content !== "") {
-      return (
-        prefix +
-        content +
-        (node.nextSibling && !/\n$/.test(content) ? "\n" : "")
-      );
+      return prefix + content + (node.nextSibling && !/\n$/.test(content) ? "\n" : "");
     }
     return "";
   }
@@ -57,11 +49,7 @@ rules.paragraphBeforeScriptNode = {
   replacement: function(content, node) {
     var hasSiblings = node.nextSibling;
 
-    if (
-      hasSiblings &&
-      node.nextSibling.nodeName === "SCRIPT" &&
-      node.nextSibling.type.startsWith("math/tex")
-    ) {
+    if (hasSiblings && node.nextSibling.nodeName === "SCRIPT" && node.nextSibling.type.startsWith("math/tex")) {
       return content;
     }
 

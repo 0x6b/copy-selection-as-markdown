@@ -20,10 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         typeof result.linkStyle === "undefined" ? "inlined" : result.linkStyle;
       document.querySelector("form").linkReferenceStyle.value =
         typeof result.linkReferenceStyle === "undefined" ? "full" : result.linkReferenceStyle;
-      document.querySelector("#debug").checked =
-        typeof result.debug === "undefined" ? false : result.debug;
-      document.querySelector("#mathjax").checked =
-        typeof result.mathjax === "undefined" ? false : result.mathjax;
+      document.querySelector("#debug").checked = typeof result.debug === "undefined" ? false : result.debug;
+      document.querySelector("#mathjax").checked = typeof result.mathjax === "undefined" ? false : result.mathjax;
     },
     error => console.log(`Error: ${error}`)
   );
