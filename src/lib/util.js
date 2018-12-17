@@ -3,13 +3,10 @@ import turndownPluginMathJax from "./turndown-plugin-mathjax";
 
 const url = require("url");
 
-const turndownService = TurndownService({
-  headingStyle: "atx",
-  bulletListMarker: "-"
-});
-turndownService.use(turndownPluginMathJax);
+const getSelectionAsMarkdown = options => {
+  const turndownService = TurndownService(options);
+  turndownService.use(turndownPluginMathJax);
 
-const getSelectionAsMarkdown = () => {
   let html = "";
   const sel = document.getSelection();
 
