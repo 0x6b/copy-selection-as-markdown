@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Copy Selection as Markdown",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "Copy title, URL, and selection as Markdown",
   "icons": {
     "48": "icons/default.svg",
