@@ -3,7 +3,7 @@
   "version": "0.5.2",
   "scripts": {
     "web-ext": "web-ext",
-    "watch:webextension": "unset WEB_EXT_API_KEY WEB_EXT_API_SECRET && web-ext --browser-console --start-url https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference --start-url https://www.mozilla.org/en-US/contribute/ --source-dir dist --artifacts-dir dist/web-ext-artifacts run",
+    "watch:webextension": "unset WEB_EXT_API_KEY WEB_EXT_API_SECRET && web-ext --browser-console --start-url https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference --start-url https://www.mozilla.org/en-US/contribute/ --start-url https://stats.stackexchange.com/questions/235528/backpropagation-with-softmax-cross-entropy --source-dir dist --artifacts-dir dist/web-ext-artifacts run",
     "watch:js": "webpack --watch --progress",
     "watch:assets": "cpx 'src/{icons/*,manifest.json}' dist --watch",
     "prewatch": "npm-run-all generate-icons copy-assets",
@@ -14,14 +14,20 @@
     "prebuild": "npm-run-all generate-icons copy-assets webpack",
     "build": "unset WEB_EXT_API_KEY WEB_EXT_API_SECRET WEB_EXT_FIREFOX && web-ext --source-dir dist --artifacts-dir dist/web-ext-artifacts build",
     "postbuild": "unset WEB_EXT_FIREFOX && web-ext --source-dir dist --artifacts-dir dist/web-ext-artifacts sign --api-key $WEB_EXT_API_KEY --api-secret $WEB_EXT_API_SECRET",
-    "format": "prettier --write 'src/**/{*.js,*.json}'"
+    "format": "prettier --write 'src/**/{*.js,*.json}'",
+    "test": "jest"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
     "cpx": "^1.5.0",
-    "npm-run-all": "4.1.3",
+    "jest": "^23.5.0",
+    "jsdom": "^11.12.0",
+    "npm-run-all": "^4.1.5",
     "octicons": "7.4.0",
     "prettier": "^1.13.7",
-    "web-ext": "2.7.0",
+    "web-ext": "^2.9.3",
     "webpack": "3"
   },
   "dependencies": {
@@ -29,5 +35,10 @@
   },
   "prettier": {
     "printWidth": 120
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }

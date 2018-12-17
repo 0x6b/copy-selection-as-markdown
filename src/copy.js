@@ -14,24 +14,36 @@ async function main() {
     options.linkStyle = typeof options.linkStyle === "undefined" ? "inlined" : options.linkStyle;
     options.linkReferenceStyle =
       typeof options.linkReferenceStyle === "undefined" ? "full" : options.linkReferenceStyle;
+    options.debug = typeof options.debug === "undefined" ? false : options.debug;
+    options.mathjax = typeof options.mathjax === "undefined" ? false : options.mathjax;
 
     let text = `[${document.title}](${document.URL})`;
     let selection = getSelectionAsMarkdown(options);
 
-    if (selection !== "") {
+    if (selection.output !== "") {
       if (options["use-quote"]) {
-        selection = selection
+        selection.output = selection.output
           .split("\n")
           .map(line => `> ${line}`)
           .join("\n");
       }
       if (options["link-to-source"]) {
-        text += `\n\n${selection}`;
+        text += `\n\n${selection.output}`;
       } else {
-        text = selection;
+        text = selection.output;
       }
     }
 
+    if (options.debug) {
+      console.log("/* --- copy-selection-as-markdown debug information --- */");
+      console.log("/* --- INPUT ------------------------------------------ */");
+      console.log(selection.html);
+      console.log("/* --- OUTPUT------------------------------------------ */");
+      console.log(selection.output);
+      console.log("/* --- URL -------------------------------------------- */");
+      console.log(selection.url);
+      console.log("/* ---------------------------------------------------- */");
+    }
     doCopy(text);
   } catch (e) {
     console.error(e);

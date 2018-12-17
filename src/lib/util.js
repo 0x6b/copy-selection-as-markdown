@@ -1,9 +1,14 @@
 import TurndownService from "turndown";
+import turndownPluginMathJax from "./turndown-plugin-mathjax";
 
 const url = require("url");
 
 const getSelectionAsMarkdown = options => {
   const turndownService = TurndownService(options);
+
+  if (options.mathjax) {
+    turndownService.use(turndownPluginMathJax);
+  }
 
   let html = "";
   const sel = document.getSelection();
@@ -30,7 +35,7 @@ const getSelectionAsMarkdown = options => {
     html = container.innerHTML;
   }
 
-  return turndownService.turndown(html);
+  return { html, output: turndownService.turndown(html), url: document.URL };
 };
 
 const doCopy = text => {
