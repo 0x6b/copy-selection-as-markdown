@@ -21,13 +21,13 @@ const getSelectionAsMarkdown = options => {
     }
 
     for (let a of container.getElementsByTagName("a")) {
-      if (!a.getAttribute("href").startsWith("http")) {
+      if (a.hasAttribute("href") && !a.getAttribute("href").startsWith("http")) {
         a.setAttribute("href", url.resolve(document.URL, a.getAttribute("href")));
       }
     }
 
     for (let img of container.getElementsByTagName("img")) {
-      if (!img.getAttribute("src").startsWith("http")) {
+      if (img.hasAttribute("src") && !img.getAttribute("src").startsWith("http")) {
         img.setAttribute("src", url.resolve(document.URL, img.getAttribute("src")));
       }
     }
