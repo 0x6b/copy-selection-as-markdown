@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         typeof result.linkReferenceStyle === "undefined" ? "full" : result.linkReferenceStyle;
       document.querySelector("#debug").checked = typeof result.debug === "undefined" ? false : result.debug;
       document.querySelector("#mathjax").checked = typeof result.mathjax === "undefined" ? false : result.mathjax;
+      document.querySelector("#gfm").checked = typeof result.gfm === "undefined" ? false : result.gfm;
     },
     error => console.log(`Error: ${error}`)
   );
@@ -41,6 +42,7 @@ document.querySelector("form").addEventListener("submit", e => {
     linkStyle: document.querySelector("form").linkStyle.value,
     linkReferenceStyle: document.querySelector("form").linkReferenceStyle.value,
     debug: document.querySelector("#debug").checked,
-    mathjax: document.querySelector("#mathjax").checked
+    mathjax: document.querySelector("#mathjax").checked,
+    gfm: document.querySelector("#gfm").checked
   });
 });

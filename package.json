@@ -38,7 +38,8 @@
   },
   "dependencies": {
     "clipboard-copy": "^2.0.1",
-    "turndown": "4.0.2"
+    "turndown": "4.0.2",
+    "turndown-plugin-gfm": "^1.0.2"
   },
   "prettier": {
     "printWidth": 120
