@@ -33,6 +33,10 @@ const testCases = [
   {
     filename: "issue-8-2",
     url: "https://blog.csdn.net/aws3217150/article/details/53840029"
+  },
+  {
+    filename: "issue-18",
+    url: "https://urukrama.wordpress.com/openbox-guide/#xcompmgr"
   }
 ];
 
