@@ -1,5 +1,6 @@
 import TurndownService from "turndown";
 import turndownPluginMathJax from "./turndown-plugin-mathjax";
+import * as copy from "clipboard-copy";
 
 const url = require("url");
 
@@ -38,15 +39,6 @@ const getSelectionAsMarkdown = options => {
   return { html, output: turndownService.turndown(html), url: document.URL };
 };
 
-const doCopy = text => {
-  let copyFrom = document.createElement("textarea");
-  copyFrom.style.left = "-300px";
-  copyFrom.style.position = "absolute";
-  copyFrom.value = text;
-  document.body.appendChild(copyFrom);
-  copyFrom.select();
-  document.execCommand("copy");
-  copyFrom.parentNode.removeChild(copyFrom);
-};
+const doCopy = text => copy(text);
 
 export { getSelectionAsMarkdown, doCopy };

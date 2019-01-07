@@ -31,6 +31,7 @@
     "webpack": "3"
   },
   "dependencies": {
+    "clipboard-copy": "^2.0.1",
     "turndown": "4.0.2"
   },
   "prettier": {
