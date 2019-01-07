@@ -17,9 +17,9 @@ Right click and select:
 
 You can configure **Append quote (<code>&gt;</code>) to selection** and **Include link to source web page in the beginning of copied text**, and **Markdown Styles**.
 
-1. Click the menu button ![](images/menu.svg) and choose ![](images/extensionGeneric-16.svg) Add-ons. The Add-ons Manager tab will open
-2. In the Add-ons Manager tab, select the Extensions panel
-3. Find **Copy Selection as Markdown** and click **More**
+1. Click the menu button ![](images/menu.svg) and choose ![](images/extensionGeneric-16.svg) **Add-ons**. The Add-ons Manager tab will open
+2. In the Add-ons Manager tab, select the **Extensions** panel
+3. Find **Copy Selection as Markdown** and click **Preferences**
 
 ### Available Markdown Styles
 
