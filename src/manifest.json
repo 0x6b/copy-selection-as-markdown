@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Copy Selection as Markdown",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "description": "Copy title, URL, and selection as Markdown",
   "icons": {
     "48": "icons/default.svg",
@@ -11,7 +11,7 @@
     "scripts": ["index.js"]
   },
   "options_ui": {
-    "page": "settings/settings.html",
+    "page": "settings.html",
     "browser_style": true
   },
   "permissions": ["<all_urls>", "activeTab", "clipboardWrite", "contextMenus", "tabs", "storage"],

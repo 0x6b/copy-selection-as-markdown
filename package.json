@@ -1,16 +1,16 @@
 {
   "name": "copy-selection-as-markdown",
-  "version": "0.6.2",
+  "version": "0.7.0",
   "scripts": {
     "web-ext": "web-ext",
     "watch:webextension": "unset WEB_EXT_API_KEY WEB_EXT_API_SECRET && web-ext --browser-console --start-url https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference --start-url https://www.mozilla.org/en-US/contribute/ --start-url https://stats.stackexchange.com/questions/235528/backpropagation-with-softmax-cross-entropy --source-dir dist --artifacts-dir dist/web-ext-artifacts run",
     "watch:js": "webpack --watch --progress",
-    "watch:assets": "cpx 'src/{icons/*,manifest.json}' dist --watch",
+    "watch:assets": "cpx 'src/{icons/*.svg,manifest.json}' dist --watch",
     "prewatch": "npm-run-all generate-icons copy-assets",
     "watch": "npm-run-all --parallel watch:*",
     "webpack": "webpack",
     "generate-icons": "node src/icons/generate.js",
-    "copy-assets": "cpx 'src/{icons/*,settings/*,manifest.json}' dist",
+    "copy-assets": "cpx 'src/{icons/*.svg,settings.html,manifest.json}' dist",
     "prebuild": "npm-run-all generate-icons copy-assets webpack",
     "build": "unset WEB_EXT_API_KEY WEB_EXT_API_SECRET WEB_EXT_FIREFOX && web-ext --source-dir dist --artifacts-dir dist/web-ext-artifacts build",
     "postbuild": "unset WEB_EXT_FIREFOX && web-ext --source-dir dist --artifacts-dir dist/web-ext-artifacts sign --api-key $WEB_EXT_API_KEY --api-secret $WEB_EXT_API_SECRET",
@@ -18,28 +18,44 @@
     "test": "jest"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-es2015": "^6.24.1",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/runtime": "^7.2.0",
+    "@babel/runtime-corejs2": "^7.2.0",
+    "@types/firefox-webext-browser": "^65.0.0",
+    "babel-loader": "^8.0.5",
     "cpx": "^1.5.0",
-    "jest": "^23.5.0",
-    "jsdom": "^11.12.0",
+    "jest": "^24.0.0-alpha.9",
+    "jsdom": "13.1.0",
     "npm-run-all": "^4.1.5",
-    "octicons": "7.4.0",
+    "octicons": "8.2.0",
     "prettier": "^1.13.7",
     "web-ext": "^2.9.3",
-    "webpack": "3"
+    "webpack": "4.28.1",
+    "webpack-cli": "^3.2.1",
+    "xml2js": "^0.4.19"
   },
   "dependencies": {
     "clipboard-copy": "^2.0.1",
-    "turndown": "4.0.2"
+    "turndown": "4.0.2",
+    "turndown-plugin-gfm": "^1.0.2"
   },
   "prettier": {
     "printWidth": 120
   },
   "babel": {
     "presets": [
-      "es2015"
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "firefox": "57"
+          },
+          "useBuiltIns": "usage"
+        }
+      ]
     ]
   }
 }

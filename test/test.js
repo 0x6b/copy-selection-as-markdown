@@ -3,12 +3,17 @@ import { JSDOM } from "jsdom";
 
 import TurndownService from "turndown";
 import turndownPluginMathJax from "../src/lib/turndown-plugin-mathjax";
+import turndownPluginGfmStrikethrough from "../src/lib/turndown-plugin-gfm-strikethrough";
+import { tables, taskListItems } from "turndown-plugin-gfm";
 
 const turndownService = TurndownService({
   headingStyle: "atx",
   bulletListMarker: "-"
 });
 turndownService.use(turndownPluginMathJax);
+turndownService.use(turndownPluginGfmStrikethrough);
+turndownService.use(tables);
+turndownService.use(taskListItems);
 
 const testCases = [
   {
@@ -36,6 +41,10 @@ const testCases = [
   },
   {
     filename: "issue-18",
+    url: "https://urukrama.wordpress.com/openbox-guide/#xcompmgr"
+  },
+  {
+    filename: "issue-17",
     url: "https://urukrama.wordpress.com/openbox-guide/#xcompmgr"
   }
 ];
