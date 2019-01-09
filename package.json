@@ -28,7 +28,8 @@
     "octicons": "8.2.0",
     "prettier": "^1.13.7",
     "web-ext": "^2.9.3",
-    "webpack": "3"
+    "webpack": "3",
+    "xml2js": "^0.4.19"
   },
   "dependencies": {
     "clipboard-copy": "^2.0.1",
