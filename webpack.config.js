@@ -10,6 +10,9 @@ module.exports = {
     path: __dirname + "/dist",
     filename: "[name].js"
   },
+  node: {
+    global: false
+  },
   module: {
     rules: [
       {
@@ -22,7 +25,7 @@ module.exports = {
               [
                 "@babel/plugin-transform-runtime",
                 {
-                  corejs: false,
+                  corejs: 2,
                   helpers: false,
                   regenerator: true,
                   useESModules: false
