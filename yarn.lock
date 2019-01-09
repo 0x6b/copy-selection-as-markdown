@@ -55,6 +55,11 @@
     "@cliqz-oss/firefox-client" "0.3.1"
     es6-promise "^2.0.1"
 
+"@types/firefox-webext-browser@^65.0.0":
+  version "65.0.0"
+  resolved "https://registry.yarnpkg.com/@types/firefox-webext-browser/-/firefox-webext-browser-65.0.0.tgz#ff2c8a1993cee3643ffab455bdaf176b3a3a8f94"
+  integrity sha512-J/hNOwMft/nVk++fywknSJJhwU8vJsmD6fVQRbqtD8BnxBaGCCkNGIUV2pWuD/K4jeTH1R8+pBvIEC+JKvjR/w==
+
 "@types/node@*":
   version "10.12.15"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.15.tgz#20e85651b62fd86656e57c9c9bc771ab1570bc59"
