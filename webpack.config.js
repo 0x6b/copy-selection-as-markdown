@@ -3,7 +3,8 @@ module.exports = {
   devtool: "source-map",
   entry: {
     index: "./src/index.js",
-    copy: "./src/copy.js"
+    copy: "./src/copy.js",
+    options: "./src/options.js"
   },
   output: {
     path: __dirname + "/dist",

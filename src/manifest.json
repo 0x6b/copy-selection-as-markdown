@@ -11,7 +11,7 @@
     "scripts": ["index.js"]
   },
   "options_ui": {
-    "page": "settings/settings.html",
+    "page": "settings.html",
     "browser_style": true
   },
   "permissions": ["<all_urls>", "activeTab", "clipboardWrite", "contextMenus", "tabs", "storage"],
