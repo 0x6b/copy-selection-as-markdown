@@ -14,7 +14,7 @@ const createIcon = (path, color) => {
         reject(err);
       }
 
-      resolve(`<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+      resolve(`<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
 <path fill="${color}" d="${result.path.$.d}"/>
 </svg>`);
     });
