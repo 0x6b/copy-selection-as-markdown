@@ -2,6 +2,22 @@
 
 Copy title, URL, selection as Markdown
 
+- [Install](#install)
+- [Usage](#usage)
+- [Settings](#settings)
+    -[Available Markdown Styles](#available-markdown-styles)
+        - [Heading style](#heading-style)
+        - [Bullet list marker](#bullet-list-marker)
+        - [Code block style](#code-block-style)
+        - [Fence](#fence)
+        - [Em](#em)
+        - [Strong](#strong)
+        - [Link style](#link-style)
+        - [Link reference style](#link-reference-style)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
 ## Install
 
 Go to [Add-ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/) and install.
@@ -158,4 +174,13 @@ Set your preference by:
 
 ## Contributing
 
-See [LICENSE](LICENSE) and [CONTRIBUTING](CONTRIBUTING.md) for detail.
+Please read [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## License
+
+This extension is released under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Acknowledgements
+
+- [Turndown](https://github.com/domchristie/turndown), which does all the heavy lifting from HTML to markdown
+- [Octicons](https://octicons.github.com/) [clippy](https://octicons.github.com/icon/clippy/)

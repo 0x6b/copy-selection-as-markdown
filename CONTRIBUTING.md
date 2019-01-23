@@ -22,6 +22,8 @@ $ git clone https://github.com/<your-account>/copy-selection-as-markdown.git
 
 ## Play with your fork
 
+The project uses [Semantic Versioning 2.0.0](http://semver.org/) but you don't have to update [`package.json`](package.json) nor [`manifest.json`](src/manifest.json) as I will maintain release.
+
 1. Open your terminal, navigate to local repository directory
 2. Export AMO's API key and secret as environment variable
     ```sh
@@ -99,10 +101,6 @@ Run with `yarn <script-name>` or `npm run <script-name>`.
 - [Browser Extensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions)
 - [Getting started with web-ext](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext)
 - [Signing and distributing your add-on](https://developer.mozilla.org/en-US/Add-ons/Distribution)
-
-### Icon
-
-- [Octicons](https://octicons.github.com/) [clippy](https://octicons.github.com/icon/clippy/)
 
 ## FAQ
 
