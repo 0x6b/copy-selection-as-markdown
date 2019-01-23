@@ -5,25 +5,30 @@ const { writeFileSync } = require("fs");
 const { resolve } = require("path");
 const { parseString } = require("xml2js");
 
-const colors = { default: "#222222", highlight: "#45a1ff" };
+// Light and dark colors are taken from https://design.firefox.com/photon/visuals/iconography.html
+const icons = [
+  { name: "extension", color: "#222222", opacity: "1.0" },
+  { name: "browser-action-light", color: "#f9f9fa", opacity: "0.8" },
+  { name: "browser-action-dark", color: "#0c0c03", opacity: "0.8" }
+];
 
-const createIcon = (path, color) => {
+const createIcon = (path, color, opacity) => {
   return new Promise((resolve, reject) => {
     parseString(path, (err, result) => {
       if (err) {
         reject(err);
       }
 
-      resolve(`<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-<path fill="${color}" d="${result.path.$.d}"/>
+      resolve(`<svg version="1.1" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path fill="${color}" fill-opacity="${opacity}" d="${result.path.$.d}"/>
 </svg>`);
     });
   });
 };
 
-["default", "highlight"].forEach(async type => {
-  const data = await createIcon(path, colors[type]);
-  const filename = resolve(__dirname, `${type}.svg`);
+icons.forEach(async ({ name, color, opacity }) => {
+  const data = await createIcon(path, color, opacity);
+  const filename = resolve(__dirname, `${name}.svg`);
   writeFileSync(filename, data);
-  console.log(`Generate ${type} icon at ${filename}`);
+  console.log(`Generate ${name} icon at ${filename}`);
 });

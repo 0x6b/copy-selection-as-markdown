@@ -27,3 +27,5 @@ browser.contextMenus.onClicked.addListener(({ menuItemId }, { id }) => {
     browser.tabs.executeScript(id, { file: "copy.js" });
   }
 });
+
+browser.browserAction.onClicked.addListener(() => browser.tabs.executeScript({ file: "copy.js" }));

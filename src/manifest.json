@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
   "name": "Copy Selection as Markdown",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Copy title, URL, and selection as Markdown",
   "icons": {
-    "48": "icons/default.svg",
-    "96": "icons/default.svg"
+    "48": "icons/extension.svg",
+    "96": "icons/extension.svg"
   },
   "background": {
     "scripts": ["index.js"]
@@ -13,6 +13,23 @@
   "options_ui": {
     "page": "settings.html",
     "browser_style": true
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icons/extension.svg",
+    "default_title": "Copy as Markdown",
+    "theme_icons": [
+      {
+        "light": "icons/browser-action-light.svg",
+        "dark": "icons/browser-action-dark.svg",
+        "size": 16
+      },
+      {
+        "light": "icons/browser-action-light.svg",
+        "dark": "icons/browser-action-dark.svg",
+        "size": 32
+      }
+    ]
   },
   "permissions": ["<all_urls>", "activeTab", "clipboardWrite", "contextMenus", "tabs", "storage"],
   "applications": {
