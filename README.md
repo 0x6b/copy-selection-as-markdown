@@ -5,7 +5,8 @@ Copy title, URL, selection as Markdown
 - [Install](#install)
 - [Usage](#usage)
 - [Settings](#settings)
-  - [Available Markdown Styles](#available-markdown-styles)
+  - [General](#general)
+  - [Markdown Styles](#markdown-styles)
     - [Heading style](#heading-style)
     - [Bullet list marker](#bullet-list-marker)
     - [Code block style](#code-block-style)
@@ -31,22 +32,21 @@ Right click and select:
 
 ## Settings
 
-You can configure followings:
+The add-on have multiple configuration to suit your setup as follows. Set your preference by:
+
+1. Click the menu button ![](images/menu.svg) and choose ![](images/extensionGeneric-16.svg) **Add-ons**. The Add-ons Manager tab will open
+2. In the Add-ons Manager tab, select the **Extensions** panel
+3. Find **Keyboard shortcuts**, or **Copy Selection as Markdown** and click **Preferences**
+4. Hit **Save** button to apply changes (no restart required)
+
+### General
 
 - Append quote (<code>&gt;</code>) to selection
 - Include link to source web page in the beginning of copied text
 - Enable experimental MathJax support
 - Enable <a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a> (strikethrough, tables, and taskListItems) support
-- Markdown Styles (see below for detail)
 
-Set your preference by:
-
-1. Click the menu button ![](images/menu.svg) and choose ![](images/extensionGeneric-16.svg) **Add-ons**. The Add-ons Manager tab will open
-2. In the Add-ons Manager tab, select the **Extensions** panel
-3. Find **Copy Selection as Markdown** and click **Preferences**
-4. Hit **Save** button to apply changes (no restart required)
-
-### Available Markdown Styles
+### Markdown Styles
 
 #### Heading style
 
