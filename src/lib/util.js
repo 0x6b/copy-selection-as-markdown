@@ -20,7 +20,23 @@ const getSelectionAsMarkdown = options => {
   }
 
   let html = "";
-  const sel = document.getSelection();
+  let sel = document.getSelection();
+
+  if (sel.rangeCount === 0) {
+    let frames = document.getElementsByTagName("iframe");
+    if (frames) {
+      for (let i = 0; i < frames.length; i++) {
+        if (
+          frames[i].contentDocument != null &&
+          frames[i].contentWindow.document != null &&
+          frames[i].contentWindow.document.getSelection() &&
+          frames[i].contentWindow.document.getSelection().rangeCount > 0
+        ) {
+          sel = frames[i].contentWindow.document.getSelection();
+        }
+      }
+    }
+  }
 
   if (sel.rangeCount) {
     const container = document.createElement("div");
