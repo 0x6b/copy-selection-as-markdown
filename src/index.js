@@ -2,7 +2,7 @@ browser.contextMenus.create(
   {
     id: "copy-as-markdown",
     title: "Copy Title and URL as Markdown",
-    contexts: ["page"],
+    contexts: ["page", "frame"],
     documentUrlPatterns: ["<all_urls>"]
   },
   () => {
