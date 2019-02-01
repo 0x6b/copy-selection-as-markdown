@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.10.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.10.0) - 2019-02-01
+
+### Added
+
+- support iframe without text selection (#30)
+
 ## [0.9.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.9.0) - 2019-01-30
 
 ### Added
