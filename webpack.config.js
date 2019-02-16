@@ -4,6 +4,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
     copy: "./src/copy.js",
+    "copy-link": "./src/copy-link.js",
     options: "./src/options.js"
   },
   output: {
