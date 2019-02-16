@@ -39,6 +39,8 @@ browser.contextMenus.onClicked.addListener(({ menuItemId, linkText, linkUrl }, {
     browser.tabs.executeScript(id, { file: "copy.js" });
   } else if (menuItemId === "copy-link-as-markdown") {
     browser.tabs.executeScript(id, { file: "copy-link.js" }).then(() => {
+      linkText = linkText.replace(/[\\\[\]]/g, (match) => '\\'+match);
+      linkUrl = linkUrl.replace(/\\/g, '%5C').replace(/\(/g, '%28').replace(/\)/g, '%29');
       browser.tabs.sendMessage(id, { text: `[${linkText}](${linkUrl})` });
     });
   }
