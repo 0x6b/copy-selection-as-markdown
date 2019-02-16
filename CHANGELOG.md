@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.11.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.11.0) - 2019-02-17
+
+### Added
+
+- add context menu to link (#33)
+
 ## [0.10.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.10.0) - 2019-02-01
 
 ### Added
