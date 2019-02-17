@@ -29,6 +29,7 @@ Right click and select:
 
 - when part of the page is selected: **Copy Selection as Markdown**
 - when user context-clicks in the page: **Copy Title and URL as Markdown**
+- when user context-clicks in the link: **Copy Link as Markdown**
 
 ## Settings
 
