@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.11.1](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.11.1) - 2019-02-19
+
+### Fixed
+
+- Escape text and URL when copying link (#34) thanks to @Changaco!
+
 ## [0.11.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.11.0) - 2019-02-17
 
 ### Added
