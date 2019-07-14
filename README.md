@@ -38,8 +38,8 @@ The add-on have multiple configuration to suit your setup as follows. Set your p
 
 1. Click the menu button ![](images/menu.svg) and choose ![](images/extensionGeneric-16.svg) **Add-ons**. The Add-ons Manager tab will open
 2. In the Add-ons Manager tab, select the **Extensions** panel
-3. Find **Keyboard shortcuts**, or **Copy Selection as Markdown** and click **Preferences**
-4. Hit **Save** button to apply changes (no restart required)
+3. Click **Copy Selection as Markdown** and click **Preferences** tab
+4. Hit **Save** button on the top to apply changes (no restart required)
 
 ### General
 
@@ -53,7 +53,7 @@ The add-on have multiple configuration to suit your setup as follows. Set your p
 - macOS: `Command` + `Shift` + `E`
 - Windows/Linux: `Ctrl` + `Shift` + `E`
 
-Firefox 66 will have an ability to reconfigure the assignment. See https://bugzilla.mozilla.org/show_bug.cgi?id=1303384.
+To change shortcut key, click gear icon on top-right and click **Manage Extension Shortcuts**.
 
 ### Markdown Styles
 
