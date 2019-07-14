@@ -6,6 +6,7 @@ Copy title, URL, selection as Markdown
 - [Usage](#usage)
 - [Settings](#settings)
   - [General](#general)
+  - [Shortcut Key](#shortcut-key)
   - [Markdown Styles](#markdown-styles)
     - [Heading style](#heading-style)
     - [Bullet list marker](#bullet-list-marker)
@@ -46,6 +47,13 @@ The add-on have multiple configuration to suit your setup as follows. Set your p
 - Include link to source web page in the beginning of copied text
 - Enable experimental MathJax support
 - Enable <a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a> (strikethrough, tables, and taskListItems) support
+
+### Shortcut Key
+
+- macOS: `Command` + `Shift` + `E`
+- Windows/Linux: `Ctrl` + `Shift` + `E`
+
+Firefox 66 will have an ability to reconfigure the assignment. See https://bugzilla.mozilla.org/show_bug.cgi?id=1303384.
 
 ### Markdown Styles
 

@@ -31,6 +31,14 @@
       }
     ]
   },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E"
+      },
+      "description": "Copy as Markdown"
+    }
+  },
   "permissions": ["<all_urls>", "activeTab", "clipboardWrite", "contextMenus", "tabs", "storage"],
   "applications": {
     "gecko": {
