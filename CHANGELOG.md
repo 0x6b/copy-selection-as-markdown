@@ -4,7 +4,7 @@
 
 ### Added
 
-- Add preference to use img tag for image instead of ![]() (#41)
+- Add preference to use `img` tag for image instead of `![]()` (#41)
 
 ## [0.13.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.13.0) - 2019-07-15
 
