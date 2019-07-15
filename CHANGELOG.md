@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.14.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.14.0) - 2019-07-15
+
+### Added
+
+- Add preference to use img tag for image instead of ![]() (#41)
+
+## [0.13.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.13.0) - 2019-07-15
+
+### Changed
+
+- add save button to the button and more visible (#40)
+
+## [0.12.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.12.0) - 2019-07-14
+
+### Added
+
+- add shortcut key support (#39)
+
 ## [0.11.1](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.11.1) - 2019-02-19
 
 ### Fixed
