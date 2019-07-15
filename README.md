@@ -19,6 +19,7 @@ Copy title, URL, selection as Markdown
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
+- [Privacy](#privacy)
 
 ## Install
 
@@ -193,3 +194,7 @@ This extension is released under the MIT License. See [LICENSE](LICENSE) for det
 
 - [Turndown](https://github.com/domchristie/turndown), which does all the heavy lifting from HTML to markdown
 - [Octicons](https://octicons.github.com/) [clippy](https://octicons.github.com/icon/clippy/)
+
+## Privacy
+
+The add-on does not store any user data outside of the Firefox user profile. The conversion to markdown is solely done locally. The add-on never send user action/data to any server.
