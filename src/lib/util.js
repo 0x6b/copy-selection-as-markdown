@@ -1,6 +1,7 @@
 import TurndownService from "turndown";
 import turndownPluginMathJax from "./turndown-plugin-mathjax";
 import turndownPluginGfmStrikethrough from "./turndown-plugin-gfm-strikethrough";
+import turndownPluginImg from "./turndown-plugin-img";
 import { tables, taskListItems } from "turndown-plugin-gfm";
 import * as copy from "clipboard-copy";
 
@@ -17,6 +18,10 @@ const getSelectionAsMarkdown = options => {
     turndownService.use(turndownPluginGfmStrikethrough);
     turndownService.use(tables);
     turndownService.use(taskListItems);
+  }
+
+  if (options.img) {
+    turndownService.use(turndownPluginImg);
   }
 
   let html = "";
