@@ -3,7 +3,7 @@
   "version": "0.14.0",
   "scripts": {
     "web-ext": "web-ext",
-    "watch:webextension": "unset WEB_EXT_API_KEY WEB_EXT_API_SECRET && web-ext --browser-console --start-url https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference --start-url https://www.mozilla.org/en-US/contribute/ --start-url https://stats.stackexchange.com/questions/235528/backpropagation-with-softmax-cross-entropy --start-url https://www.w3schools.com/html/html_iframe.asp --source-dir dist --artifacts-dir dist/web-ext-artifacts run",
+    "watch:webextension": "unset WEB_EXT_FIREFOX WEB_EXT_API_KEY WEB_EXT_API_SECRET && web-ext --browser-console --config=web-ext-config.js run",
     "watch:js": "webpack --watch --progress",
     "watch:assets": "cpx 'src/{icons/*.svg,manifest.json}' dist --watch",
     "prewatch": "npm-run-all generate-icons copy-assets",
@@ -12,8 +12,9 @@
     "generate-icons": "node src/icons/generate.js",
     "copy-assets": "cpx 'src/{icons/*.svg,settings.html,manifest.json}' dist",
     "prebuild": "npm-run-all generate-icons copy-assets webpack",
-    "build": "unset WEB_EXT_API_KEY WEB_EXT_API_SECRET WEB_EXT_FIREFOX && web-ext --source-dir dist --artifacts-dir dist/web-ext-artifacts build",
-    "postbuild": "unset WEB_EXT_FIREFOX && web-ext --source-dir dist --artifacts-dir dist/web-ext-artifacts sign --api-key $WEB_EXT_API_KEY --api-secret $WEB_EXT_API_SECRET",
+    "build": "unset WEB_EXT_FIREFOX WEB_EXT_API_KEY WEB_EXT_API_SECRET && web-ext --config=web-ext-config.js build",
+    "postbuild": "unset WEB_EXT_FIREFOX && web-ext --config=web-ext-config.js sign --api-key $WEB_EXT_API_KEY --api-secret $WEB_EXT_API_SECRET",
+    "lint": "unset WEB_EXT_FIREFOX WEB_EXT_API_KEY WEB_EXT_API_SECRET && web-ext --config=web-ext-config.js lint",
     "format": "prettier --write 'src/**/{*.js,*.json}'",
     "test": "jest"
   },
