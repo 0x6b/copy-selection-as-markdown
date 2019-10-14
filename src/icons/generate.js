@@ -1,6 +1,6 @@
 const {
   clippy: { path }
-} = require("octicons");
+} = require("@primer/octicons");
 const { writeFileSync } = require("fs");
 const { resolve } = require("path");
 const { parseString } = require("xml2js");
