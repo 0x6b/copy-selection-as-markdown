@@ -1,6 +1,6 @@
 {
   "name": "copy-selection-as-markdown",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "scripts": {
     "web-ext": "web-ext",
     "watch:webextension": "unset WEB_EXT_FIREFOX WEB_EXT_API_KEY WEB_EXT_API_SECRET && web-ext --browser-console --config=web-ext-config.js run",
