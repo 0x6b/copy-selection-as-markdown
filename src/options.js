@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#gfm").checked = typeof result.gfm === "undefined" ? false : result.gfm;
       document.querySelector("#linkWithoutStyling").checked = typeof result.linkWithoutStyling === "undefined" ? false : result.linkWithoutStyling;
       document.querySelector("#img").checked = typeof result.img === "undefined" ? false : result.img;
+      document.querySelector("#titleSubstitution").value = typeof result.titleSubstitution === "undefined" ? "" : result.titleSubstitution;
     },
     error => console.log(`Error: ${error}`)
   );
@@ -47,6 +48,7 @@ document.querySelector("form").addEventListener("submit", e => {
     mathjax: document.querySelector("#mathjax").checked,
     gfm: document.querySelector("#gfm").checked,
     linkWithoutStyling: document.querySelector("#linkWithoutStyling").checked,
-    img: document.querySelector("#img").checked
+    img: document.querySelector("#img").checked,
+    titleSubstitution: document.querySelector("#titleSubstitution").value
   });
 });
