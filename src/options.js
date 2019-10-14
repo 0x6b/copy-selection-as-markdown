@@ -23,9 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#debug").checked = typeof result.debug === "undefined" ? false : result.debug;
       document.querySelector("#mathjax").checked = typeof result.mathjax === "undefined" ? false : result.mathjax;
       document.querySelector("#gfm").checked = typeof result.gfm === "undefined" ? false : result.gfm;
-      document.querySelector("#linkWithoutStyling").checked = typeof result.linkWithoutStyling === "undefined" ? false : result.linkWithoutStyling;
+      document.querySelector("#linkWithoutStyling").checked =
+        typeof result.linkWithoutStyling === "undefined" ? false : result.linkWithoutStyling;
       document.querySelector("#img").checked = typeof result.img === "undefined" ? false : result.img;
-      document.querySelector("#titleSubstitution").value = typeof result.titleSubstitution === "undefined" ? "" : result.titleSubstitution;
+      document.querySelector("#titleSubstitution").value =
+        typeof result.titleSubstitution === "undefined" ? "" : result.titleSubstitution;
     },
     error => console.log(`Error: ${error}`)
   );

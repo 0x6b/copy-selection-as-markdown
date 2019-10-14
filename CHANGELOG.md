@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.16.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.16.0) - 2019-10-14
+
+### Added
+
+- Add option to title text substitution (#47)
+
 ## [0.15.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.15.0) - 2019-10-14
 
 ### Added

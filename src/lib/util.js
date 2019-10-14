@@ -26,7 +26,7 @@ const getSelectionAsMarkdown = options => {
   }
 
   if (options.linkWithoutStyling) {
-    turndownService.use(turndownPluginLinkWithoutStyling)
+    turndownService.use(turndownPluginLinkWithoutStyling);
   }
 
   let html = "";
