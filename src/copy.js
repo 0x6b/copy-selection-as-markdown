@@ -17,8 +17,12 @@ async function main() {
     options.debug = typeof options.debug === "undefined" ? false : options.debug;
     options.mathjax = typeof options.mathjax === "undefined" ? false : options.mathjax;
     options.gfm = typeof options.gfm === "undefined" ? false : options.gfm;
+    options.linkWithoutStyling = typeof options.linkWithoutStyling === "undefined" ? false : options.linkWithoutStyling;
+    options.img = typeof options.img === "undefined" ? false : options.img;
 
-    let text = `[${document.title}](${document.URL})`;
+    let text = options.linkWithoutStyling
+      ? `${document.title} (${document.URL})`
+      : `[${document.title}](${document.URL})`;
     let selection = getSelectionAsMarkdown(options);
 
     if (selection.output !== "") {

@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#debug").checked = typeof result.debug === "undefined" ? false : result.debug;
       document.querySelector("#mathjax").checked = typeof result.mathjax === "undefined" ? false : result.mathjax;
       document.querySelector("#gfm").checked = typeof result.gfm === "undefined" ? false : result.gfm;
+      document.querySelector("#linkWithoutStyling").checked = typeof result.linkWithoutStyling === "undefined" ? false : result.linkWithoutStyling;
       document.querySelector("#img").checked = typeof result.img === "undefined" ? false : result.img;
     },
     error => console.log(`Error: ${error}`)
@@ -45,6 +46,7 @@ document.querySelector("form").addEventListener("submit", e => {
     debug: document.querySelector("#debug").checked,
     mathjax: document.querySelector("#mathjax").checked,
     gfm: document.querySelector("#gfm").checked,
+    linkWithoutStyling: document.querySelector("#linkWithoutStyling").checked,
     img: document.querySelector("#img").checked
   });
 });
