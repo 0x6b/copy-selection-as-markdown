@@ -16,6 +16,7 @@ Copy title, URL, selection as Markdown
     - [Strong](#strong)
     - [Link style](#link-style)
     - [Link reference style](#link-reference-style)
+  - [Advanced](#advanced)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
@@ -183,6 +184,12 @@ To change shortcut key, click gear icon on top-right and click **Manage Extensio
 
   [reference with shortcut style]: https://example.com
   ```
+
+### Advanced
+
+- Title Substitution -- line separated texts which will be removed from title text. If you add ` - Mozilla | MDN` to the textbox, the copied text wil be:
+  - From `[Add-ons - Mozilla | MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons)`
+  - To `[Add-ons](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons)`
 
 ## Contributing
 

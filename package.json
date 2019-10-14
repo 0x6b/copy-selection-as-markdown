@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "clipboard-copy": "^2.0.1",
+    "regex-escape": "^3.4.9",
     "turndown": "4.0.2",
     "turndown-plugin-gfm": "^1.0.2"
   },

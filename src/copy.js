@@ -1,4 +1,5 @@
 import { doCopy, getSelectionAsMarkdown } from "./lib/util";
+const RegexEscape = require("regex-escape");
 
 async function main() {
   try {
@@ -19,10 +20,20 @@ async function main() {
     options.gfm = typeof options.gfm === "undefined" ? false : options.gfm;
     options.linkWithoutStyling = typeof options.linkWithoutStyling === "undefined" ? false : options.linkWithoutStyling;
     options.img = typeof options.img === "undefined" ? false : options.img;
+    options.titleSubstitution = typeof options.titleSubstitution === "undefined" ? "" : options.titleSubstitution;
 
-    let text = options.linkWithoutStyling
-      ? `${document.title} (${document.URL})`
-      : `[${document.title}](${document.URL})`;
+    let title = document.title;
+    if (options.titleSubstitution !== "") {
+      let pattern = new RegExp(
+        options.titleSubstitution
+          .split(/\n/)
+          .map(e => `(${RegexEscape(e)})`)
+          .join("|"),
+        "g"
+      );
+      title = title.replace(pattern, "");
+    }
+    let text = options.linkWithoutStyling ? `${title} (${document.URL})` : `[${title}](${document.URL})`;
     let selection = getSelectionAsMarkdown(options);
 
     if (selection.output !== "") {
