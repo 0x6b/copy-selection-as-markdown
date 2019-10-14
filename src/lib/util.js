@@ -2,6 +2,7 @@ import TurndownService from "turndown";
 import turndownPluginMathJax from "./turndown-plugin-mathjax";
 import turndownPluginGfmStrikethrough from "./turndown-plugin-gfm-strikethrough";
 import turndownPluginImg from "./turndown-plugin-img";
+import turndownPluginLinkWithoutStyling from "./turndown-plugin-link-without-styling";
 import { tables, taskListItems } from "turndown-plugin-gfm";
 import * as copy from "clipboard-copy";
 
@@ -22,6 +23,10 @@ const getSelectionAsMarkdown = options => {
 
   if (options.img) {
     turndownService.use(turndownPluginImg);
+  }
+
+  if (options.linkWithoutStyling) {
+    turndownService.use(turndownPluginLinkWithoutStyling)
   }
 
   let html = "";

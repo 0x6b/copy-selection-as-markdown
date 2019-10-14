@@ -53,6 +53,8 @@
         <input type="checkbox" id="gfm">
         <label for="gfm">Enable <a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a> (strikethrough,
             tables, and taskListItems) support</label><br>
+        <input type="checkbox" id="linkWithoutStyling">
+        <label for="linkWithoutStyling">Disable link styling (<code>like this (https://example.com)</code> instead of <code>[like this](https://example.com)</code>)</label><br>
         <input type="checkbox" id="debug">
         <label for="debug">Log debug message in the console</label>
     </div>
@@ -181,7 +183,7 @@
         </table>
     </div>
 
-    <button type="submit">Save</button
+    <button type="submit">Save</button>
 </form>
 <script src="options.js"></script>
 </body>
