@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.15.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.15.0) - 2019-10-14
+
+### Added
+
+- Add preference to disable link styling (#43)
+
 ## [0.14.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.14.0) - 2019-07-15
 
 ### Added
