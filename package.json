@@ -1,6 +1,6 @@
 {
   "name": "copy-selection-as-markdown",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "scripts": {
     "web-ext": "web-ext",
     "watch:webextension": "unset WEB_EXT_FIREFOX WEB_EXT_API_KEY WEB_EXT_API_SECRET && web-ext --browser-console --config=web-ext-config.js run",
@@ -13,7 +13,6 @@
     "copy-assets": "cpx 'src/{icons/*.svg,settings.html,manifest.json}' dist",
     "prebuild": "npm-run-all generate-icons copy-assets webpack",
     "build": "unset WEB_EXT_FIREFOX WEB_EXT_API_KEY WEB_EXT_API_SECRET && web-ext --config=web-ext-config.js build",
-    "postbuild": "unset WEB_EXT_FIREFOX && web-ext --config=web-ext-config.js sign --api-key $WEB_EXT_API_KEY --api-secret $WEB_EXT_API_SECRET",
     "lint": "unset WEB_EXT_FIREFOX WEB_EXT_API_KEY WEB_EXT_API_SECRET && web-ext --config=web-ext-config.js lint",
     "format": "prettier --write 'src/**/{*.js,*.json}'",
     "test": "jest"

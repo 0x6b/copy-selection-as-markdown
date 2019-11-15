@@ -94,7 +94,6 @@ Run with `yarn <script-name>` or `npm run <script-name>`.
     - `webpack`: Run [`webpack`](https://webpack.js.org) to bundle scripts according to the [`webpack.config.js`](https://webpack.js.org/concepts/configuration/)
     - `prebuild`: Run `generate-icons`, `copy-assets` and `webpack` before starting `build`
     - `build`: Build the extension with [`web-ext build`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_build)
-    - `postbuild`: Sign the extension with [`web-ext sign`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_sign) after build
 
 ### Mozilla Developer Network (MDN)
 
