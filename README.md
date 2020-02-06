@@ -47,9 +47,7 @@ The add-on have multiple configuration to suit your setup as follows. Set your p
 
 - Append quote (<code>&gt;</code>) to selection
 - Include link to source web page in the beginning of copied text
-- Use `img` tag for image instead of `![title](url for image)`
 - Enable experimental MathJax support
-- Enable <a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a> (strikethrough, tables, and taskListItems) support
 - Disable link styling (`like this (https://example.com)` instead of `[like this](https://example.com)`)
 
 ### Shortcut Key
@@ -60,6 +58,10 @@ The add-on have multiple configuration to suit your setup as follows. Set your p
 To change shortcut key, click gear icon on top-right and click **Manage Extension Shortcuts**.
 
 ### Markdown Styles
+
+- Enable <a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a> (strikethrough, tables, and taskListItems) support
+- Use `img` tag for image instead of `![title](url for image)`
+- Reduce padding spaces for list items
 
 #### Heading style
 
