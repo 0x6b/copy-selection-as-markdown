@@ -3,6 +3,7 @@ import turndownPluginMathJax from "./turndown-plugin-mathjax";
 import turndownPluginGfmStrikethrough from "./turndown-plugin-gfm-strikethrough";
 import turndownPluginImg from "./turndown-plugin-img";
 import turndownPluginLinkWithoutStyling from "./turndown-plugin-link-without-styling";
+import turndownPluginListItem from "./turndown-plugin-list-item";
 import { tables, taskListItems } from "turndown-plugin-gfm";
 import * as copy from "clipboard-copy";
 
@@ -27,6 +28,10 @@ const getSelectionAsMarkdown = options => {
 
   if (options.linkWithoutStyling) {
     turndownService.use(turndownPluginLinkWithoutStyling);
+  }
+
+  if (options.reduceListItemPadding) {
+    turndownService.use(turndownPluginListItem);
   }
 
   let html = "";

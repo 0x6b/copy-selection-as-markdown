@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#img").checked = typeof result.img === "undefined" ? false : result.img;
       document.querySelector("#titleSubstitution").value =
         typeof result.titleSubstitution === "undefined" ? "" : result.titleSubstitution;
+      document.querySelector("#reduceListItemPadding").value =
+        typeof result.reduceListItemPadding === "undefined" ? false : result.titleSubstitution;
     },
     error => console.log(`Error: ${error}`)
   );
@@ -51,6 +53,7 @@ document.querySelector("form").addEventListener("submit", e => {
     gfm: document.querySelector("#gfm").checked,
     linkWithoutStyling: document.querySelector("#linkWithoutStyling").checked,
     img: document.querySelector("#img").checked,
-    titleSubstitution: document.querySelector("#titleSubstitution").value
+    titleSubstitution: document.querySelector("#titleSubstitution").value,
+    reduceListItemPadding: document.querySelector("#reduceListItemPadding").value
   });
 });
