@@ -62,6 +62,7 @@ To change shortcut key, click gear icon on top-right and click **Manage Extensio
 - Enable <a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a> (strikethrough, tables, and taskListItems) support
 - Use `img` tag for image instead of `![title](url for image)`
 - Reduce padding spaces for list items
+- Replace `<>` with HTML entities
 
 #### Heading style
 

@@ -2,7 +2,8 @@
 
 ## [Unreleased]
 
-- Add option to reduce padding spaces for list items (#41)
+- Add option to replace `<>` with HTML entities (#53)
+- Add option to reduce padding spaces for list items (#51)
 
 ## [0.16.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.16.0) - 2019-10-14
 

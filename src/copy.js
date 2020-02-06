@@ -22,6 +22,7 @@ async function main() {
     options.img = typeof options.img === "undefined" ? false : options.img;
     options.titleSubstitution = typeof options.titleSubstitution === "undefined" ? "" : options.titleSubstitution;
     options.reduceListItemPadding = typeof options.reduceListItemPadding === "undefined" ? false : options.reduceListItemPadding;
+    options.replaceAngleBrackets = typeof options.replaceAngleBrackets === "undefined" ? false : options.replaceAngleBrackets;
 
     let title = document.title;
     if (options.titleSubstitution !== "") {

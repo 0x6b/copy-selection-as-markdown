@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#titleSubstitution").value =
         typeof result.titleSubstitution === "undefined" ? "" : result.titleSubstitution;
       document.querySelector("#reduceListItemPadding").value =
-        typeof result.reduceListItemPadding === "undefined" ? false : result.titleSubstitution;
+        typeof result.reduceListItemPadding === "undefined" ? false : result.reduceListItemPadding;
+      document.querySelector("#replaceAngleBrackets").value =
+        typeof result.replaceAngleBrackets === "undefined" ? false : result.replaceAngleBrackets;
     },
     error => console.log(`Error: ${error}`)
   );
@@ -54,6 +56,7 @@ document.querySelector("form").addEventListener("submit", e => {
     linkWithoutStyling: document.querySelector("#linkWithoutStyling").checked,
     img: document.querySelector("#img").checked,
     titleSubstitution: document.querySelector("#titleSubstitution").value,
-    reduceListItemPadding: document.querySelector("#reduceListItemPadding").value
+    reduceListItemPadding: document.querySelector("#reduceListItemPadding").value,
+    replaceAngleBrackets: document.querySelector("#replaceAngleBrackets").value
   });
 });
