@@ -21,6 +21,7 @@ async function main() {
     options.linkWithoutStyling = typeof options.linkWithoutStyling === "undefined" ? false : options.linkWithoutStyling;
     options.img = typeof options.img === "undefined" ? false : options.img;
     options.titleSubstitution = typeof options.titleSubstitution === "undefined" ? "" : options.titleSubstitution;
+    options.reduceListItemPadding = typeof options.reduceListItemPadding === "undefined" ? false : options.reduceListItemPadding;
 
     let title = document.title;
     if (options.titleSubstitution !== "") {
