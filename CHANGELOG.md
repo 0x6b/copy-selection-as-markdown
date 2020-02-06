@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [0.17.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.17.0) - 2020-02-06
 
 - Add option to replace `<>` with HTML entities (#53)
 - Add option to reduce padding spaces for list items (#51)
