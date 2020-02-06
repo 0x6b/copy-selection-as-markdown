@@ -48,15 +48,10 @@
         <label for="quote">Append quote (<code>&gt;</code>) to selection</label><br>
         <input type="checkbox" id="link">
         <label for="link">Include link to source web page in the beginning of copied text</label><br>
-        <input type="checkbox" id="img">
-        <label for="img">Use <code>img</code> tag for image</label><br>
         <input type="checkbox" id="mathjax">
         <label for="mathjax">Enable experimental MathJax support (<a
                 href="https://github.com/0x6b/copy-selection-as-markdown/issues/new">report issue</a> if you find
             anything strange, with <strong>debug</strong> enabled</label><br>
-        <input type="checkbox" id="gfm">
-        <label for="gfm">Enable <a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a> (strikethrough,
-            tables, and taskListItems) support</label><br>
         <input type="checkbox" id="linkWithoutStyling">
         <label for="linkWithoutStyling">Disable link styling (<code>like this (https://example.com)</code> instead of <code>[like this](https://example.com)</code>)</label><br>
         <input type="checkbox" id="debug">
@@ -64,6 +59,11 @@
     </div>
     <div>
         <h2>Markdown</h2>
+        <input type="checkbox" id="gfm">
+        <label for="gfm">Enable <a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a> (strikethrough,
+            tables, and taskListItems) support</label><br>
+        <input type="checkbox" id="img">
+        <label for="img">Use <code>img</code> tag for image</label><br>
         <table>
             <tr>
                 <th>Option</th>
