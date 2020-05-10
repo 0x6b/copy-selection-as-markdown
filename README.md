@@ -34,6 +34,8 @@ Right click and select:
 - when user context-clicks in the page: **Copy Title and URL as Markdown**
 - when user context-clicks in the link: **Copy Link as Markdown**
 
+Since v0.18.0, rich text (`text/html`) version of the selection will be copied to the clipboard as well. Almost all of users of this extension might be using plain text editor, but it should be useful for using with [Slack](https://slack.com).
+
 ## Settings
 
 The add-on have multiple configuration to suit your setup as follows. Set your preference by:
@@ -45,7 +47,7 @@ The add-on have multiple configuration to suit your setup as follows. Set your p
 
 ### General
 
-- Append quote (<code>&gt;</code>) to selection
+- Prepend quote (<code>&gt;</code>) to selection
 - Include link to source web page in the beginning of copied text
 - Enable experimental MathJax support
 - Disable link styling (`like this (https://example.com)` instead of `[like this](https://example.com)`)

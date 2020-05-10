@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.18.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.18.0) - 2020-05-10
+
+- Copy rich text versionof selection to the clipboard (#60)
+
 ## [0.17.1](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.17.1) - 2020-05-09
 
 - Update settings text from Append to Prepend (#59) thanks to @clach04
