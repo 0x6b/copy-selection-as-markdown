@@ -5,7 +5,7 @@ import turndownPluginImg from "./turndown-plugin-img";
 import turndownPluginLinkWithoutStyling from "./turndown-plugin-link-without-styling";
 import turndownPluginListItem from "./turndown-plugin-list-item";
 import { tables, taskListItems } from "turndown-plugin-gfm";
-import * as copy from "clipboard-copy";
+import * as clipboard from "clipboard-polyfill";
 
 const url = require("url");
 
@@ -129,6 +129,11 @@ const getSelectionAsMarkdown = options => {
   return { html, output: turndownService.turndown(html), url: document.URL };
 };
 
-const doCopy = text => copy(text);
+const doCopy = (text, html) => {
+  const dt = new clipboard.DT();
+  dt.setData("text/plain", text);
+  dt.setData("text/html", html);
+  clipboard.write(dt);
+};
 
 export { getSelectionAsMarkdown, doCopy };

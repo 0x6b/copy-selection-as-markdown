@@ -36,6 +36,7 @@ async function main() {
       title = title.replace(pattern, "");
     }
     let text = options.linkWithoutStyling ? `${title} (${document.URL})` : `[${title}](${document.URL})`;
+    let html = `<a href="${document.URL}">${title}</a>`;
     let selection = getSelectionAsMarkdown(options);
 
     if (selection.output !== "") {
@@ -47,8 +48,10 @@ async function main() {
       }
       if (options["link-to-source"]) {
         text += `\n\n${selection.output}`;
+        html += `<br><br><blockquote>${selection.html}</blockquote>`;
       } else {
         text = selection.output;
+        html = selection.html;
       }
     }
 
@@ -62,7 +65,7 @@ async function main() {
       console.log(selection.url);
       console.log("/* ---------------------------------------------------- */");
     }
-    doCopy(text);
+    doCopy(text, html);
   } catch (e) {
     console.error(e);
   }
