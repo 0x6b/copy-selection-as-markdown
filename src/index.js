@@ -41,7 +41,7 @@ browser.contextMenus.onClicked.addListener(({ menuItemId, linkText, linkUrl }, {
     browser.tabs.executeScript(id, { file: "copy-link.js" }).then(() => {
       linkText = linkText.replace(/([\\`*_[\]<>])/g, "\\$1");
       linkUrl = linkUrl.replace(/[\\!'()*]/g, c => `%${c.charCodeAt(0).toString(16)}`);
-      browser.tabs.sendMessage(id, { text: `[${linkText}](${linkUrl})` });
+      browser.tabs.sendMessage(id, { text: `[${linkText}](${linkUrl})`, html: `<a href="${linkUrl}">${linkText}</a>` });
     });
   }
 });
