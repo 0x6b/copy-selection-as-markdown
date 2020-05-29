@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.18.1](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.18.1) - 2020-05-29
+
+- Fix wrong number of fence characters (#62). Thanks @t-e-r-m for the report!
+
 ## [0.18.0](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/versions/0.18.0) - 2020-05-10
 
 - Copy rich text versionof selection to the clipboard (#60)
