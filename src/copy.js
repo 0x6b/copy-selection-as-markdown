@@ -9,7 +9,7 @@ async function main() {
     options.headingStyle = typeof options.headingStyle === "undefined" ? "atx" : options.headingStyle;
     options.bulletListMarker = typeof options.bulletListMarker === "undefined" ? "-" : options.bulletListMarker;
     options.codeBlockStyle = typeof options.codeBlockStyle === "undefined" ? "indented" : options.codeBlockStyle;
-    options.fence = typeof options.fence === "undefined" ? "`" : options.fence;
+    options.fence = typeof options.fence === "undefined" ? "```" : (options.fence).repeat(3);
     options.emDelimiter = typeof options.emDelimiter === "undefined" ? "_" : options.emDelimiter;
     options.strongDelimiter = typeof options.strongDelimiter === "undefined" ? "**" : options.strongDelimiter;
     options.linkStyle = typeof options.linkStyle === "undefined" ? "inlined" : options.linkStyle;
