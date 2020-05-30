@@ -1,8 +1,13 @@
 {
-  "name": "chromium",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "copy-selection-as-markdown-chromium",
+  "version": "0.19.0",
+  "description": "copy-selection-as-markdown Chrome extension",
+  "author": "0x6b",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0x6b/copy-selection-as-markdown"
+  },
   "scripts": {
     "prebuild": "npm-run-all clean",
     "build": "webpack",
@@ -15,8 +20,5 @@
     "lint": "web-ext --config=web-ext-config.js lint",
     "format": "prettier --write 'src/**/{*.js,*.json}'",
     "test": "jest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
