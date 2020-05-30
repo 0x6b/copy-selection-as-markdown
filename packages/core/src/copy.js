@@ -1,4 +1,5 @@
 import { doCopy, getSelectionAsMarkdown } from "./util";
+
 const RegexEscape = require("regex-escape");
 
 async function main() {
@@ -93,14 +94,27 @@ async function main() {
     }
 
     if (options.debug) {
-      console.log("/* --- copy-selection-as-markdown debug information --- */");
-      console.log("/* --- INPUT ------------------------------------------ */");
-      console.log(selection.html);
-      console.log("/* --- OUTPUT------------------------------------------ */");
-      console.log(selection.output);
-      console.log("/* --- URL -------------------------------------------- */");
-      console.log(selection.url);
-      console.log("/* ---------------------------------------------------- */");
+      console.log(`
+/* --- copy-selection-as-markdown debug information ------------------------------------------------------- */
+### INPUT
+
+\`\`\`html
+${selection.html}
+\`\`\`
+
+### OUTPUT
+
+\`\`\`markdown
+${selection.output}
+\`\`\`
+
+### Source URL
+
+${selection.url}
+/* --- end of copy-selection-as-markdown debug information ------------------------------------------------ */
+Open new issue at https://github.com/0x6b/copy-selection-as-markdown/issues/new with information above.
+
+`      );
     }
     doCopy(text, html);
   } catch (e) {
