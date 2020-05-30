@@ -1,5 +1,5 @@
-export default function strikethrough(turndownService) {
-  turndownService.addRule("strikethrough", {
+export default function img(turndownService) {
+  turndownService.addRule("img", {
     filter: ["img"],
     replacement: function (content, node) {
       const src = node.getAttribute("src")

@@ -1,4 +1,4 @@
-export default function strikethrough(turndownService) {
+export default function inlineLink(turndownService) {
   turndownService.addRule("inlineLink", {
     filter: (node, options) =>
       options.linkStyle === "inlined" &&
