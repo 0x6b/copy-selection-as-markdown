@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Copy Selection as Markdown",
+  "version": "0.19.0",
+  "description": "Copy title, URL, and selection as Markdown",
+  "background": {
+    "scripts": [
+      "index.js"
+    ]
+  },
+  "options_ui": {
+    "page": "settings.html"
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Copy as Markdown"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E"
+      },
+      "description": "Copy as Markdown"
+    }
+  },
+  "permissions": [
+    "<all_urls>",
+    "activeTab",
+    "clipboardWrite",
+    "contextMenus",
+    "tabs",
+    "storage"
+  ]
+}
+

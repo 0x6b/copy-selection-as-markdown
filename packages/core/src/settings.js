@@ -1,3 +1,5 @@
+const browser = require("webextension-polyfill");
+
 document.addEventListener("DOMContentLoaded", () => {
   browser.storage.local.get().then(
     (result) => {
