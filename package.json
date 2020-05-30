@@ -4,16 +4,15 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "run-s build:core build:firefox",
+    "build": "run-s build:core build:firefox build:chromium",
     "build:core": "npm run build --workspace copy-selection-as-markdown-core",
     "build:firefox": "npm run build --workspace copy-selection-as-markdown-firefox",
+    "build:chromium": "npm run build --workspace copy-selection-as-markdown-chromium",
     "test": "run-s test:core",
     "test:core": "npm run test --workspace copy-selection-as-markdown-core",
     "generate": "run-s generate:firefox",
     "generate:firefox": "npm run generate --workspace copy-selection-as-markdown-firefox",
-    "format": "run-s format:core format:firefox",
-    "format:core": "npm run format --workspace copy-selection-as-markdown-core",
-    "format:firefox": "npm run format --workspace copy-selection-as-markdown-firefox",
+    "format": "npm run format --workspaces",
     "watch": "run-p watch:core watch:firefox",
     "watch:core": "npm run watch --workspace copy-selection-as-markdown-core",
     "watch:firefox": "npm run watch --workspace copy-selection-as-markdown-firefox"
