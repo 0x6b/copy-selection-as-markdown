@@ -8,7 +8,11 @@
 4. Check **Log debug message in the console** and click **Save**.
 5. Click the menu button and choose **Web Developer** then **Web Console**.
 6. Copy your text again.
-7. Paste console output between `/* --- copy-selection-as-markdown debug information --- */` and `/* ---------------------------------------------------- */` to here.
+7. Paste console output between
+      `/* --- copy-selection-as-markdown debug information ------------------------------------------------------- */`
+   and
+      `/* --- end of copy-selection-as-markdown debug information ------------------------------------------------ */`
+   to here.
 --> 
 
 **Expected Result**
