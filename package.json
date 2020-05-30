@@ -10,12 +10,13 @@
     "build:chromium": "npm run build --workspace copy-selection-as-markdown-chromium",
     "test": "run-s test:core",
     "test:core": "npm run test --workspace copy-selection-as-markdown-core",
-    "generate": "run-s generate:firefox",
+    "generate": "run-s generate:*",
     "generate:firefox": "npm run generate --workspace copy-selection-as-markdown-firefox",
     "format": "npm run format --workspaces",
-    "watch": "run-p watch:core watch:firefox",
+    "watch": "run-p watch:*",
     "watch:core": "npm run watch --workspace copy-selection-as-markdown-core",
-    "watch:firefox": "npm run watch --workspace copy-selection-as-markdown-firefox"
+    "watch:firefox": "npm run watch --workspace copy-selection-as-markdown-firefox",
+    "clean": "yarn workspaces run clean"
   },
   "devDependencies": {
     "@types/firefox-webext-browser": "^82.0.0",
