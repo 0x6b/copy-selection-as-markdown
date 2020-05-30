@@ -1,6 +1,6 @@
 module.exports = {
   sourceDir: "dist",
-  artifactsDir: "../../artifacts/firefox",
+  artifactsDir: "../../artifacts/chromium",
   run: {
     startUrl: [
       "https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference",
