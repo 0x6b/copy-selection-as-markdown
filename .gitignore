@@ -1,5 +1,5 @@
-dist/*
 node_modules/
 .idea/
-src/icons/*.svg
-*.zip
+dist/
+*.svg
+*.pem

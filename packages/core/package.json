@@ -1,0 +1,48 @@
+{
+  "name": "copy-selection-as-markdown-core",
+  "version": "0.19.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "npm-run-all clean",
+    "build": "webpack",
+    "clean": "rimraf dist/*",
+    "watch": "webpack --watch --progress",
+    "format": "prettier --write 'src/**/{*.js,*.json}'",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clipboard-polyfill": "^2.8.6",
+    "regex-escape": "^3.4.9",
+    "turndown": "^6.0.0",
+    "turndown-plugin-gfm": "^1.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "@babel/runtime": "^7.10.1",
+    "@babel/runtime-corejs3": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "core-js": "2",
+    "jest": "^26.0.1",
+    "jsdom": "^16.2.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "firefox": "57"
+          },
+          "useBuiltIns": "usage",
+          "corejs": 2
+        }
+      ]
+    ]
+  }
+}

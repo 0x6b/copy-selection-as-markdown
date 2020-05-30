@@ -1,0 +1,27 @@
+{
+  "name": "copy-selection-as-markdown-firefox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "npm-run-all clean generate-icons",
+    "build": "webpack",
+    "clean": "rimraf dist/*",
+    "generate-icons": "node icons/generate.js",
+    "watch:webextension": "web-ext --browser-console --config=web-ext-config.js run",
+    "watch:js": "webpack --watch --progress",
+    "watch": "npm-run-all --parallel watch:*",
+    "pregenerate": "run-s build",
+    "generate": "web-ext --config=web-ext-config.js build",
+    "lint": "web-ext --config=web-ext-config.js lint",
+    "format": "prettier --write 'src/**/{*.js,*.json}'",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@primer/octicons": "^9.6.0",
+    "xml2js": "^0.4.23"
+  }
+}
