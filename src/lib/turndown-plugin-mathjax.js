@@ -18,7 +18,7 @@ rules.removeInlineFormula = {
 
 rules.removeBlankListItem = {
   filter: ["li"],
-  replacement: function(content, node, options) {
+  replacement: function (content, node, options) {
     node.childNodes.forEach(child => {
       if (child.className && child.className.startsWith("MathJax")) {
         node.removeChild(child);
@@ -46,7 +46,7 @@ rules.removeBlankListItem = {
 // remove new lines surrounding blank paragraph before script node
 rules.paragraphBeforeScriptNode = {
   filter: "p",
-  replacement: function(content, node) {
+  replacement: function (content, node) {
     var hasSiblings = node.nextSibling;
 
     if (hasSiblings && node.nextSibling.nodeName === "SCRIPT" && node.nextSibling.type.startsWith("math/tex")) {

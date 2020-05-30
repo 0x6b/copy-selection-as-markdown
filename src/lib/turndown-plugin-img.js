@@ -1,7 +1,7 @@
 export default function strikethrough(turndownService) {
   turndownService.addRule("strikethrough", {
     filter: ["img"],
-    replacement: function(content, node) {
+    replacement: function (content, node) {
       const src = node.getAttribute("src") ? `src="${node.getAttribute("src")}"` : "";
       const alt = node.alt ? `alt="${node.alt}"` : "";
       const title = node.title ? `title="${node.title}"` : "";

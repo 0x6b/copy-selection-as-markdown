@@ -1,7 +1,7 @@
 export default function listItem(turndownService) {
   turndownService.addRule("listItem", {
     filter: "li",
-    replacement: function(content, node, options) {
+    replacement: function (content, node, options) {
       content = content
         .replace(/^\n+/, "") // remove leading newlines
         .replace(/\n+$/, "\n") // replace trailing newlines with just a single one
