@@ -6,26 +6,35 @@ Copy title, URL, selection as Markdown
 
 ## Install
 
-Go to [Add-ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/) and install.
+- Mozilla Firefox: Go to [Add-ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/) and install.
+- Google Chrome: You have to build and install at your own risk. No store distribution at this moment.
 
 ## Usage
 
 Right click and select:
 
 - when part of the page is selected: **Copy Selection as Markdown**
-- when user context-clicks in the page: **Copy Title and URL as Markdown**
-- when user context-clicks in the link: **Copy Link as Markdown**
+- when user context-clicks in the page: **Copy Title and URL as Markdown** (only available on Firefox)
+- when user context-clicks in the link: **Copy Link as Markdown** (only available on Firefox)
+
+Toolbar button is also available.
 
 Since v0.18.0, rich text (`text/html`) version of the selection will be copied to the clipboard as well. Almost all of users of this extension might be using plain text editor, but it should be useful for using with [Slack](https://slack.com).
 
 ## Settings
 
-The add-on have multiple configuration to suit your setup as follows. Set your preference by:
+The add-on has multiple configuration to suit your setup as follows. Set your preference by:
 
-1. Click the menu button ![](images/menu.svg) and choose ![](images/extensionGeneric-16.svg) **Add-ons**. The Add-ons Manager tab will open
-2. In the Add-ons Manager tab, select the **Extensions** panel
-3. Click **Copy Selection as Markdown** and click **Preferences** tab
-4. Hit **Save** button on the top to apply changes (no restart required)
+- Firefox:
+  1. Click the menu button ![](images/menu.svg) and choose ![](images/extensionGeneric-16.svg) **Add-ons**. The Add-ons Manager tab will open
+  2. In the Add-ons Manager tab, select the **Extensions** panel
+  3. Click **Copy Selection as Markdown** and click **Preferences** tab
+  4. Hit **Save** button on the top to apply changes (no restart required)
+- Chrome:
+  1. Go to `chrome://extension`
+  2. Click **Copy Selection as Markdown** and click **Details** tab
+  3. Click **Extension options**
+  4. Hit **Save** button on the top to apply changes (no restart required)
 
 ### General
 
@@ -39,7 +48,7 @@ The add-on have multiple configuration to suit your setup as follows. Set your p
 - macOS: `Command` + `Shift` + `E`
 - Windows/Linux: `Ctrl` + `Shift` + `E`
 
-To change shortcut key, click gear icon on top-right and click **Manage Extension Shortcuts**.
+To change shortcut key, click gear icon on top-right and click **Manage Extension Shortcuts**, or `chrome://extensions/shortcuts`.
 
 ### Markdown Styles
 
