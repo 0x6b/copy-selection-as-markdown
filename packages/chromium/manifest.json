@@ -3,6 +3,11 @@
   "name": "Copy Selection as Markdown",
   "version": "0.19.0",
   "description": "Copy title, URL, and selection as Markdown",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "background": {
     "scripts": [
       "index.js"
@@ -13,6 +18,11 @@
   },
   "browser_action": {
     "browser_style": true,
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
     "default_title": "Copy as Markdown"
   },
   "commands": {
