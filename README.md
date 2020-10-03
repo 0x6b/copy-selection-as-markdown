@@ -195,6 +195,7 @@ To change shortcut key, click gear icon on top-right and click **Manage Extensio
 - Title Substitution -- line separated texts which will be removed from title text. If you add ` - Mozilla | MDN` to the textbox, the copied text wil be:
   - From `[Add-ons - Mozilla | MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons)`
   - To `[Add-ons](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons)`
+- Embed `img`s (.gif, .jpg, .jpeg, .png, and .webp) as base64 -- images will be encoded as base64 text, instead of URL, and added at the end of copied text. Sometime it might fail but useful for backup. See [Permissions](#privacy).
 
 ## Contributing
 
@@ -212,3 +213,15 @@ This extension is released under the MIT License. See [LICENSE](LICENSE) for det
 ## Privacy
 
 The add-on does not store any user data outside of the Firefox user profile. The conversion to markdown is solely done locally. The add-on never send user action/data to any server.
+
+### Permissions
+
+See [permissions - Mozilla | MDN](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for more detail.
+
+| Permission       | Optional | Description                                                                                                                                                                                                                                                                                                                                                       |
+| ---------------- | :------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `activeTab`      |          | to run copy functionality at active tab                                                                                                                                                                                                                                                                                                                           |
+| `clipboardWrite` |          | to write to clipboard obviously                                                                                                                                                                                                                                                                                                                                   |
+| `contextMenus`   |          | to add context menus                                                                                                                                                                                                                                                                                                                                              |
+| `storage`        |          | to store preferences                                                                                                                                                                                                                                                                                                                                              |
+| `<all_urls>`     |    X     | when [**Embed <code>img</code>s (.gif, .jpg, .jpeg, .png, and .webp) as base64 text as possible** option](#advanced) is set, the extension requests this permission since sometimes referenced images are hosted other than current active tab's URL so `activeTab` permission is not sufficient. If the option's not set, the extension removes this permission. |
