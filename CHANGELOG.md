@@ -4,7 +4,7 @@
 
 ### Fixed
 
-- Remove unnecessary permission (#72). Thanks @bs for the report! 
+- Remove unnecessary permissions (#72). Thanks @bs for the report! 
 
 ## 0.19.0 - 2020-05-30
 
