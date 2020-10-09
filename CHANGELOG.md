@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.20.2 - 2020-10-09
+
+- Oops revert unwanted commits at 0.20.1...
+
 ## 0.20.1 - 2020-10-09
 
 - Same as v0.20.0 (failed to release proper version to AMO)
