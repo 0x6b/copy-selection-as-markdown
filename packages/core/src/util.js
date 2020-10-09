@@ -2,7 +2,6 @@ import TurndownService from "turndown";
 import turndownPluginMathJax from "./plugins/mathjax";
 import turndownPluginGfmStrikethrough from "./plugins/gfm-strikethrough";
 import turndownPluginImg from "./plugins/img";
-import turndownPluginImgReferenceStyle from "./plugins/img-reference-style";
 import turndownPluginLinkWithoutStyling from "./plugins/link-without-styling";
 import turndownPluginListItem from "./plugins/list-item";
 import { tables, taskListItems } from "turndown-plugin-gfm";
@@ -10,7 +9,7 @@ import * as clipboard from "clipboard-polyfill";
 
 const url = require("url");
 
-const getSelectionAsMarkdown = async (options) => {
+const getSelectionAsMarkdown = (options) => {
   let turndownService = TurndownService(options);
 
   if (options.mathjax) {
@@ -136,25 +135,6 @@ const getSelectionAsMarkdown = async (options) => {
       }
     }
 
-    if (options.embedImage) {
-      turndownService.use(turndownPluginImgReferenceStyle);
-      for (let img of container.getElementsByTagName("img")) {
-        if (
-          img.hasAttribute("src") &&
-          img.getAttribute("src").startsWith("http") &&
-          (
-            img.getAttribute("src").split("?", 2)[0].endsWith("gif") ||
-            img.getAttribute("src").split("?", 2)[0].endsWith("jpg") ||
-            img.getAttribute("src").split("?", 2)[0].endsWith("jpeg") ||
-            img.getAttribute("src").split("?", 2)[0].endsWith("png") ||
-            img.getAttribute("src").split("?", 2)[0].endsWith("webp")
-          )
-        ) {
-          img.setAttribute("src", await imgToDataUrl(img));
-        }
-      }
-    }
-
     html = container.innerHTML;
   }
 
@@ -166,26 +146,6 @@ const doCopy = (text, html) => {
   dt.setData("text/plain", text);
   dt.setData("text/html", html);
   clipboard.write(dt);
-};
-
-const imgToDataUrl = (image) => {
-  return new Promise((resolve) => {
-    let img = new Image();
-    img.setAttribute("crossorigin", "anonymous");
-    img.onload = function () {
-      let canvas = document.createElement("canvas");
-      canvas.width = this.naturalWidth;
-      canvas.height = this.naturalHeight;
-
-      canvas.getContext("2d").drawImage(this, 0, 0);
-      image.setAttribute("src", canvas.toDataURL("image/png"));
-
-      resolve(image.src);
-      canvas = null;
-    };
-
-    img.src = image.getAttribute("src");
-  });
 };
 
 export { getSelectionAsMarkdown, doCopy };

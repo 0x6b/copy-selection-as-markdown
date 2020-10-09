@@ -45,8 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
           : result.linkWithoutStyling;
       document.querySelector("#img").checked =
         typeof result.img === "undefined" ? false : result.img;
-      document.querySelector("#embedImage").checked =
-        typeof result.embedImage === "undefined" ? false : result.embedImage;
       document.querySelector("#titleSubstitution").value =
         typeof result.titleSubstitution === "undefined"
           ? ""
@@ -64,21 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
-document.querySelector("form").addEventListener("submit", async (e) => {
+document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
-
-  let embedImage = document.querySelector("#embedImage").checked || false;
-
-  if (embedImage) {
-    embedImage = await browser.permissions.request({
-      origins: ["<all_urls>"],
-      permissions: [],
-    });
-    document.querySelector("#embedImage").checked = embedImage;
-  } else {
-    await browser.permissions.remove({ origins: ["<all_urls>"] });
-  }
-
   browser.storage.local.set({
     "use-quote": document.querySelector("#quote").checked,
     "link-to-source": document.querySelector("#link").checked,
@@ -95,7 +80,6 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     gfm: document.querySelector("#gfm").checked,
     linkWithoutStyling: document.querySelector("#linkWithoutStyling").checked,
     img: document.querySelector("#img").checked,
-    embedImage,
     titleSubstitution: document.querySelector("#titleSubstitution").value,
     reduceListItemPadding: document.querySelector("#reduceListItemPadding")
       .value,

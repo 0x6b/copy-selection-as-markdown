@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.20.1 - 2020-10-09
+
+- Same as v0.20.0 (failed to release proper version to AMO)
+
+## 0.20.0 - 2020-10-09
+
+### Added
+
+- Add advanced option to embed <img>s as base64 text (#73)
+
 ## 0.19.1 - 2020-10-03
 
 ### Fixed

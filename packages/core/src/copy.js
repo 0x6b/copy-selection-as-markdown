@@ -47,7 +47,6 @@ async function main() {
         ? false
         : options.linkWithoutStyling;
     options.img = typeof options.img === "undefined" ? false : options.img;
-    options.embedImage = typeof options.embedImage === "undefined" ? false : options.embedImage;
     options.titleSubstitution =
       typeof options.titleSubstitution === "undefined"
         ? ""
@@ -76,7 +75,7 @@ async function main() {
       ? `${title} (${document.URL})`
       : `[${title}](${document.URL})`;
     let html = `<a href="${document.URL}">${title}</a>`;
-    let selection = await getSelectionAsMarkdown(options);
+    let selection = getSelectionAsMarkdown(options);
 
     if (selection.output !== "") {
       if (options["use-quote"]) {
