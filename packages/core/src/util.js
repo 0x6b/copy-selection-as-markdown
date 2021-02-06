@@ -11,15 +11,25 @@ import RegexEscape from "regex-escape";
 
 const url = require("url");
 
-const convertTitleSubstitution = (titleSubstitutionOption = '') => {
+const regexpRegexp = /^\/(.+)\/$/;
+
+const convertTitleSubstitution = (titleSubstitutionOption = "") => {
+  const convertLine = (line) => {
+    if (line.match(regexpRegexp)) {
+      const [, expression] = regexpRegexp.exec(line);
+      return expression;
+    } else {
+      return RegexEscape(line);
+    }
+  };
   return new RegExp(
     titleSubstitutionOption
       .split(/\n/)
-      .map((e) => `(${RegexEscape(e)})`)
+      .map((line) => `(${convertLine(line)})`)
       .join("|"),
     "g"
   );
-}
+};
 
 const getSelectionAsMarkdown = async (options) => {
   let turndownService = TurndownService(options);

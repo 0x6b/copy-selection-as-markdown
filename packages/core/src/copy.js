@@ -1,4 +1,8 @@
-import { doCopy, getSelectionAsMarkdown, convertTitleSubstitution } from "./util";
+import {
+  doCopy,
+  getSelectionAsMarkdown,
+  convertTitleSubstitution,
+} from "./util";
 
 async function main() {
   try {

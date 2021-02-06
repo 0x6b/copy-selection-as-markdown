@@ -15,5 +15,19 @@ describe("util", () => {
         ).toBe(result);
       }
     );
+
+    test.each`
+      title                  | substitutionOption       | result
+      ${"abcd"}              | ${"/[abc]+/"}            | ${"d"}
+      ${"title #1234"}       | ${"/ #\\d+/"}            | ${"title"}
+      ${"second line title"} | ${"first line\n/[^l]+/"} | ${"ll"}
+    `(
+      "provides regex title substitution on $title",
+      ({ title, substitutionOption, result }) => {
+        expect(
+          title.replace(convertTitleSubstitution(substitutionOption), "")
+        ).toBe(result);
+      }
+    );
   });
 });
