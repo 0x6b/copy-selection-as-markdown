@@ -163,13 +163,11 @@ const getSelectionAsMarkdown = async (options) => {
         if (
           img.hasAttribute("src") &&
           img.getAttribute("src").startsWith("http") &&
-          (
-            img.getAttribute("src").split("?", 2)[0].endsWith("gif") ||
+          (img.getAttribute("src").split("?", 2)[0].endsWith("gif") ||
             img.getAttribute("src").split("?", 2)[0].endsWith("jpg") ||
             img.getAttribute("src").split("?", 2)[0].endsWith("jpeg") ||
             img.getAttribute("src").split("?", 2)[0].endsWith("png") ||
-            img.getAttribute("src").split("?", 2)[0].endsWith("webp")
-          )
+            img.getAttribute("src").split("?", 2)[0].endsWith("webp"))
         ) {
           img.setAttribute("src", await imgToDataUrl(img));
         }

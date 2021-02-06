@@ -49,7 +49,8 @@ async function main() {
         ? false
         : options.linkWithoutStyling;
     options.img = typeof options.img === "undefined" ? false : options.img;
-    options.embedImage = typeof options.embedImage === "undefined" ? false : options.embedImage;
+    options.embedImage =
+      typeof options.embedImage === "undefined" ? false : options.embedImage;
     options.titleSubstitution =
       typeof options.titleSubstitution === "undefined"
         ? ""
@@ -111,7 +112,7 @@ ${selection.url}
 /* --- end of copy-selection-as-markdown debug information ------------------------------------------------ */
 Open new issue at https://github.com/0x6b/copy-selection-as-markdown/issues/new with information above.
 
-`      );
+`);
     }
     doCopy(text, html);
   } catch (e) {
