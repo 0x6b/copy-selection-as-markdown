@@ -1,6 +1,4 @@
-import { doCopy, getSelectionAsMarkdown } from "./util";
-
-const RegexEscape = require("regex-escape");
+import { doCopy, getSelectionAsMarkdown, convertTitleSubstitution } from "./util";
 
 async function main() {
   try {
@@ -63,13 +61,7 @@ async function main() {
 
     let title = document.title;
     if (options.titleSubstitution !== "") {
-      let pattern = new RegExp(
-        options.titleSubstitution
-          .split(/\n/)
-          .map((e) => `(${RegexEscape(e)})`)
-          .join("|"),
-        "g"
-      );
+      let pattern = convertTitleSubstitution(options.titleSubstitution);
       title = title.replace(pattern, "");
     }
     let text = options.linkWithoutStyling

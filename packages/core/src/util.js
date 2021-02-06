@@ -7,8 +7,19 @@ import turndownPluginLinkWithoutStyling from "./plugins/link-without-styling";
 import turndownPluginListItem from "./plugins/list-item";
 import { tables, taskListItems } from "turndown-plugin-gfm";
 import * as clipboard from "clipboard-polyfill";
+import RegexEscape from "regex-escape";
 
 const url = require("url");
+
+const convertTitleSubstitution = (titleSubstitutionOption = '') => {
+  return new RegExp(
+    titleSubstitutionOption
+      .split(/\n/)
+      .map((e) => `(${RegexEscape(e)})`)
+      .join("|"),
+    "g"
+  );
+}
 
 const getSelectionAsMarkdown = async (options) => {
   let turndownService = TurndownService(options);
@@ -188,4 +199,4 @@ const imgToDataUrl = (image) => {
   });
 };
 
-export { getSelectionAsMarkdown, doCopy };
+export { getSelectionAsMarkdown, doCopy, convertTitleSubstitution };
