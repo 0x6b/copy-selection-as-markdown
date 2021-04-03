@@ -4,28 +4,6 @@ Copy title, URL, selection as Markdown
 
 ![How it works](images/screencast.gif)
 
-- [Copy Selection as Markdown](#copy-selection-as-markdown)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Settings](#settings)
-    - [General](#general)
-    - [Shortcut Key](#shortcut-key)
-    - [Markdown Styles](#markdown-styles)
-      - [Heading style](#heading-style)
-      - [Bullet list marker](#bullet-list-marker)
-      - [Code block style](#code-block-style)
-      - [Fence](#fence)
-      - [Em](#em)
-      - [Strong](#strong)
-      - [Link style](#link-style)
-      - [Link reference style](#link-reference-style)
-    - [Advanced](#advanced)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Acknowledgements](#acknowledgements)
-  - [Privacy](#privacy)
-    - [Permissions](#permissions)
-
 ## Install
 
 Go to [Add-ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/) and install.
@@ -204,6 +182,24 @@ To change shortcut key, click gear icon on top-right and click **Manage Extensio
 ## Contributing
 
 Please read [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## FAQ: Not working on Mozilla related sites
+
+By default, no add-on can interfere pre-configured domains for security reason. You can configure this behavior at `about:config` → `extensions.webextensions.restrictedDomains` preference. See [Configuration Editor for Firefox | Firefox Help](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) for how to change the preference.
+
+- Default list of restricted domains (See [modules/libpref/init/all.js](https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js#3839))
+  - accounts-static.cdn.mozilla.net
+  - accounts.firefox.com
+  - addons.cdn.mozilla.net
+  - addons.mozilla.org
+  - api.accounts.firefox.com
+  - content.cdn.mozilla.net
+  - discovery.addons.mozilla.org
+  - install.mozilla.org
+  - oauth.accounts.firefox.com
+  - profile.accounts.firefox.com
+  - support.mozilla.org
+  - sync.services.mozilla.com
 
 ## License
 
