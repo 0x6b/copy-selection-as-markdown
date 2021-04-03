@@ -4,28 +4,6 @@ Copy title, URL, selection as Markdown
 
 ![How it works](images/screencast.gif)
 
-- [Copy Selection as Markdown](#copy-selection-as-markdown)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Settings](#settings)
-    - [General](#general)
-    - [Shortcut Key](#shortcut-key)
-    - [Markdown Styles](#markdown-styles)
-      - [Heading style](#heading-style)
-      - [Bullet list marker](#bullet-list-marker)
-      - [Code block style](#code-block-style)
-      - [Fence](#fence)
-      - [Em](#em)
-      - [Strong](#strong)
-      - [Link style](#link-style)
-      - [Link reference style](#link-reference-style)
-    - [Advanced](#advanced)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Acknowledgements](#acknowledgements)
-  - [Privacy](#privacy)
-    - [Permissions](#permissions)
-
 ## Install
 
 Go to [Add-ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/) and install.
