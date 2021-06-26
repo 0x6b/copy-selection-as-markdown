@@ -1,6 +1,8 @@
-import { doCopy, getSelectionAsMarkdown } from "./util";
-
-const RegexEscape = require("regex-escape");
+import {
+  doCopy,
+  getSelectionAsMarkdown,
+  convertTitleSubstitution,
+} from "./util";
 
 async function main() {
   try {
@@ -47,7 +49,8 @@ async function main() {
         ? false
         : options.linkWithoutStyling;
     options.img = typeof options.img === "undefined" ? false : options.img;
-    options.embedImage = typeof options.embedImage === "undefined" ? false : options.embedImage;
+    options.embedImage =
+      typeof options.embedImage === "undefined" ? false : options.embedImage;
     options.titleSubstitution =
       typeof options.titleSubstitution === "undefined"
         ? ""
@@ -63,13 +66,7 @@ async function main() {
 
     let title = document.title;
     if (options.titleSubstitution !== "") {
-      let pattern = new RegExp(
-        options.titleSubstitution
-          .split(/\n/)
-          .map((e) => `(${RegexEscape(e)})`)
-          .join("|"),
-        "g"
-      );
+      let pattern = convertTitleSubstitution(options.titleSubstitution);
       title = title.replace(pattern, "");
     }
     let text = options.linkWithoutStyling
@@ -115,7 +112,7 @@ ${selection.url}
 /* --- end of copy-selection-as-markdown debug information ------------------------------------------------ */
 Open new issue at https://github.com/0x6b/copy-selection-as-markdown/issues/new with information above.
 
-`      );
+`);
     }
     doCopy(text, html);
   } catch (e) {

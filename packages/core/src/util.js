@@ -7,8 +7,29 @@ import turndownPluginLinkWithoutStyling from "./plugins/link-without-styling";
 import turndownPluginListItem from "./plugins/list-item";
 import { tables, taskListItems } from "turndown-plugin-gfm";
 import * as clipboard from "clipboard-polyfill";
+import RegexEscape from "regex-escape";
 
 const url = require("url");
+
+const regexpRegexp = /^\/(.+)\/$/;
+
+const convertTitleSubstitution = (titleSubstitutionOption = "") => {
+  const convertLine = (line) => {
+    if (line.match(regexpRegexp)) {
+      const [, expression] = regexpRegexp.exec(line);
+      return expression;
+    } else {
+      return RegexEscape(line);
+    }
+  };
+  return new RegExp(
+    titleSubstitutionOption
+      .split(/\n/)
+      .map((line) => `(${convertLine(line)})`)
+      .join("|"),
+    "g"
+  );
+};
 
 const getSelectionAsMarkdown = async (options) => {
   let turndownService = TurndownService(options);
@@ -142,13 +163,11 @@ const getSelectionAsMarkdown = async (options) => {
         if (
           img.hasAttribute("src") &&
           img.getAttribute("src").startsWith("http") &&
-          (
-            img.getAttribute("src").split("?", 2)[0].endsWith("gif") ||
+          (img.getAttribute("src").split("?", 2)[0].endsWith("gif") ||
             img.getAttribute("src").split("?", 2)[0].endsWith("jpg") ||
             img.getAttribute("src").split("?", 2)[0].endsWith("jpeg") ||
             img.getAttribute("src").split("?", 2)[0].endsWith("png") ||
-            img.getAttribute("src").split("?", 2)[0].endsWith("webp")
-          )
+            img.getAttribute("src").split("?", 2)[0].endsWith("webp"))
         ) {
           img.setAttribute("src", await imgToDataUrl(img));
         }
@@ -188,4 +207,4 @@ const imgToDataUrl = (image) => {
   });
 };
 
-export { getSelectionAsMarkdown, doCopy };
+export { getSelectionAsMarkdown, doCopy, convertTitleSubstitution };
