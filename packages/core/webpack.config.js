@@ -5,14 +5,14 @@ module.exports = {
   entry: {
     copy: "./src/copy.js",
     "copy-link": "./src/copy-link.js",
-    settings: "./src/settings.js"
+    settings: "./src/settings.js",
   },
   output: {
     path: __dirname + "/dist",
-    filename: "[name].js"
+    filename: "[name].js",
   },
   node: {
-    global: false
+    global: false,
   },
   module: {
     rules: [
@@ -29,23 +29,22 @@ module.exports = {
                   corejs: 3,
                   helpers: false,
                   regenerator: true,
-                  useESModules: false
-                }
-              ]
-            ]
-          }
-        }
-      }
-    ]
+                  useESModules: false,
+                },
+              ],
+            ],
+          },
+        },
+      },
+    ],
   },
   plugins: [
     new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: "src/settings.html"
-          }
-        ]
-      }
-    )
-  ]
+      patterns: [
+        {
+          from: "src/settings.html",
+        },
+      ],
+    }),
+  ],
 };

@@ -46,8 +46,8 @@ module.exports = {
           from: "../core/dist/",
         },
         {
-          from: "icons/*.svg"
-        }
+          from: "icons/*.svg",
+        },
       ],
     }),
   ],
