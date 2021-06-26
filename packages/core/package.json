@@ -20,7 +20,8 @@
     "clipboard-polyfill": "^2.8.6",
     "regex-escape": "^3.4.9",
     "turndown": "^6.0.0",
-    "turndown-plugin-gfm": "^1.0.2"
+    "turndown-plugin-gfm": "^1.0.2",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
