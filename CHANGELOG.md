@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.21.0 - 2021-06-27
+
+### Added
+
+- Support regular expression in title substitution (#80). Thanks @viktomas for this great enhancement!
+
 ## 0.20.4 - 2020-10-09
 
 ### Added
