@@ -3,6 +3,7 @@ import {
   getSelectionAsMarkdown,
   convertTitleSubstitution,
 } from "./util";
+const browser = require("webextension-polyfill");
 
 async function main() {
   try {

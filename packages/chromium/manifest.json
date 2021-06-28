@@ -10,7 +10,8 @@
   },
   "background": {
     "scripts": [
-      "index.js"
+      "index.js",
+      "browser-polyfill.min.js"
     ]
   },
   "options_ui": {
