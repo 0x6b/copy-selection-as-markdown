@@ -13,7 +13,6 @@
     "build": "webpack",
     "clean": "rimraf dist/*",
     "watch": "webpack --watch --progress",
-    "format": "prettier --write 'src/**/{*.js,*.json}'",
     "test": "jest"
   },
   "dependencies": {

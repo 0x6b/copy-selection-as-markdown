@@ -4,19 +4,14 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "run-s build:core build:firefox",
-    "build:core": "npm run build --workspace copy-selection-as-markdown-core",
-    "build:firefox": "npm run build --workspace copy-selection-as-markdown-firefox",
-    "test": "run-s test:core",
-    "test:core": "npm run test --workspace copy-selection-as-markdown-core",
-    "generate": "run-s generate:firefox",
-    "generate:firefox": "npm run generate --workspace copy-selection-as-markdown-firefox",
-    "format": "run-s format:core format:firefox",
-    "format:core": "npm run format --workspace copy-selection-as-markdown-core",
-    "format:firefox": "npm run format --workspace copy-selection-as-markdown-firefox",
-    "watch": "run-p watch:core watch:firefox",
+    "build": "npm run build --workspace copy-selection-as-markdown-core --workspace copy-selection-as-markdown-firefox --workspace copy-selection-as-markdown-chromium\n",
+    "test": "npm test --workspaces",
+    "generate": "npm run generate --workspace copy-selection-as-markdown-firefox",
+    "format": "prettier --write 'packages/**/src/**/{*.js,*.json}'",
+    "watch": "run-p watch:*",
     "watch:core": "npm run watch --workspace copy-selection-as-markdown-core",
-    "watch:firefox": "npm run watch --workspace copy-selection-as-markdown-firefox"
+    "watch:firefox": "npm run watch --workspace copy-selection-as-markdown-firefox",
+    "clean": "npm run clean --workspaces"
   },
   "devDependencies": {
     "@types/firefox-webext-browser": "^82.0.0",
