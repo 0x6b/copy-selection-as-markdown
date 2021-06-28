@@ -9,13 +9,12 @@
     "url": "https://github.com/0x6b/copy-selection-as-markdown"
   },
   "scripts": {
-    "prebuild": "npm-run-all clean",
+    "prebuild": "npm run clean",
     "build": "webpack",
     "clean": "rimraf dist/*",
     "watch:webextension": "web-ext --browser-console --config=web-ext-config.js run --target chromium",
     "watch:js": "webpack --watch --progress",
     "watch": "npm-run-all --parallel watch:*",
-    "pregenerate": "run-s build",
     "test": "exit 0"
   },
   "dependencies": {
