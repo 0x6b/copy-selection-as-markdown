@@ -4,7 +4,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build --workspace copy-selection-as-markdown-core --workspace copy-selection-as-markdown-firefox --workspace copy-selection-as-markdown-chromium\n",
+    "build": "npm run build --workspace copy-selection-as-markdown-core --workspace copy-selection-as-markdown-firefox --workspace copy-selection-as-markdown-chromium",
     "test": "npm test --workspaces",
     "generate": "npm run generate --workspace copy-selection-as-markdown-firefox",
     "format": "prettier --write 'packages/**/src/**/{*.js,*.json}'",
