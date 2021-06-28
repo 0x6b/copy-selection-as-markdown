@@ -4,19 +4,14 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "run-s build:core build:firefox build:chromium",
-    "build:core": "npm run build --workspace copy-selection-as-markdown-core",
-    "build:firefox": "npm run build --workspace copy-selection-as-markdown-firefox",
-    "build:chromium": "npm run build --workspace copy-selection-as-markdown-chromium",
-    "test": "run-s test:core",
-    "test:core": "npm run test --workspace copy-selection-as-markdown-core",
-    "generate": "run-s generate:*",
-    "generate:firefox": "npm run generate --workspace copy-selection-as-markdown-firefox",
-    "format": "npm run format --workspaces",
+    "build": "npm run build --workspace copy-selection-as-markdown-core --workspace copy-selection-as-markdown-firefox --workspace copy-selection-as-markdown-chromium\n",
+    "test": "npm test --workspaces",
+    "generate": "npm run generate --workspace copy-selection-as-markdown-firefox",
+    "format": "prettier --write 'packages/**/src/**/{*.js,*.json}'",
     "watch": "run-p watch:*",
     "watch:core": "npm run watch --workspace copy-selection-as-markdown-core",
     "watch:firefox": "npm run watch --workspace copy-selection-as-markdown-firefox",
-    "clean": "yarn workspaces run clean"
+    "clean": "npm run clean --workspaces"
   },
   "devDependencies": {
     "@types/firefox-webext-browser": "^82.0.0",
@@ -27,9 +22,6 @@
     "web-ext": "^6.2.0",
     "webpack": "^5.40.0",
     "webpack-cli": "^4.7.2"
-  },
-  "dependencies": {
-    "webextension-polyfill": "^0.8.0"
   },
   "version": "0.21.0",
   "engines": {

@@ -19,7 +19,6 @@
     "pregenerate": "run-s build",
     "generate": "web-ext --config=web-ext-config.js build",
     "lint": "web-ext --config=web-ext-config.js lint",
-    "format": "prettier --write 'src/**/{*.js,*.json}'",
     "test": "exit 0"
   },
   "devDependencies": {
