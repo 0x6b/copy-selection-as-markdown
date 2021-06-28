@@ -5,7 +5,7 @@
 - Create a [Firefox Add-ons](https://addons.mozilla.org) (AMO) account
 - Install followings:
   - [WebExtensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions) enabled [Firefox](https://www.mozilla.org/firefox/)
-  - [Node.js](http://nodejs.org) and [Yarn](https://yarnpkg.com) v1. Version 2 might work but not tested.
+  - [Node.js](http://nodejs.org) v16 or later. Package scripts need npm@7.
   - Python 2.x for compiling `dtrace-provider` (`web-ext` requires this as dependency)
 
 ## Fork on GitHub
@@ -32,7 +32,7 @@ The project uses [Semantic Versioning 2.0.0](http://semver.org/) but you don't h
    ```
 3. Install dependencies
    ```sh
-   $ yarn install
+   $ npm install
    ```
 4. Create a new topic branch
    ```sh
@@ -40,7 +40,7 @@ The project uses [Semantic Versioning 2.0.0](http://semver.org/) but you don't h
    ```
 5. Run js bundler/watcher and firefox
    ```sh
-   $ yarn watch
+   $ npm run watch
    ```
 6. Modify source code and firefox will reload the extension automatically
 
@@ -48,7 +48,7 @@ The project uses [Semantic Versioning 2.0.0](http://semver.org/) but you don't h
 
 1. Run test cases
    ```sh
-   $ yarn test
+   $ npm test
    ```
 
 To make sure Turndown conversion remains intact after my modification for supporting [MathJax](https://www.mathjax.org/), I use [Jest snapshot testing](https://jestjs.io/docs/en/snapshot-testing). When you updated [Turndown](https://github.com/domchristie/turndown), you have to [update snapshots](<(https://jestjs.io/docs/en/cli.html#updatesnapshot)>).
@@ -59,12 +59,12 @@ To make sure Turndown conversion remains intact after my modification for suppor
    ```
 2. Update Jest snapshot
    ```sh
-   $ yarn test --updateSnapshot
+   $ npm run test:core -- --updateSnapshot
    ```
 3. Revert [`test.js`](test/test.js)
 4. Run test cases
    ```sh
-   $ yarn test
+   $ npm test
    ```
 
 ## Open a pull request
@@ -79,7 +79,7 @@ To make sure Turndown conversion remains intact after my modification for suppor
 
 ### Package Scripts
 
-Run with `yarn <script-name>`.
+Run with `npm run <script-name>`.
 
 - Watchers
   - `watch`: Run watch scripts

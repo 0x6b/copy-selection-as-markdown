@@ -5,18 +5,18 @@
   ],
   "scripts": {
     "build": "run-s build:core build:firefox",
-    "build:core": "yarn workspace copy-selection-as-markdown-core build",
-    "build:firefox": "yarn workspace copy-selection-as-markdown-firefox build",
+    "build:core": "npm run build --workspace copy-selection-as-markdown-core",
+    "build:firefox": "npm run build --workspace copy-selection-as-markdown-firefox",
     "test": "run-s test:core",
-    "test:core": "yarn workspace copy-selection-as-markdown-core test",
+    "test:core": "npm run test --workspace copy-selection-as-markdown-core",
     "generate": "run-s generate:firefox",
-    "generate:firefox": "yarn workspace copy-selection-as-markdown-firefox generate",
+    "generate:firefox": "npm run generate --workspace copy-selection-as-markdown-firefox",
     "format": "run-s format:core format:firefox",
-    "format:core": "yarn workspace copy-selection-as-markdown-core format",
-    "format:firefox": "yarn workspace copy-selection-as-markdown-firefox format",
+    "format:core": "npm run format --workspace copy-selection-as-markdown-core",
+    "format:firefox": "npm run format --workspace copy-selection-as-markdown-firefox",
     "watch": "run-p watch:core watch:firefox",
-    "watch:core": "yarn workspace copy-selection-as-markdown-core watch",
-    "watch:firefox": "yarn workspace copy-selection-as-markdown-firefox watch"
+    "watch:core": "npm run watch --workspace copy-selection-as-markdown-core",
+    "watch:firefox": "npm run watch --workspace copy-selection-as-markdown-firefox"
   },
   "devDependencies": {
     "@types/firefox-webext-browser": "^82.0.0",
@@ -28,5 +28,8 @@
     "webpack": "^5.40.0",
     "webpack-cli": "^4.7.2"
   },
-  "version": "0.21.0"
+  "version": "0.21.0",
+  "engines": {
+    "node": "16.x"
+  }
 }
