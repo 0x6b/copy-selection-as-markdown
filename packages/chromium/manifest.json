@@ -10,12 +10,12 @@
   },
   "background": {
     "scripts": [
-      "index.js",
-      "browser-polyfill.min.js"
+      "dist/index.js",
+      "dist/browser-polyfill.min.js"
     ]
   },
   "options_ui": {
-    "page": "settings.html"
+    "page": "dist/settings.html"
   },
   "browser_action": {
     "browser_style": true,
