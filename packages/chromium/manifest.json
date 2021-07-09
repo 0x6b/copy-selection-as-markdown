@@ -36,12 +36,14 @@
     }
   },
   "permissions": [
-    "<all_urls>",
     "activeTab",
     "clipboardWrite",
     "contextMenus",
     "tabs",
     "storage"
+  ],
+  "optional_permissions":[
+    "<all_urls>"
   ]
 }
 
