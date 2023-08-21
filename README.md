@@ -194,9 +194,13 @@ Please read [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## FAQ: Not working on Mozilla related sites
 
-By default, no add-on can interfere pre-configured domains for security reason. You can configure this behavior at `about:config` → `extensions.webextensions.restrictedDomains` preference. See [Configuration Editor for Firefox | Firefox Help](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) for how to change the preference.
+By default, no add-on can interfere pre-configured domains for security reason.  You can configure this behavior at either of
 
-- Default list of restricted domains (See [modules/libpref/init/all.js](https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js#3839))
+- `about:config` → `extensions.webextensions.restrictedDomains` preference. See [Configuration Editor for Firefox | Firefox Help](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) for how to change the preference.
+- Starting with Firefox 116, you can also control this behavior for this extension in the Add-ons Manager. See [Why are some add-ons not allowed on sites restricted by Mozilla? | Firefox Help](https://support.mozilla.org/en-US/kb/quarantined-domains?as=u&utm_source=inproduct) for how to change the preference.
+
+Default list of restricted domains (See [modules/libpref/init/all.js](https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js#3147)) as of 2023-08-21:
+
   - accounts-static.cdn.mozilla.net
   - accounts.firefox.com
   - addons.cdn.mozilla.net
