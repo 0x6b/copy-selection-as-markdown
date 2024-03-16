@@ -180,11 +180,18 @@ const getSelectionAsMarkdown = async (options) => {
   return { html, output: turndownService.turndown(html), url: document.URL };
 };
 
-const doCopy = (text, html) => {
-  const dt = new clipboard.DT();
-  dt.setData("text/plain", text);
-  dt.setData("text/html", html);
-  clipboard.write(dt);
+const doCopy = async (text, html) => {
+  const item = new clipboard.ClipboardItem({
+    "text/html": new Blob(
+      [html],
+      { type: "text/html" }
+    ),
+    "text/plain": new Blob(
+      [text],
+      { type: "text/plain" }
+    ),
+  });
+  await clipboard.write([item]);
 };
 
 const imgToDataUrl = (image) => {
