@@ -1,5 +1,17 @@
 # Changelog
 
+## Planned (but not scheduled yet)
+
+- Manifest V3 migration
+
+## 0.22.0 - 2024-03-17
+
+### Changed
+
+- Update dependencies (#127)
+
+Due to major version bump of (6.0.0 to 7.1.3) the [Turndown](https://github.com/mixmark-io/turndown/) which this extension heavily relies on, the behavior might've been changed. It might be impossible for me to reserve backward compatibility, but I will try to fix the issue as much as possible, if any.
+
 ## 0.21.0 - 2021-06-27
 
 ### Added
