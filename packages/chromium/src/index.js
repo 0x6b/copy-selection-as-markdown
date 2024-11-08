@@ -14,9 +14,9 @@ browser.contextMenus.create(
 );
 
 browser.contextMenus.onClicked.addListener(() => {
-  browser.tabs.executeScript({ file: "copy.js" });
+  browser.tabs.executeScript({ file: "dist/copy.js" });
 });
 
 browser.browserAction.onClicked.addListener(() =>
-  browser.tabs.executeScript({ file: "copy.js" })
+  browser.tabs.executeScript({ file: "dist/copy.js" })
 );
