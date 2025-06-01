@@ -3,7 +3,7 @@
 Copy title, URL, selection as Markdown
 
 > [!NOTE]
-> This extension isn't abandoned; it's in maintenance mode because its current state is stable and feature-complete for my needs (I use it every hour). I don't plan to add new features or make major changes, except for the update to manifest V3, which might be the last update. I may address critical issues as they arise, but other issues may not be resolved. Thanks!
+> This extension isn't abandoned; it's in maintenance mode because its current state is stable and feature-complete for my needs (I use it every hour). I don't plan to add new features or make major changes. I may address critical issues as they arise, but other issues may not be resolved. Thanks!
 
 ![How it works](images/screencast.gif)
 
