@@ -1,14 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "build": "pnpm --filter copy-selection-as-markdown-core --filter copy-selection-as-markdown-firefox --filter copy-selection-as-markdown-chromium run build",
+    "build": "pnpm --filter copy-selection-as-markdown-core run build && pnpm --filter copy-selection-as-markdown-firefox --filter copy-selection-as-markdown-chromium run build",
     "test": "pnpm --recursive test",
     "generate": "pnpm --filter copy-selection-as-markdown-firefox run generate",
     "format": "biome format --write",
     "watch": "run-p watch:*",
     "watch:core": "pnpm --filter copy-selection-as-markdown-core run watch",
     "watch:firefox": "pnpm --filter copy-selection-as-markdown-firefox run watch",
-    "clean": "pnpm --recursive run clean"
+    "clean": "pnpm --recursive run clean",
+    "clean-node_modules": "rimraf packages/**/node_modules && rimraf node_modules"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

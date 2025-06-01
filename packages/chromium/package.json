@@ -9,7 +9,7 @@
     "url": "https://github.com/0x6b/copy-selection-as-markdown"
   },
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "pnpm run clean",
     "build": "node build.js",
     "clean": "rimraf dist/*",
     "watch:webextension": "web-ext --browser-console --config=web-ext-config.js run --target chromium",

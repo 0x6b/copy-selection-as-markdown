@@ -1,10 +1,6 @@
 import esbuild from "esbuild";
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 async function copyFile(src, dest) {
   const destDir = path.dirname(dest);
@@ -35,8 +31,9 @@ async function build() {
 
     // Copy static files
     await copyFile("src/settings/settings.html", "dist/settings.html");
+    // Copy browser-polyfill.min.js from core's node_modules
     await copyFile(
-      "../../node_modules/.pnpm/webextension-polyfill@0.8.0/node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
+      "node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
       "dist/browser-polyfill.min.js"
     );
 
