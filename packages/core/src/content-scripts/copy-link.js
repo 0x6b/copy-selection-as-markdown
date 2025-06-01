@@ -1,6 +1,4 @@
-import { doCopy } from "./util";
-
-const browser = require("webextension-polyfill");
+import { doCopy } from "../clipboard.js";
 
 browser.runtime.onMessage.addListener((message) =>
   doCopy(message.text, message.html),

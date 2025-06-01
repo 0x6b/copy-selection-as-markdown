@@ -1,6 +1,10 @@
-const esbuild = require("esbuild");
-const fs = require("fs");
-const path = require("path");
+import esbuild from "esbuild";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function copyFile(src, dest) {
   const destDir = path.dirname(dest);
@@ -15,9 +19,9 @@ async function build() {
     // Build JavaScript files
     await esbuild.build({
       entryPoints: {
-        copy: "./src/copy.js",
-        "copy-link": "./src/copy-link.js",
-        settings: "./src/settings.js",
+        copy: "./src/content-scripts/copy.js",
+        "copy-link": "./src/content-scripts/copy-link.js",
+        settings: "./src/settings/settings.js",
       },
       bundle: true,
       outdir: "./dist",
@@ -26,12 +30,13 @@ async function build() {
       platform: "browser",
       minify: true,
       sourcemap: false,
+      external: ["webextension-polyfill"],
     });
 
     // Copy static files
-    await copyFile("src/settings.html", "dist/settings.html");
+    await copyFile("src/settings/settings.html", "dist/settings.html");
     await copyFile(
-      "../../node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
+      "../../node_modules/.pnpm/webextension-polyfill@0.8.0/node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
       "dist/browser-polyfill.min.js"
     );
 
@@ -42,15 +47,15 @@ async function build() {
   }
 }
 
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   const isWatch = process.argv.includes("--watch");
   
   if (isWatch) {
     esbuild.context({
       entryPoints: {
-        copy: "./src/copy.js",
-        "copy-link": "./src/copy-link.js",
-        settings: "./src/settings.js",
+        copy: "./src/content-scripts/copy.js",
+        "copy-link": "./src/content-scripts/copy-link.js",
+        settings: "./src/settings/settings.js",
       },
       bundle: true,
       outdir: "./dist",
@@ -59,6 +64,7 @@ if (require.main === module) {
       platform: "browser",
       minify: true,
       sourcemap: false,
+      external: ["webextension-polyfill"],
     }).then(ctx => {
       ctx.watch();
       console.log("Watching for changes...");
@@ -68,4 +74,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { build };
+export { build };

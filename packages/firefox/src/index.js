@@ -43,17 +43,21 @@ browser.contextMenus.onClicked.addListener(
       menuItemId === "copy-selection-as-markdown" ||
       menuItemId === "copy-as-markdown"
     ) {
-      browser.tabs.executeScript(id, { file: "copy.js" });
+      browser.tabs.executeScript(id, { file: "browser-polyfill.min.js" }).then(() => {
+        browser.tabs.executeScript(id, { file: "copy.js" });
+      });
     } else if (menuItemId === "copy-link-as-markdown") {
-      browser.tabs.executeScript(id, { file: "copy-link.js" }).then(() => {
-        linkText = linkText.replace(/([\\`*_[\]<>])/g, "\\$1");
-        linkUrl = linkUrl.replace(
-          /[\\!'()*]/g,
-          (c) => `%${c.charCodeAt(0).toString(16)}`,
-        );
-        browser.tabs.sendMessage(id, {
-          text: `[${linkText}](${linkUrl})`,
-          html: `<a href="${linkUrl}">${linkText}</a>`,
+      browser.tabs.executeScript(id, { file: "browser-polyfill.min.js" }).then(() => {
+        browser.tabs.executeScript(id, { file: "copy-link.js" }).then(() => {
+          linkText = linkText.replace(/([\\`*_[\]<>])/g, "\\$1");
+          linkUrl = linkUrl.replace(
+            /[\\!'()*]/g,
+            (c) => `%${c.charCodeAt(0).toString(16)}`,
+          );
+          browser.tabs.sendMessage(id, {
+            text: `[${linkText}](${linkUrl})`,
+            html: `<a href="${linkUrl}">${linkText}</a>`,
+          });
         });
       });
     }
@@ -61,5 +65,7 @@ browser.contextMenus.onClicked.addListener(
 );
 
 browser.browserAction.onClicked.addListener(() =>
-  browser.tabs.executeScript({ file: "copy.js" }),
+  browser.tabs.executeScript({ file: "browser-polyfill.min.js" }).then(() => {
+    browser.tabs.executeScript({ file: "copy.js" });
+  }),
 );
