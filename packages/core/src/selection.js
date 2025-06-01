@@ -4,7 +4,7 @@ export const getSelection = () => {
   let sel = document.getSelection();
 
   if (sel.rangeCount === 0) {
-    let frames = document.getElementsByTagName("iframe");
+    const frames = document.getElementsByTagName("iframe");
     if (frames) {
       for (let i = 0; i < frames.length; i++) {
         if (
@@ -38,7 +38,7 @@ export const getSelectionHtml = async (options) => {
 
     // Handle image embedding if enabled
     if (options.embedImage) {
-      for (let img of container.getElementsByTagName("img")) {
+      for (const img of container.getElementsByTagName("img")) {
         if (
           img.hasAttribute("src") &&
           img.getAttribute("src").startsWith("http") &&

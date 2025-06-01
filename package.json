@@ -5,6 +5,7 @@
     "test": "pnpm --recursive test",
     "generate": "pnpm --filter copy-selection-as-markdown-firefox run generate",
     "format": "biome format --write",
+    "lint": "biome lint",
     "watch": "run-p watch:*",
     "watch:core": "pnpm --filter copy-selection-as-markdown-core run watch",
     "watch:firefox": "pnpm --filter copy-selection-as-markdown-firefox run watch",

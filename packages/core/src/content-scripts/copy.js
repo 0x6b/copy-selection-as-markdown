@@ -5,19 +5,19 @@ import { getAllOptionsWithDefaults } from "../settings/defaults.js";
 
 async function main() {
   try {
-    let rawOptions = await browser.storage.local.get();
-    let options = getAllOptionsWithDefaults(rawOptions);
+    const rawOptions = await browser.storage.local.get();
+    const options = getAllOptionsWithDefaults(rawOptions);
 
     let title = document.title;
     if (options.titleSubstitution !== "") {
-      let pattern = convertTitleSubstitution(options.titleSubstitution);
+      const pattern = convertTitleSubstitution(options.titleSubstitution);
       title = title.replace(pattern, "");
     }
     let text = options.linkWithoutStyling
       ? `${title} (${document.URL})`
       : `[${title}](${document.URL})`;
     let html = `<a href="${document.URL}">${title}</a>`;
-    let selection = await getSelectionAsMarkdown(options);
+    const selection = await getSelectionAsMarkdown(options);
 
     if (selection.output !== "") {
       if (options["use-quote"]) {
