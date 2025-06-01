@@ -193,7 +193,7 @@ To change shortcut key, click gear icon on top-right and click **Manage Extensio
 
 ## Contributing
 
-Please read [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please read [CONTRIBUTING](docs/CONTRIBUTING.md) for details.
 
 ## FAQ: Not working on Mozilla related sites
 
