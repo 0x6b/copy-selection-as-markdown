@@ -27,7 +27,7 @@ const convertTitleSubstitution = (titleSubstitutionOption = "") => {
       .split(/\n/)
       .map((line) => `(${convertLine(line)})`)
       .join("|"),
-    "g"
+    "g",
   );
 };
 
@@ -140,7 +140,7 @@ const getSelectionAsMarkdown = async (options) => {
       ) {
         a.setAttribute(
           "href",
-          url.resolve(document.URL, a.getAttribute("href"))
+          url.resolve(document.URL, a.getAttribute("href")),
         );
       }
     }
@@ -152,7 +152,7 @@ const getSelectionAsMarkdown = async (options) => {
       ) {
         img.setAttribute(
           "src",
-          url.resolve(document.URL, img.getAttribute("src"))
+          url.resolve(document.URL, img.getAttribute("src")),
         );
       }
     }
@@ -182,14 +182,8 @@ const getSelectionAsMarkdown = async (options) => {
 
 const doCopy = async (text, html) => {
   const item = new clipboard.ClipboardItem({
-    "text/html": new Blob(
-      [html],
-      { type: "text/html" }
-    ),
-    "text/plain": new Blob(
-      [text],
-      { type: "text/plain" }
-    ),
+    "text/html": new Blob([html], { type: "text/html" }),
+    "text/plain": new Blob([text], { type: "text/plain" }),
   });
   await clipboard.write([item]);
 };

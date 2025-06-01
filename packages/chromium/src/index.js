@@ -10,7 +10,7 @@ browser.contextMenus.create(
   () => {
     if (browser.runtime.lastError)
       console.log(`Error: ${browser.runtime.lastError}`);
-  }
+  },
 );
 
 browser.contextMenus.onClicked.addListener(() => {
@@ -18,5 +18,5 @@ browser.contextMenus.onClicked.addListener(() => {
 });
 
 browser.browserAction.onClicked.addListener(() =>
-  browser.tabs.executeScript({ file: "copy.js" })
+  browser.tabs.executeScript({ file: "copy.js" }),
 );

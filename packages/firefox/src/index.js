@@ -8,7 +8,7 @@ browser.contextMenus.create(
   () => {
     if (browser.runtime.lastError)
       console.log(`Error: ${browser.runtime.lastError}`);
-  }
+  },
 );
 
 browser.contextMenus.create(
@@ -21,7 +21,7 @@ browser.contextMenus.create(
   () => {
     if (browser.runtime.lastError)
       console.log(`Error: ${browser.runtime.lastError}`);
-  }
+  },
 );
 
 browser.contextMenus.create(
@@ -34,7 +34,7 @@ browser.contextMenus.create(
   () => {
     if (browser.runtime.lastError)
       console.log(`Error: ${browser.runtime.lastError}`);
-  }
+  },
 );
 
 browser.contextMenus.onClicked.addListener(
@@ -49,7 +49,7 @@ browser.contextMenus.onClicked.addListener(
         linkText = linkText.replace(/([\\`*_[\]<>])/g, "\\$1");
         linkUrl = linkUrl.replace(
           /[\\!'()*]/g,
-          (c) => `%${c.charCodeAt(0).toString(16)}`
+          (c) => `%${c.charCodeAt(0).toString(16)}`,
         );
         browser.tabs.sendMessage(id, {
           text: `[${linkText}](${linkUrl})`,
@@ -57,9 +57,9 @@ browser.contextMenus.onClicked.addListener(
         });
       });
     }
-  }
+  },
 );
 
 browser.browserAction.onClicked.addListener(() =>
-  browser.tabs.executeScript({ file: "copy.js" })
+  browser.tabs.executeScript({ file: "copy.js" }),
 );

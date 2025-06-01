@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ? false
           : result.replaceAngleBrackets;
     },
-    (error) => console.log(`Error: ${error}`)
+    (error) => console.log(`Error: ${error}`),
   );
 });
 
