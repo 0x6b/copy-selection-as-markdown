@@ -1,6 +1,6 @@
 {
   "name": "copy-selection-as-markdown-chromium",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "description": "copy-selection-as-markdown Chrome extension",
   "author": "0x6b",
   "license": "MIT",
