@@ -1,6 +1,7 @@
-const browser = require("webextension-polyfill");
+// Import browser polyfill for service worker
+importScripts("browser-polyfill.min.js");
 
-browser.contextMenus.create(
+chrome.contextMenus.create(
   {
     id: "copy-selection-as-markdown",
     title: "Copy Selection as Markdown",
@@ -8,15 +9,29 @@ browser.contextMenus.create(
     documentUrlPatterns: ["<all_urls>"],
   },
   () => {
-    if (browser.runtime.lastError)
-      console.log(`Error: ${browser.runtime.lastError}`);
+    if (chrome.runtime.lastError)
+      console.log(`Error: ${chrome.runtime.lastError}`);
   },
 );
 
-browser.contextMenus.onClicked.addListener(() => {
-  browser.tabs.executeScript({ file: "copy.js" });
+chrome.contextMenus.onClicked.addListener(async (info, tab) => {
+  await chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    files: ["browser-polyfill.min.js"]
+  });
+  await chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    files: ["copy.js"]
+  });
 });
 
-browser.browserAction.onClicked.addListener(() =>
-  browser.tabs.executeScript({ file: "copy.js" }),
-);
+chrome.action.onClicked.addListener(async (tab) => {
+  await chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    files: ["browser-polyfill.min.js"]
+  });
+  await chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    files: ["copy.js"]
+  });
+});
