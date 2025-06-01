@@ -1,17 +1,14 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "build": "npm run build --workspace copy-selection-as-markdown-core --workspace copy-selection-as-markdown-firefox --workspace copy-selection-as-markdown-chromium",
-    "test": "npm test --workspaces",
-    "generate": "npm run generate --workspace copy-selection-as-markdown-firefox",
+    "build": "pnpm --filter copy-selection-as-markdown-core --filter copy-selection-as-markdown-firefox --filter copy-selection-as-markdown-chromium run build",
+    "test": "pnpm --recursive test",
+    "generate": "pnpm --filter copy-selection-as-markdown-firefox run generate",
     "format": "biome format --write",
     "watch": "run-p watch:*",
-    "watch:core": "npm run watch --workspace copy-selection-as-markdown-core",
-    "watch:firefox": "npm run watch --workspace copy-selection-as-markdown-firefox",
-    "clean": "npm run clean --workspaces"
+    "watch:core": "pnpm --filter copy-selection-as-markdown-core run watch",
+    "watch:firefox": "pnpm --filter copy-selection-as-markdown-firefox run watch",
+    "clean": "pnpm --recursive run clean"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
