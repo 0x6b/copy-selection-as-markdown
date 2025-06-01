@@ -21,7 +21,9 @@ export const DEFAULT_OPTIONS = {
 };
 
 export function getOptionWithDefault(options, key) {
-  return typeof options[key] === "undefined" ? DEFAULT_OPTIONS[key] : options[key];
+  return typeof options[key] === "undefined"
+    ? DEFAULT_OPTIONS[key]
+    : options[key];
 }
 
 export function getAllOptionsWithDefaults(options) {
@@ -29,11 +31,11 @@ export function getAllOptionsWithDefaults(options) {
   for (const key in DEFAULT_OPTIONS) {
     result[key] = getOptionWithDefault(options, key);
   }
-  
+
   // Special handling for fence option - repeat 3 times for markdown
   if (result.fence && typeof result.fence === "string") {
     result.fence = result.fence.repeat(3);
   }
-  
+
   return result;
 }

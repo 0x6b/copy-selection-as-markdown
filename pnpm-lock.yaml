@@ -51,15 +51,9 @@ importers:
         specifier: ^0.11.4
         version: 0.11.4
     devDependencies:
-      '@biomejs/biome':
-        specifier: ^1.9.4
-        version: 1.9.4
       '@types/firefox-webext-browser':
         specifier: ^120.0.4
         version: 120.0.4
-      esbuild:
-        specifier: ^0.25.5
-        version: 0.25.5
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@22.15.29)(node-notifier@10.0.1)
@@ -69,15 +63,6 @@ importers:
       jsdom:
         specifier: ^24.0.0
         version: 24.1.3
-      npm-run-all:
-        specifier: ^4.1.5
-        version: 4.1.5
-      rimraf:
-        specifier: ^6.0.1
-        version: 6.0.1
-      web-ext:
-        specifier: ^8.7.1
-        version: 8.7.1
       webextension-polyfill:
         specifier: ^0.12.0
         version: 0.12.0

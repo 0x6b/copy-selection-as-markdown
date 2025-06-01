@@ -3,25 +3,68 @@ import { DEFAULT_OPTIONS, getOptionWithDefault } from "./defaults.js";
 document.addEventListener("DOMContentLoaded", () => {
   browser.storage.local.get().then(
     (result) => {
-      document.querySelector("#quote").checked = getOptionWithDefault(result, "use-quote");
-      document.querySelector("#link").checked = getOptionWithDefault(result, "link-to-source");
-      document.querySelector("form").headingStyle.value = getOptionWithDefault(result, "headingStyle");
-      document.querySelector("form").bulletListMarker.value = getOptionWithDefault(result, "bulletListMarker");
-      document.querySelector("form").codeBlockStyle.value = getOptionWithDefault(result, "codeBlockStyle");
-      document.querySelector("form").fence.value = getOptionWithDefault(result, "fence");
-      document.querySelector("form").emDelimiter.value = getOptionWithDefault(result, "emDelimiter");
-      document.querySelector("form").strongDelimiter.value = getOptionWithDefault(result, "strongDelimiter");
-      document.querySelector("form").linkStyle.value = getOptionWithDefault(result, "linkStyle");
-      document.querySelector("form").linkReferenceStyle.value = getOptionWithDefault(result, "linkReferenceStyle");
-      document.querySelector("#debug").checked = getOptionWithDefault(result, "debug");
-      document.querySelector("#mathjax").checked = getOptionWithDefault(result, "mathjax");
-      document.querySelector("#gfm").checked = getOptionWithDefault(result, "gfm");
-      document.querySelector("#linkWithoutStyling").checked = getOptionWithDefault(result, "linkWithoutStyling");
-      document.querySelector("#img").checked = getOptionWithDefault(result, "img");
-      document.querySelector("#embedImage").checked = getOptionWithDefault(result, "embedImage");
-      document.querySelector("#titleSubstitution").value = getOptionWithDefault(result, "titleSubstitution");
-      document.querySelector("#reduceListItemPadding").value = getOptionWithDefault(result, "reduceListItemPadding");
-      document.querySelector("#replaceAngleBrackets").value = getOptionWithDefault(result, "replaceAngleBrackets");
+      document.querySelector("#quote").checked = getOptionWithDefault(
+        result,
+        "use-quote",
+      );
+      document.querySelector("#link").checked = getOptionWithDefault(
+        result,
+        "link-to-source",
+      );
+      document.querySelector("form").headingStyle.value = getOptionWithDefault(
+        result,
+        "headingStyle",
+      );
+      document.querySelector("form").bulletListMarker.value =
+        getOptionWithDefault(result, "bulletListMarker");
+      document.querySelector("form").codeBlockStyle.value =
+        getOptionWithDefault(result, "codeBlockStyle");
+      document.querySelector("form").fence.value = getOptionWithDefault(
+        result,
+        "fence",
+      );
+      document.querySelector("form").emDelimiter.value = getOptionWithDefault(
+        result,
+        "emDelimiter",
+      );
+      document.querySelector("form").strongDelimiter.value =
+        getOptionWithDefault(result, "strongDelimiter");
+      document.querySelector("form").linkStyle.value = getOptionWithDefault(
+        result,
+        "linkStyle",
+      );
+      document.querySelector("form").linkReferenceStyle.value =
+        getOptionWithDefault(result, "linkReferenceStyle");
+      document.querySelector("#debug").checked = getOptionWithDefault(
+        result,
+        "debug",
+      );
+      document.querySelector("#mathjax").checked = getOptionWithDefault(
+        result,
+        "mathjax",
+      );
+      document.querySelector("#gfm").checked = getOptionWithDefault(
+        result,
+        "gfm",
+      );
+      document.querySelector("#linkWithoutStyling").checked =
+        getOptionWithDefault(result, "linkWithoutStyling");
+      document.querySelector("#img").checked = getOptionWithDefault(
+        result,
+        "img",
+      );
+      document.querySelector("#embedImage").checked = getOptionWithDefault(
+        result,
+        "embedImage",
+      );
+      document.querySelector("#titleSubstitution").value = getOptionWithDefault(
+        result,
+        "titleSubstitution",
+      );
+      document.querySelector("#reduceListItemPadding").value =
+        getOptionWithDefault(result, "reduceListItemPadding");
+      document.querySelector("#replaceAngleBrackets").value =
+        getOptionWithDefault(result, "replaceAngleBrackets");
     },
     (error) => console.log(`Error: ${error}`),
   );

@@ -17,21 +17,21 @@ chrome.contextMenus.create(
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   await chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    files: ["browser-polyfill.min.js"]
+    files: ["browser-polyfill.min.js"],
   });
   await chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    files: ["copy.js"]
+    files: ["copy.js"],
   });
 });
 
 chrome.action.onClicked.addListener(async (tab) => {
   await chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    files: ["browser-polyfill.min.js"]
+    files: ["browser-polyfill.min.js"],
   });
   await chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    files: ["copy.js"]
+    files: ["copy.js"],
   });
 });

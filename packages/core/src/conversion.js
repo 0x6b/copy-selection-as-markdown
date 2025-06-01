@@ -95,9 +95,9 @@ export const getSelectionAsMarkdown = async (options) => {
   const turndownService = configureTurndownService(options);
   const html = await getSelectionHtml(options);
 
-  return { 
-    html, 
-    output: turndownService.turndown(html), 
-    url: document.URL 
+  return {
+    html,
+    output: turndownService.turndown(html),
+    url: document.URL,
   };
 };
