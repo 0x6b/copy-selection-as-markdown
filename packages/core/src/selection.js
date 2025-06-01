@@ -1,4 +1,4 @@
-import { resolveRelativeUrls, imgToDataUrl } from "./utils/url-resolver.js";
+import { imgToDataUrl, resolveRelativeUrls } from "./utils/url-resolver.js";
 
 export const getSelection = () => {
   let sel = document.getSelection();

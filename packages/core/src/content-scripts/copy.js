@@ -1,7 +1,7 @@
 import { doCopy } from "../clipboard.js";
 import { getSelectionAsMarkdown } from "../conversion.js";
-import { convertTitleSubstitution } from "../utils/title-substitution.js";
 import { getAllOptionsWithDefaults } from "../settings/defaults.js";
+import { convertTitleSubstitution } from "../utils/title-substitution.js";
 
 async function main() {
   try {
