@@ -2,6 +2,7 @@
   "name": "copy-selection-as-markdown-core",
   "version": "0.22.0",
   "description": "copy-selection-as-markdown core",
+  "type": "module",
   "author": "0x6b",
   "license": "MIT",
   "repository": {
@@ -13,7 +14,7 @@
     "build": "node build.js",
     "clean": "rimraf dist/*",
     "watch": "node build.js --watch",
-    "test": "jest"
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest"
   },
   "dependencies": {
     "clipboard-polyfill": "^4.0.2",
@@ -31,5 +32,13 @@
     "npm-run-all": "^4.1.5",
     "rimraf": "^6.0.1",
     "web-ext": "^8.7.1"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    },
+    "transform": {},
+    "setupFilesAfterEnv": ["<rootDir>/test/setup.js"]
   }
 }

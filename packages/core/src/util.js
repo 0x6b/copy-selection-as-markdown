@@ -9,7 +9,7 @@ import { tables, taskListItems } from "turndown-plugin-gfm";
 import * as clipboard from "clipboard-polyfill";
 import RegexEscape from "regex-escape";
 
-const url = require("url");
+import url from "url";
 
 const regexpRegexp = /^\/(.+)\/$/;
 
