@@ -1,4 +1,4 @@
-let rules = {};
+const rules = {};
 
 // remove display formula
 rules.removeDisplayFormula = {
@@ -22,7 +22,7 @@ rules.removeInlineFormula = {
 
 rules.removeBlankListItem = {
   filter: ["li"],
-  replacement: function (content, node, options) {
+  replacement: (content, node, options) => {
     node.childNodes.forEach((child) => {
       if (child.className && child.className.startsWith("MathJax")) {
         node.removeChild(child);
@@ -54,7 +54,7 @@ rules.removeBlankListItem = {
 // remove new lines surrounding blank paragraph before script node
 rules.paragraphBeforeScriptNode = {
   filter: "p",
-  replacement: function (content, node) {
+  replacement: (content, node) => {
     var hasSiblings = node.nextSibling;
 
     if (

@@ -2,6 +2,8 @@
 
 ## Planned (but not scheduled yet)
 
+## 0.23.0 - 2025-06-01
+
 - Manifest V3 migration
 
 ## 0.22.0 - 2024-03-17

@@ -1,6 +1,6 @@
 {
   "name": "copy-selection-as-markdown-chromium",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "description": "copy-selection-as-markdown Chrome extension",
   "author": "0x6b",
   "license": "MIT",
@@ -9,15 +9,15 @@
     "url": "https://github.com/0x6b/copy-selection-as-markdown"
   },
   "scripts": {
-    "prebuild": "npm run clean",
-    "build": "webpack",
+    "prebuild": "pnpm run clean",
+    "build": "node build.js",
     "clean": "rimraf dist/*",
     "watch:webextension": "web-ext --browser-console --config=web-ext-config.js run --target chromium",
-    "watch:js": "webpack --watch --progress",
+    "watch:js": "node build.js --watch",
     "watch": "npm-run-all --parallel watch:*",
     "test": "exit 0"
   },
   "dependencies": {
-    "webextension-polyfill": "^0.8.0"
+    "webextension-polyfill": "^0.12.0"
   }
 }

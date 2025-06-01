@@ -1,4 +1,4 @@
-import { convertTitleSubstitution } from "../src/util";
+import { convertTitleSubstitution } from "../src/utils/title-substitution";
 
 describe("util", () => {
   describe("convertTitleSubstitution", () => {

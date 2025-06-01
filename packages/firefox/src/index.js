@@ -8,7 +8,7 @@ browser.contextMenus.create(
   () => {
     if (browser.runtime.lastError)
       console.log(`Error: ${browser.runtime.lastError}`);
-  }
+  },
 );
 
 browser.contextMenus.create(
@@ -21,7 +21,7 @@ browser.contextMenus.create(
   () => {
     if (browser.runtime.lastError)
       console.log(`Error: ${browser.runtime.lastError}`);
-  }
+  },
 );
 
 browser.contextMenus.create(
@@ -34,7 +34,7 @@ browser.contextMenus.create(
   () => {
     if (browser.runtime.lastError)
       console.log(`Error: ${browser.runtime.lastError}`);
-  }
+  },
 );
 
 browser.contextMenus.onClicked.addListener(
@@ -43,23 +43,55 @@ browser.contextMenus.onClicked.addListener(
       menuItemId === "copy-selection-as-markdown" ||
       menuItemId === "copy-as-markdown"
     ) {
-      browser.tabs.executeScript(id, { file: "copy.js" });
-    } else if (menuItemId === "copy-link-as-markdown") {
-      browser.tabs.executeScript(id, { file: "copy-link.js" }).then(() => {
-        linkText = linkText.replace(/([\\`*_[\]<>])/g, "\\$1");
-        linkUrl = linkUrl.replace(
-          /[\\!'()*]/g,
-          (c) => `%${c.charCodeAt(0).toString(16)}`
-        );
-        browser.tabs.sendMessage(id, {
-          text: `[${linkText}](${linkUrl})`,
-          html: `<a href="${linkUrl}">${linkText}</a>`,
+      browser.scripting
+        .executeScript({
+          target: { tabId: id },
+          files: ["browser-polyfill.min.js"],
+        })
+        .then(() => {
+          browser.scripting.executeScript({
+            target: { tabId: id },
+            files: ["copy.js"],
+          });
         });
-      });
+    } else if (menuItemId === "copy-link-as-markdown") {
+      browser.scripting
+        .executeScript({
+          target: { tabId: id },
+          files: ["browser-polyfill.min.js"],
+        })
+        .then(() => {
+          browser.scripting
+            .executeScript({
+              target: { tabId: id },
+              files: ["copy-link.js"],
+            })
+            .then(() => {
+              linkText = linkText.replace(/([\\`*_[\]<>])/g, "\\$1");
+              linkUrl = linkUrl.replace(
+                /[\\!'()*]/g,
+                (c) => `%${c.charCodeAt(0).toString(16)}`,
+              );
+              browser.tabs.sendMessage(id, {
+                text: `[${linkText}](${linkUrl})`,
+                html: `<a href="${linkUrl}">${linkText}</a>`,
+              });
+            });
+        });
     }
-  }
+  },
 );
 
-browser.browserAction.onClicked.addListener(() =>
-  browser.tabs.executeScript({ file: "copy.js" })
+browser.action.onClicked.addListener((tab) =>
+  browser.scripting
+    .executeScript({
+      target: { tabId: tab.id },
+      files: ["browser-polyfill.min.js"],
+    })
+    .then(() => {
+      browser.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ["copy.js"],
+      });
+    }),
 );

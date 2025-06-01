@@ -1,6 +1,10 @@
 import { readdirSync, readFileSync } from "fs";
-import { join, extname, sep } from "path";
+import { join, extname, sep, dirname } from "path";
+import { fileURLToPath } from "url";
 import { JSDOM } from "jsdom";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 import TurndownService from "turndown";
 import turndownPluginMathJax from "../src/plugins/mathjax";

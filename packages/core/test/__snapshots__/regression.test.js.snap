@@ -705,7 +705,7 @@ exports[`159.link_reference_definitions.html 1`] = `"[foo](/url "title")"`;
 
 exports[`160.link_reference_definitions.html 1`] = `"[foo](/url "the title")"`;
 
-exports[`161.link_reference_definitions.html 1`] = `"[Foo\\*bar\\]](my_(url) "title (with parens)")"`;
+exports[`161.link_reference_definitions.html 1`] = `"[Foo\\*bar\\]](my_\\(url\\) "title (with parens)")"`;
 
 exports[`162.link_reference_definitions.html 1`] = `"[Foo bar](my%20url "title")"`;
 
@@ -733,7 +733,7 @@ exports[`166.link_reference_definitions.html 1`] = `
 \\[foo\\]"
 `;
 
-exports[`167.link_reference_definitions.html 1`] = `"[foo](/url%5Cbar*baz "foo"bar\\baz")"`;
+exports[`167.link_reference_definitions.html 1`] = `"[foo](/url%5Cbar*baz "foo\\"bar\\baz")"`;
 
 exports[`168.link_reference_definitions.html 1`] = `"[foo](url)"`;
 
@@ -1448,7 +1448,7 @@ exports[`298.backslash_escapes.html 1`] = `"    \\[\\]"`;
 
 exports[`299.backslash_escapes.html 1`] = `"[http://example.com?find=\\\\\\*](http://example.com?find=%5C*)"`;
 
-exports[`300.backslash_escapes.html 1`] = `"[](/bar\\/))"`;
+exports[`300.backslash_escapes.html 1`] = `"[](/bar\\/\\))"`;
 
 exports[`301.backslash_escapes.html 1`] = `"[foo](/bar* "ti*tle")"`;
 
@@ -1800,15 +1800,15 @@ exports[`468.links.html 1`] = `"\\[link\\](foo bar)"`;
 
 exports[`469.links.html 1`] = `"\\[link\\]()"`;
 
-exports[`470.links.html 1`] = `"[link]((foo))"`;
+exports[`470.links.html 1`] = `"[link](\\(foo\\))"`;
 
-exports[`471.links.html 1`] = `"[link](foo(and(bar)))"`;
+exports[`471.links.html 1`] = `"[link](foo\\(and\\(bar\\)\\))"`;
 
-exports[`472.links.html 1`] = `"[link](foo(and(bar))"`;
+exports[`472.links.html 1`] = `"[link](foo\\(and\\(bar\\))"`;
 
-exports[`473.links.html 1`] = `"[link](foo(and(bar))"`;
+exports[`473.links.html 1`] = `"[link](foo\\(and\\(bar\\))"`;
 
-exports[`474.links.html 1`] = `"[link](foo):)"`;
+exports[`474.links.html 1`] = `"[link](foo\\):)"`;
 
 exports[`475.links.html 1`] = `
 "[link](#fragment)
@@ -1826,13 +1826,13 @@ exports[`478.links.html 1`] = `"[link](%22title%22)"`;
 
 exports[`479.links.html 1`] = `"[link](/url "title") [link](/url "title") [link](/url "title")"`;
 
-exports[`480.links.html 1`] = `"[link](/url "title """)"`;
+exports[`480.links.html 1`] = `"[link](/url "title \\"\\"")"`;
 
 exports[`481.links.html 1`] = `"[link](/url%C2%A0%22title%22)"`;
 
 exports[`482.links.html 1`] = `"\\[link\\](/url "title "and" title")"`;
 
-exports[`483.links.html 1`] = `"[link](/url "title "and" title")"`;
+exports[`483.links.html 1`] = `"[link](/url "title \\"and\\" title")"`;
 
 exports[`484.links.html 1`] = `"[link](/uri "title")"`;
 
@@ -1866,7 +1866,7 @@ exports[`498.links.html 1`] = `"\\[foo"`;
 
 exports[`499.links.html 1`] = `"\\[foo\`](/uri)\`"`;
 
-exports[`500.links.html 1`] = `"\\[foo[http://example.com/?search=\\](uri)](http://example.com/?search=%5D(uri))"`;
+exports[`500.links.html 1`] = `"\\[foo[http://example.com/?search=\\](uri)](http://example.com/?search=%5D\\(uri\\))"`;
 
 exports[`501.links.html 1`] = `"[foo](/url "title")"`;
 

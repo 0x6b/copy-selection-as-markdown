@@ -5,7 +5,8 @@
 - Create a [Firefox Add-ons](https://addons.mozilla.org) (AMO) account
 - Install followings:
   - [WebExtensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions) enabled [Firefox](https://www.mozilla.org/firefox/)
-  - [Node.js](http://nodejs.org) v16 or later. Package scripts need npm@7.
+  - [Node.js](http://nodejs.org) v20.x
+  - [pnpm](https://pnpm.io/) for package management (monorepo support)
   - Python 2.x for compiling `dtrace-provider` (`web-ext` requires this as dependency)
 
 ## Fork on GitHub
@@ -22,7 +23,7 @@ $ git clone https://github.com/<your-account>/copy-selection-as-markdown.git
 
 ## Play with your fork
 
-The project uses [Semantic Versioning 2.0.0](http://semver.org/) but you don't have to update [`package.json`](package.json) nor [`manifest.json`](src/manifest.json) as I will maintain release.
+The project uses [Semantic Versioning 2.0.0](http://semver.org/) and is organized as a monorepo with packages in `packages/`. You don't have to update version numbers in package.json files as releases are maintained centrally.
 
 1. Open your terminal, navigate to local repository directory
 2. Export AMO's API key and secret as environment variable
@@ -32,7 +33,7 @@ The project uses [Semantic Versioning 2.0.0](http://semver.org/) but you don't h
    ```
 3. Install dependencies
    ```sh
-   $ npm install
+   $ pnpm install
    ```
 4. Create a new topic branch
    ```sh
@@ -40,7 +41,7 @@ The project uses [Semantic Versioning 2.0.0](http://semver.org/) but you don't h
    ```
 5. Run js bundler/watcher and firefox
    ```sh
-   $ npm run watch
+   $ pnpm run watch
    ```
 6. Modify source code and firefox will reload the extension automatically
 
@@ -48,23 +49,23 @@ The project uses [Semantic Versioning 2.0.0](http://semver.org/) but you don't h
 
 1. Run test cases
    ```sh
-   $ npm test
+   $ pnpm test
    ```
 
 To make sure Turndown conversion remains intact after my modification for supporting [MathJax](https://www.mathjax.org/), I use [Jest snapshot testing](https://jestjs.io/docs/en/snapshot-testing). When you updated [Turndown](https://github.com/domchristie/turndown), you have to [update snapshots](<(https://jestjs.io/docs/en/cli.html#updatesnapshot)>).
 
-1. Comment out following line from [`test.js`](test/test.js)
+1. Comment out following line from [`packages/core/test/test.js`](../packages/core/test/test.js)
    ```js
    turndownService.use(turndownPluginMathJax);
    ```
 2. Update Jest snapshot
    ```sh
-   $ npm run test:core -- --updateSnapshot
+   $ pnpm --filter copy-selection-as-markdown-core test -- --updateSnapshot
    ```
-3. Revert [`test.js`](test/test.js)
+3. Revert [`packages/core/test/test.js`](../packages/core/test/test.js)
 4. Run test cases
    ```sh
-   $ npm test
+   $ pnpm test
    ```
 
 ## Open a pull request
@@ -75,18 +76,34 @@ To make sure Turndown conversion remains intact after my modification for suppor
    ```
 2. Go to your fork on GitHub, switch to your topic branch, then click "Compare and pull request" button.
 
+## Project Structure
+
+This project is organized as a monorepo with the following packages:
+
+- `packages/core/` - Core functionality and markdown conversion logic
+- `packages/firefox/` - Firefox-specific extension code and manifest
+- `packages/chromium/` - Chromium-specific extension code and manifest
+
+Each package has its own `package.json` with specific dependencies and build scripts. The root `package.json` orchestrates builds across all packages using pnpm workspaces.
+
 ## References
 
 ### Package Scripts
 
-Run with `npm run <script-name>`.
+Run with `pnpm run <script-name>` from the project root.
 
 - Watchers
-  - `watch`: Run watch scripts
+  - `watch`: Run watch scripts for all packages
+  - `watch:core`: Watch core package only
+  - `watch:firefox`: Watch Firefox package only
 - Builds
-  - `build`: Build the extension with webpack
+  - `build`: Build all packages (core, firefox, chromium)
   - `generate`: Generate WebExtension artifacts
-  - `format`: format JS files by [Prettier](https://prettier.io/)
+  - `format`: Format JS files with [Biome](https://biomejs.dev/)
+- Testing
+  - `test`: Run tests across all packages
+- Maintenance
+  - `clean`: Clean all build artifacts
 
 ### Mozilla Developer Network (MDN)
 

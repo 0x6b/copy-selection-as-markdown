@@ -1,21 +1,19 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Copy Selection as Markdown",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "description": "Copy title, URL, and selection as Markdown",
   "icons": {
     "48": "icons/extension.svg",
     "96": "icons/extension.svg"
   },
   "background": {
-    "scripts": ["index.js"]
+    "page": "background.html"
   },
   "options_ui": {
-    "page": "settings.html",
-    "browser_style": true
+    "page": "settings.html"
   },
-  "browser_action": {
-    "browser_style": true,
+  "action": {
     "default_icon": "icons/extension.svg",
     "default_title": "Copy as Markdown",
     "theme_icons": [
@@ -32,7 +30,7 @@
     ]
   },
   "commands": {
-    "_execute_browser_action": {
+    "_execute_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+E",
         "mac": "Command+Shift+E"
@@ -40,9 +38,9 @@
       "description": "Copy as Markdown"
     }
   },
-  "permissions": ["activeTab", "clipboardWrite", "contextMenus", "storage"],
-  "optional_permissions": ["<all_urls>"],
-  "applications": {
+  "permissions": ["activeTab", "clipboardWrite", "contextMenus", "storage", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "browser_specific_settings": {
     "gecko": {
       "id": "{db9a72da-7bc5-4805-bcea-da3cb1a15316}"
     }
