@@ -47,12 +47,15 @@ async function build() {
 
     // Copy static files
     await copyFile("manifest.json", "dist/manifest.json");
+    await copyFile("src/background.html", "dist/background.html");
     
     // Copy core dist files
     await copyDirectory("../core/dist", "dist");
     
-    // Copy icons
-    await copyDirectory("icons", "dist/icons");
+    // Copy icon files (excluding generate.js)
+    await copyFile("icons/extension.svg", "dist/icons/extension.svg");
+    await copyFile("icons/browser-action-light.svg", "dist/icons/browser-action-light.svg");
+    await copyFile("icons/browser-action-dark.svg", "dist/icons/browser-action-dark.svg");
 
     console.log("Firefox build completed successfully");
   } catch (error) {
