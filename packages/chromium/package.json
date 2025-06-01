@@ -10,10 +10,10 @@
   },
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "webpack",
+    "build": "node build.js",
     "clean": "rimraf dist/*",
     "watch:webextension": "web-ext --browser-console --config=web-ext-config.js run --target chromium",
-    "watch:js": "webpack --watch --progress",
+    "watch:js": "node build.js --watch",
     "watch": "npm-run-all --parallel watch:*",
     "test": "exit 0"
   },
