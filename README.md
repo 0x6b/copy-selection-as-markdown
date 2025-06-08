@@ -9,7 +9,7 @@ Copy title, URL, selection as Markdown
 
 ## Install
 
-- Mozilla Firefox: Go to [Add-ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/copy-selection-as-markdown/) and install.
+- Mozilla Firefox: Go to [Add-ons for Firefox](https://addons.mozilla.org/firefox/addon/copy-selection-as-markdown/) and install.
 - Google Chrome: You have to build and install at your own risk. No store distribution at this moment.
 
 ## Usage
