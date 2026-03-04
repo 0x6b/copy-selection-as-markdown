@@ -4,7 +4,7 @@
 
 - Create a [Firefox Add-ons](https://addons.mozilla.org) (AMO) account
 - Install followings:
-  - [WebExtensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions) enabled [Firefox](https://www.mozilla.org/firefox/)
+  - [WebExtensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) enabled [Firefox](https://www.mozilla.org/firefox/)
   - [Node.js](http://nodejs.org) v20.x
   - [pnpm](https://pnpm.io/) for package management (monorepo support)
   - Python 2.x for compiling `dtrace-provider` (`web-ext` requires this as dependency)
@@ -107,6 +107,6 @@ Run with `pnpm run <script-name>` from the project root.
 
 ### Mozilla Developer Network (MDN)
 
-- [Browser Extensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions)
-- [Getting started with web-ext](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext)
-- [Signing and distributing your add-on](https://developer.mozilla.org/en-US/Add-ons/Distribution)
+- [Browser Extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
+- [Getting started with web-ext](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)
+- [Signing and distributing your add-on](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution)
